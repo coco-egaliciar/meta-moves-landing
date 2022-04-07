@@ -43,7 +43,7 @@ module.exports = {
       {
         // https://webpack.js.org/loaders/css-loader/#root
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader']
+        use: ['style-loader', 'css-loader', 'postcss-loader']
       },
       {
         // https://webpack.js.org/guides/asset-modules/#resource-assets

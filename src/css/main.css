@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 html, body {
   height: 100vh;
 }
@@ -6,7 +14,7 @@ body {
   background-color: #ffffff;
   color: #2c302f;
   font-weight: 400;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Permanent Marker", Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
@@ -68,6 +76,7 @@ footer {
   color: beige;
   flex: 1 0 auto;
   padding-top: 20px;
+  z-index: 0;
 }
 
 footer a {
@@ -84,14 +93,20 @@ footer > ul {
 
 footer > ul > li {
   display: block;
+
 }
 
 footer > ul > li > a {
   display: block;
   font-size: 21px;
   padding: 10px 20px;
+
 }
 
 .spacer {
   flex: 2 1 auto;
+}
+
+html {
+  scroll-behavior: smooth;
 }

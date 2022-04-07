@@ -23,11 +23,11 @@ export class Animate3D {
     window.addEventListener('resize', () => { this.OnWindowResize() }, false)
 
     const fov = 60
-    const aspect = modelDiv.offsetWidth / modelDiv.offsetHeight
-    const near = 1.0
-    const far = 1000.0
+    const aspect = window.innerHeight/window.innerWidth
+    const near = 5
+    const far = 5000.0
     this._camera = new THREE.PerspectiveCamera(fov, aspect, near, far)
-    this._camera.position.set(15, 15, 20)
+    this._camera.position.set(150 / 5, 150 / 5, 200 / 5)
 
     this.scene = new THREE.Scene()
 
@@ -52,6 +52,7 @@ export class Animate3D {
     this.scene.add(light)
 
     this._controls = new OrbitControls(this._camera, this.canvas.domElement)
+    this._controls.enabled = false
     this._controls.target.set(0, 10, 0)
     this._controls.update()
 
@@ -75,17 +76,6 @@ export class Animate3D {
       })
       fbx.position.copy(offset)
 
-      // const mixer = new THREE.AnimationMixer(fbx)
-      // const action = mixer.clipAction(fbx.animations[0])
-      // action.play()
-      //
-      // fbx.traverse(function (child) {
-      //   if (child.isMesh) {
-      //     child.castShadow = true
-      //     child.receiveShadow = true
-      //   }
-      // })
-
       const anim = new FBXLoader()
       // anim.setPath(path)
       anim.load(modelFile, (anim) => {
@@ -99,10 +89,8 @@ export class Animate3D {
   }
 
   OnScroll (position) {
-    const a = 15
-    const b = -15
-    const amount = Math.min(position / 500.0, 1.0)
-    this._camera.position.set(a + amount * (b - a), 15, 20)
+    const amount = Math.min(0.174533)
+    this.scene.rotateY(amount)
     this._controls.update()
   }
 
