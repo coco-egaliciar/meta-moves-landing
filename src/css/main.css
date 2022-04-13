@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 @import url('../menu/css/app.8af041ab.css');
 @import url('hamburger.css');
+@import url('card.css');
 
 
 @tailwind base;
