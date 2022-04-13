@@ -11,104 +11,34 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>
-<body class="font-nunito">
+<body class="font-nunito text-white">
 
 <!-- intercepted by a resourceQuery in the webpack config -->
 <%= require('./partials/nav.html?raw') %>
-
-<div id="menu" class="menu__hidden"></div>
-
 <div id="model"></div>
 
-<section class="cube" id="top" >
-  <h1 class="font-marker text-red-800">Welcome to Meta-Moves</h1>
-  <p>A Novel NFT collection where all members are able to bring to life there digital avatars through custom Motion Capture..</p>
-  <p>Vivamus feugiat ante nec sagittis posuere.</p>
-  <p>Sed tempus mi eget fermentum bibendum.</p>
-  <p>Donec suscipit arcu semper, consectetur erat et, laoreet enim.</p>
-  <p>Donec commodo magna a libero pellentesque pulvinar.</p>
-  <p>Fusce ultrices lectus vitae nulla posuere, sed interdum massa dictum.</p>
-  <p>Ut scelerisque augue id nisi euismod malesuada.</p>
-  <p>Mauris dapibus lacus a dictum suscipit.</p>
-  <p>Nullam volutpat tortor et elit cursus congue.</p>
-  <p>Donec fringilla diam vel aliquam pellentesque.</p>
-  <p>Mauris auctor nulla eget enim tincidunt laoreet.</p>
-  <p>Vivamus rutrum libero quis urna ultricies, ut egestas velit imperdiet.</p>
-  <p>Suspendisse quis elit a purus pharetra imperdiet in at eros.</p>
-  <p>Nulla quis orci egestas, porttitor arcu sed, gravida massa.</p>
-  <p>Donec non justo vel lorem consequat tristique a et nunc.</p>
-</section>
-<section class="cube" id="content">
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Vivamus feugiat ante nec sagittis posuere.</p>
-  <p>Sed tempus mi eget fermentum bibendum.</p>
-  <p>Donec suscipit arcu semper, consectetur erat et, laoreet enim.</p>
-  <p>Donec commodo magna a libero pellentesque pulvinar.</p>
-  <p>Fusce ultrices lectus vitae nulla posuere, sed interdum massa dictum.</p>
-  <p>Ut scelerisque augue id nisi euismod malesuada.</p>
-  <p>Mauris dapibus lacus a dictum suscipit.</p>
-  <p>Nullam volutpat tortor et elit cursus congue.</p>
-  <p>Donec fringilla diam vel aliquam pellentesque.</p>
-  <p>Mauris auctor nulla eget enim tincidunt laoreet.</p>
-  <p>Vivamus rutrum libero quis urna ultricies, ut egestas velit imperdiet.</p>
-  <p>Suspendisse quis elit a purus pharetra imperdiet in at eros.</p>
-  <p>Nulla quis orci egestas, porttitor arcu sed, gravida massa.</p>
-  <p>Donec non justo vel lorem consequat tristique a et nunc.</p>
-</section>
-<section class="cube" id="content">
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Vivamus feugiat ante nec sagittis posuere.</p>
-  <p>Sed tempus mi eget fermentum bibendum.</p>
-  <p>Donec suscipit arcu semper, consectetur erat et, laoreet enim.</p>
-  <p>Donec commodo magna a libero pellentesque pulvinar.</p>
-  <p>Fusce ultrices lectus vitae nulla posuere, sed interdum massa dictum.</p>
-  <p>Ut scelerisque augue id nisi euismod malesuada.</p>
-  <p>Mauris dapibus lacus a dictum suscipit.</p>
-  <p>Nullam volutpat tortor et elit cursus congue.</p>
-  <p>Donec fringilla diam vel aliquam pellentesque.</p>
-  <p>Mauris auctor nulla eget enim tincidunt laoreet.</p>
-  <p>Vivamus rutrum libero quis urna ultricies, ut egestas velit imperdiet.</p>
-  <p>Suspendisse quis elit a purus pharetra imperdiet in at eros.</p>
-  <p>Nulla quis orci egestas, porttitor arcu sed, gravida massa.</p>
-  <p>Donec non justo vel lorem consequat tristique a et nunc.</p>
-</section>
+<div class="px-2 lg:px-4 container">
+  <section class="flex flex-row lg:mt-12">
+    <div class="w-full lg:w-1/2 ">
+      <h1 id="metamoves" class="font-marker text-white text-4xl">Meta-Moves</h1>
+      <div class="py-2" id="metamove_description"></div>
 
-<section class="cube" id="content">
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Vivamus feugiat ante nec sagittis posuere.</p>
-  <p>Sed tempus mi eget fermentum bibendum.</p>
-  <p>Donec suscipit arcu semper, consectetur erat et, laoreet enim.</p>
-  <p>Donec commodo magna a libero pellentesque pulvinar.</p>
-  <p>Fusce ultrices lectus vitae nulla posuere, sed interdum massa dictum.</p>
-  <p>Ut scelerisque augue id nisi euismod malesuada.</p>
-  <p>Mauris dapibus lacus a dictum suscipit.</p>
-  <p>Nullam volutpat tortor et elit cursus congue.</p>
-  <p>Donec fringilla diam vel aliquam pellentesque.</p>
-  <p>Mauris auctor nulla eget enim tincidunt laoreet.</p>
-  <p>Vivamus rutrum libero quis urna ultricies, ut egestas velit imperdiet.</p>
-  <p>Suspendisse quis elit a purus pharetra imperdiet in at eros.</p>
-  <p>Nulla quis orci egestas, porttitor arcu sed, gravida massa.</p>
-  <p>Donec non justo vel lorem consequat tristique a et nunc.</p>
-</section>
+      <button class="py-3 bg-metapink-100 flex flex-row lg:w-1/2 w-full text-2xl mt-10">
+        <span class="text-white w-10/12"> Mint Now</span>
+        <span class="text-white w-2/12 px-2"> ></span>
+      </button>
+    </div>
+  </section>
 
-<section class="cube" id="content">
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <p>Vivamus feugiat ante nec sagittis posuere.</p>
-  <p>Sed tempus mi eget fermentum bibendum.</p>
-  <p>Donec suscipit arcu semper, consectetur erat et, laoreet enim.</p>
-  <p>Donec commodo magna a libero pellentesque pulvinar.</p>
-  <p>Fusce ultrices lectus vitae nulla posuere, sed interdum massa dictum.</p>
-  <p>Ut scelerisque augue id nisi euismod malesuada.</p>
-  <p>Mauris dapibus lacus a dictum suscipit.</p>
-  <p>Nullam volutpat tortor et elit cursus congue.</p>
-  <p>Donec fringilla diam vel aliquam pellentesque.</p>
-  <p>Mauris auctor nulla eget enim tincidunt laoreet.</p>
-  <p>Vivamus rutrum libero quis urna ultricies, ut egestas velit imperdiet.</p>
-  <p>Suspendisse quis elit a purus pharetra imperdiet in at eros.</p>
-  <p>Nulla quis orci egestas, porttitor arcu sed, gravida massa.</p>
-  <p>Donec non justo vel lorem consequat tristique a et nunc.</p>
-</section>
+  <section class="text-2xl mt-12 lg:mt-40 " >
+    <div class="marquee">
+      <div class="track">
+        <div class="content">メタバースの動き&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;メタバースの動き&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;メタバースの動き&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;メタバースの動き&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;メタバースの動き&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;メタバースの動き&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;メタバースの動き&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;メタバースの動き&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;メタバースの動き&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;メタバースの動き&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;メタバースの動き&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;メタバースの動き&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;メタバースの動き&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;メタバースの動き&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      </div>
+    </div>
+  </section>
 
+  </div>
 <section class="cube" id="content">
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
   <p>Vivamus feugiat ante nec sagittis posuere.</p>

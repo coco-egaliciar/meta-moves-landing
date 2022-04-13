@@ -60,9 +60,9 @@ input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
 }
 
 .menu_container {
-  border-width: 1px;
-  border-style: solid;
-  border-color: green;
+  /*border-width: 1px;*/
+  /*border-style: solid;*/
+  /*border-color: green;*/
   background: transparent;
   height: 100%;
 }
@@ -79,7 +79,7 @@ input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
 
 .nav-container {
   display: block;
-  /*height: 60px;*/
+  height: auto;
 }
 
 

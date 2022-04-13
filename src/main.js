@@ -1,4 +1,5 @@
 import { Animate3D } from './js/animation3D'
+import Typewriter from 'typewriter-effect/dist/core'
 
 require('normalize.css/normalize.css')
 require('./css/main.css')
@@ -23,3 +24,28 @@ document.addEventListener('DOMContentLoaded', () => {
     _APP.OnScroll(window.scrollY)
   })
 })
+
+const metamove_description = document.querySelector('#metamove_description')
+
+const typewriter = new Typewriter(metamove_description, {
+  loop: false,
+  delay: 75
+})
+
+typewriter
+  .typeString('A Nft collection where all members are')
+  .typeString('.')
+  .pauseFor(1500)
+  .typeString('.')
+  .pauseFor(1500)
+  .typeString('.')
+  .pauseFor(1500)
+  .deleteChars(41)
+  .pauseFor(1000)
+  .typeString('A Novel Nft')
+  .pauseFor(300)
+  .typeString(' collection where all members are able to bring to life there digital avatars through custom\n' +
+    '      <span class="text-metapink-400">M̷o̸t̸i̶o̴n̶ ̴C̸a̸p̵t̸u̵r̴e̷.̵</span>')
+  .start()
+
+

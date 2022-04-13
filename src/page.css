@@ -1,8 +1,5 @@
 
-
-
-
-#model{
+#model {
   top: 100px;
   width: 50%;
   height: 100vh;
@@ -13,4 +10,33 @@
   border-color: red;
   border-width: 2px;
   border-style: solid;
+}
+
+
+#metamoves {
+  background-image: linear-gradient(90deg, #e73c7e, #bd2a60, #ee7752, #f16b41);
+  background-clip: text;
+  color: transparent;
+
+}
+
+
+
+.marquee {
+  width: 100vw;
+  max-width: 100%;
+  height: 200px;
+  overflow-x: hidden;
+}
+
+.track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
