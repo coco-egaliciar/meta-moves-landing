@@ -23,7 +23,7 @@ export class Animate3D {
     window.addEventListener('resize', () => { this.OnWindowResize() }, false)
 
     const fov = 60
-    const aspect = window.innerHeight/window.innerWidth
+    const aspect = window.innerHeight / window.innerWidth
     const near = 5
     const far = 5000.0
     this._camera = new THREE.PerspectiveCamera(fov, aspect, near, far)

@@ -10,12 +10,13 @@
         content="width=device-width,user-scalable=0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-
 </head>
 <body class="font-nunito">
 
 <!-- intercepted by a resourceQuery in the webpack config -->
 <%= require('./partials/nav.html?raw') %>
+
+<div id="menu" class="menu__hidden"></div>
 
 <div id="model"></div>
 
