@@ -23,28 +23,33 @@
 
 @-webkit-keyframes animatedgradient {
   0% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
   }
   50% {
     background-position: 100% 50%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
   }
 }
 
 
 @keyframes animatedgradient {
   0% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
   }
   50% {
     background-position: 100% 50%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
   }
 }
 
 
-
+.gradient-border:hover:before, .gradient-border:hover:after {
+  animation: none;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
