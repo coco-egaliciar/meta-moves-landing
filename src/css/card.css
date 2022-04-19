@@ -1,69 +1,50 @@
-:root {
-  --card-height: 65vh;
-  --card-width: calc(var(--card-height) / 1.5);
-}
-
-
-.card {
-  background: #191c29;
-  width: var(--card-width);
-  height: var(--card-height);
-  padding: 3px;
+.gradient-border {
+  --borderWidth: 4px;
+  /*background: #1D1F20;*/
   position: relative;
-  border-radius: 6px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  cursor: pointer;
+  border-radius: var(--borderWidth);
 }
 
-.card:hover {
-  color: rgb(88 199 250 / 100%);
-  transition: color 1s;
-}
-
-.card:hover:before, .card:hover:after {
-  animation: none;
-  opacity: 0;
-}
-
-
-.card::before {
-  content: "";
-  width: 104%;
-  height: 102%;
-  border-radius: 8px;
-  background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
+.gradient-border:after {
+  content: '';
   position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #5ddcff, #3c67e3 43%, #4e00c2);
+  border-radius: calc(2 * var(--borderWidth));
   z-index: -1;
-  top: -1%;
-  left: -2%;
-  animation: spin 2.5s linear infinite;
+  -webkit-animation: animatedgradient 3s ease alternate infinite;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
 }
 
-.card::after {
-  position: absolute;
-  content: "";
-  top: calc(var(--card-height) / 6);
-  left: 0;
-  right: 0;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  margin: 0 auto;
-  transform: scale(0.8);
-  filter: blur(calc(var(--card-height) / 6));
-  background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
-  opacity: 1;
-  transition: opacity .5s;
-  animation: spin 2.5s linear infinite;
-}
 
-@keyframes spin {
+@-webkit-keyframes animatedgradient {
   0% {
-    --rotate: 0deg;
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
   }
   100% {
-    --rotate: 360deg;
+    background-position: 0% 50%;
   }
 }
+
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+

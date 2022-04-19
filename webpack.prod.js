@@ -18,7 +18,7 @@ module.exports = {
 
   // https://webpack.js.org/concepts/entry-points/#multi-page-application
   entry: {
-    index: './src/index/main.js',
+    index: './src/main.js'
   },
 
   // how to write the compiled files to disk
@@ -32,6 +32,21 @@ module.exports = {
   // https://webpack.js.org/concepts/loaders/
   module: {
     rules: [
+      {
+        loader: 'postcss-loader',
+        options: {
+          postcssOptions: {
+            plugins: [
+              [
+                'autoprefixer',
+                {
+                  // Options
+                }
+              ]
+            ]
+          }
+        }
+      },
       {
         // https://webpack.js.org/loaders/babel-loader/#root
         test: /\.m?js$/i,
@@ -72,7 +87,7 @@ module.exports = {
   // https://webpack.js.org/concepts/plugins/
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index/index.html',
+      template: './src/index.html',
       inject: true,
       chunks: ['index'],
       filename: 'index.html'
