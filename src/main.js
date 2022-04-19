@@ -25,15 +25,15 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 })
 
-const metamove_description = document.querySelector('#metamove_description')
+const metamoveDescription = document.querySelector('#metamove_description')
 
-const typewriter = new Typewriter(metamove_description, {
+const typewriter = new Typewriter(metamoveDescription, {
   loop: false,
   delay: 75
 })
 
 typewriter
-  .typeString('A Nft collection where all members are')
+  .typeString('A NFT collection where all members are')
   .typeString('.')
   .pauseFor(1500)
   .typeString('.')
@@ -42,10 +42,37 @@ typewriter
   .pauseFor(1500)
   .deleteChars(41)
   .pauseFor(1000)
-  .typeString('A Novel Nft')
+  .typeString('A Novel NFT')
   .pauseFor(300)
   .typeString(' collection where all members are able to bring to life there digital avatars through custom\n' +
-    '      <span class="text-metapink-400">M̷o̸t̸i̶o̴n̶ ̴C̸a̸p̵t̸u̵r̴e̷.̵</span>')
+    '      <span class="text-metablue">M̷o̸t̸i̶o̴n̶ ̴C̸a̸p̵t̸u̵r̴e̷.̵</span>')
   .start()
 
+const visuals1 = document.querySelector('#visuals__1')
+visuals1.addEventListener('mouseover', () => {
+  document.querySelector('#visuals__background_1').classList.add('visuals__rotation')
+})
 
+visuals1.addEventListener('mouseleave', () => {
+  document.querySelector('#visuals__background_1').classList.remove('visuals__rotation')
+})
+
+const visuals2 = document.querySelector('#visuals__2')
+visuals2.addEventListener('mouseover', () => {
+  document.querySelector('#visuals__background_2').classList.add('visuals__rotation')
+})
+
+visuals2.addEventListener('mouseleave', () => {
+  document.querySelector('#visuals__background_2').classList.remove('visuals__rotation')
+})
+
+
+
+const visuals3 = document.querySelector('#visuals__3')
+visuals3.addEventListener('mouseover', () => {
+  document.querySelector('#visuals__background_3').classList.add('visuals__rotation')
+})
+
+visuals3.addEventListener('mouseleave', () => {
+  document.querySelector('#visuals__background_3').classList.remove('visuals__rotation')
+})
