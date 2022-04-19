@@ -20,7 +20,6 @@
 }
 
 
-
 .marquee {
   width: 100vw;
   max-width: 100%;
@@ -36,6 +35,12 @@
 }
 
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
+
+
