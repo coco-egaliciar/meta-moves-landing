@@ -33,21 +33,6 @@ module.exports = {
   module: {
     rules: [
       {
-        loader: 'postcss-loader',
-        options: {
-          postcssOptions: {
-            plugins: [
-              [
-                'autoprefixer',
-                {
-                  // Options
-                }
-              ]
-            ]
-          }
-        }
-      },
-      {
         // https://webpack.js.org/loaders/babel-loader/#root
         test: /\.m?js$/i,
         exclude: /node_modules/,
@@ -63,7 +48,22 @@ module.exports = {
         test: /\.css$/i,
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader'
+          { loader: 'css-loader', options: { importLoaders: 2 } },
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [
+                  [
+                    'postcss-preset-env',
+                    {
+                      // Options
+                    }
+                  ]
+                ]
+              }
+            }
+          }
         ]
       },
       {

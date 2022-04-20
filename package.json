@@ -16,6 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "normalize.css": "^8.0.1",
+    "swiper": "^8.1.1",
     "three": "^0.139.2",
     "typewriter-effect": "^2.18.2"
   },
@@ -43,6 +44,7 @@
     "mini-css-extract-plugin": "^2.6.0",
     "postcss": "^8.4.12",
     "postcss-loader": "^6.2.1",
+    "postcss-preset-env": "^7.4.3",
     "standard": "^16.0.4",
     "style-loader": "^3.3.1",
     "tailwindcss": "^3.0.23",
