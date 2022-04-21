@@ -9,7 +9,6 @@ module.exports = {
   entry: {
     index: './src/main.js'
   },
-
   target: 'web',
   devtool: 'eval-cheap-module-source-map',
   devServer: {
@@ -21,7 +20,7 @@ module.exports = {
     liveReload: true
   },
   stats: {
-    children: true,
+    children: true
   },
 
   // https://webpack.js.org/concepts/loaders/
@@ -43,7 +42,19 @@ module.exports = {
       {
         // https://webpack.js.org/loaders/css-loader/#root
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader', 'postcss-loader']
+        use: ['style-loader', 'css-loader', {
+          loader: 'postcss-loader',
+          options: {
+            postcssOptions: {
+              plugins: [
+                [
+                  'postcss-preset-env',
+                  'tailwindcss'
+                ]
+              ]
+            }
+          }
+        }]
       },
       {
         // https://webpack.js.org/guides/asset-modules/#resource-assets
@@ -58,7 +69,25 @@ module.exports = {
       {
         // https://webpack.js.org/loaders/html-loader/#usage
         resourceQuery: /template/,
-        loader: 'html-loader'
+        loader: 'html-loader',
+        options: {
+          sources: {
+            list: [
+              // All default supported tags and attributes
+              '...',
+              {
+                tag: 'img',
+                attribute: 'data-src',
+                type: 'src'
+              },
+              {
+                tag: 'img',
+                attribute: 'data-srcset',
+                type: 'srcset'
+              }
+            ]
+          }
+        }
       }
     ]
   },
