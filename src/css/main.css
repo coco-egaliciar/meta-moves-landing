@@ -4,6 +4,7 @@
 @import url('hamburger.css');
 @import url('card.css');
 @import url('decentraland.css');
+@import url('ourchannels.css');
 
 @tailwind base;
 @tailwind components;

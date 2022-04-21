@@ -9,9 +9,16 @@ require('./page.css')
 // require('./menu/js/chunk-vendors.955db42e')
 require('./js/hamburger')
 require('./js/decentraland')
+require('./js/ourchannels')
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOMContentLoaded', 'index')
+
+  window.scroll({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  });
 
   let _APP = null
 
