@@ -2,6 +2,7 @@
 import * as THREE from 'three'
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import fbxFile from '../resource/ParaWeb.fbx'
 
 export class Animate3D {
   constructor () {
@@ -56,8 +57,9 @@ export class Animate3D {
     this._controls.target.set(0, 10, 0)
     this._controls.update()
 
-    this.LoadAnimatedModelAndPlay(
-      'https://threejs.org/examples/models/fbx/Samba%20Dancing.fbx', new THREE.Vector3(0, 0, 0))
+    this.LoadAnimatedModelAndPlay(fbxFile, new THREE.Vector3(0, 0, 0))
+    // 'https://threejs.org/examples/models/fbx/Samba%20Dancing.fbx', new THREE.Vector3(0, 0, 0)
+
 
     this._mixers = []
     this._previousRAF = null

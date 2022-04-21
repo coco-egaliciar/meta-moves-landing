@@ -5,9 +5,10 @@ require('normalize.css/normalize.css')
 require('./css/main.css')
 require('./page.css')
 
-require('./menu/js/app.28787ae0')
-require('./menu/js/chunk-vendors.955db42e')
+// require('./menu/js/app.28787ae0')
+// require('./menu/js/chunk-vendors.955db42e')
 require('./js/hamburger')
+require('./js/decentraland')
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOMContentLoaded', 'index')
@@ -65,8 +66,6 @@ visuals2.addEventListener('mouseover', () => {
 visuals2.addEventListener('mouseleave', () => {
   document.querySelector('#visuals__background_2').classList.remove('visuals__rotation')
 })
-
-
 
 const visuals3 = document.querySelector('#visuals__3')
 visuals3.addEventListener('mouseover', () => {
