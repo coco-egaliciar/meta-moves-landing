@@ -10,6 +10,7 @@ require('./page.css')
 require('./js/hamburger')
 require('./js/decentraland')
 require('./js/ourchannels')
+require('./js/gallery')
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOMContentLoaded', 'index')
