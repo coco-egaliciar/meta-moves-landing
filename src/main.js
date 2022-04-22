@@ -19,19 +19,20 @@ document.addEventListener('DOMContentLoaded', () => {
     top: 0,
     left: 0,
     behavior: 'smooth'
-  });
-
-  let _APP = null
-
-  window.addEventListener('DOMContentLoaded', () => {
-    console.log(Animate3D)
-    console.log(typeof Animate3D)
-    _APP = new Animate3D()
   })
 
-  window.addEventListener('scroll', (e) => {
-    _APP.OnScroll(window.scrollY)
-  })
+  if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    let _APP = null
+
+    window.addEventListener('DOMContentLoaded', () => {
+      _APP = new Animate3D()
+    })
+
+    window.addEventListener('scroll', (e) => {
+      _APP.OnScroll(window.scrollY)
+    })
+  }
+
 })
 
 const metamoveDescription = document.querySelector('#metamove_description')

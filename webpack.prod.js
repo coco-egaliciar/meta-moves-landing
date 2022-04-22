@@ -33,6 +33,14 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(fbx|glb|gltf)$/,
+        use: [
+          {
+            loader: 'file-loader'
+          }
+        ]
+      },
+      {
         // https://webpack.js.org/loaders/babel-loader/#root
         test: /\.m?js$/i,
         exclude: /node_modules/,

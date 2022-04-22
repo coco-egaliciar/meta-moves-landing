@@ -25,11 +25,10 @@
   z-index: 10;
   touch-action: none;
   border-radius: 5%/3.5%;
-  box-shadow: -5px -5px 5px -5px var(--color1), 5px 5px 5px -5px var(--color2), -7px -7px 10px -5px transparent, 7px 7px 10px -5px transparent, 0 0 5px 0px rgba(255, 255, 255, 0), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
+  box-shadow: -5px -5px 5px -5px var(--color1), 5px 5px 5px -5px var(--color2), -7px -7px 10px -5px transparent, 7px 7px 10px -5px transparent, 0 0 5px 0 rgba(255, 255, 255, 0), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
   transition: transform 0.5s ease, box-shadow 0.2s ease;
   will-change: transform, filter;
   background-color: #040712;
-  background-image: var(--front);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -209,33 +208,36 @@
 }
 
 
+.swiperA {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-/*.card:hover:before,*/
-/*.card.active:before {*/
-/*  background-image: linear-gradient(115deg, transparent 20%, var(--color1) 36%, var(--color2) 43%, var(--color3) 50%, var(--color4) 57%, var(--color5) 64%, transparent 80%);*/
-/*}*/
+.swiper-slideA {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+  height: calc((100% - 30px) / 2) !important;
 
-
-
-.cards {
+  /* Center slide text vertically */
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-evenly;
-  perspective: 2000px;
-  position: relative;
-  z-index: 1;
-  transform: translate3d(0.1px, 0.1px, 0.1px);
 }
 
-
-@media screen and (min-width: 600px) {
-  .cards {
-    flex-direction: row;
-  }
+.swiper-slideA#imgA{
+  width: auto;
+  height: auto;
+  min-height: 850px;
+  max-width: 100%;
+  max-height: 100%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
 }
 
-
-.cards, .card:before, .card:after {
-  animation-delay: 0.75s;
+.swiper-3d .swiper-slide-shadow{
+  background: rgba(0,0,0,0) !important;
 }

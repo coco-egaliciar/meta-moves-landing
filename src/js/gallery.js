@@ -1,5 +1,6 @@
 import $ from 'jquery'
 import MicroModal from 'micromodal'
+import { Swiper } from 'swiper'
 
 let x
 const $cards = $('.card')
@@ -59,5 +60,35 @@ $cards
     }, 2500)
   })
 
+MicroModal.init()
 
-MicroModal.init();
+const swiperA = new Swiper('.mySwiperGallery', {
+  effect: 'cards',
+  grabCursor: true,
+  lazy: true
+  // preloadImages: true,
+  // slidesPerView: 3,
+  // // grid: {
+  // //   rows: 2
+  // // },
+  // effect: 'creative',
+  // creativeEffect: {
+  //   prev: {
+  //     // will set `translateZ(-400px)` on previous slides
+  //     translate: [0, 0, -400]
+  //   },
+  //   next: {
+  //     // will set `translateX(100%)` on next slides
+  //     translate: ['100%', 0, 0]
+  //   }
+  // },
+  // spaceBetween: 30,
+
+  // direction: 'horizntal',
+  // slidesPerView: 'auto',
+  // freeMode: true,
+  // scrollbar: {
+  //   el: '.swiper-scrollbar'
+  // },
+  // mousewheel: true
+})

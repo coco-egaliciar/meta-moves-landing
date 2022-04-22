@@ -10,12 +10,15 @@
   align-items: center;
 }
 
-.swiper-slide img{
+.swiper-slide #img1{
   height: 180px;
 }
 
 
-
+.decentraland.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+}
 
 .swiper-slide:nth-child(2n) {
   width: 60%;
