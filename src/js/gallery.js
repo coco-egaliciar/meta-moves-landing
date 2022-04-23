@@ -1,7 +1,16 @@
+//
 import $ from 'jquery'
-import MicroModal from 'micromodal'
+// import MicroModal from 'micromodal'
 import { Swiper } from 'swiper'
 
+/*
+
+  using
+    - an animated gif of sparkles.
+    - an animated gradient as a holo effect.
+    - color-dodge mix blend mode
+
+*/
 let x
 const $cards = $('.card')
 const $style = $('.hover')
@@ -20,26 +29,26 @@ $cards
     const t = pos[1]
     const h = $card.height()
     const w = $card.width()
-    const px = Math.abs(Math.floor(100 / w * l) - 100)
-    const py = Math.abs(Math.floor(100 / h * t) - 100)
-    const pa = (50 - px) + (50 - py)
+    const px = Math.abs(Math.floor((100 / w) * l) - 100)
+    const py = Math.abs(Math.floor((100 / h) * t) - 100)
+    const pa = 50 - px + (50 - py)
     // math for gradient / background positions
-    const lp = (50 + (px - 50) / 1.5)
-    const tp = (50 + (py - 50) / 1.5)
-    const pxSpark = (50 + (px - 50) / 7)
-    const pySpark = (50 + (py - 50) / 7)
-    const pOpc = 20 + (Math.abs(pa) * 1.5)
+    const lp = 50 + (px - 50) / 1.5
+    const tp = 50 + (py - 50) / 1.5
+    const px_spark = 50 + (px - 50) / 7
+    const py_spark = 50 + (py - 50) / 7
+    const p_opc = 20 + Math.abs(pa) * 1.5
     const ty = ((tp - 50) / 2) * -1
     const tx = ((lp - 50) / 1.5) * 0.5
     // css to apply for active card
-    const gradPos = `background-position: ${lp}% ${tp}%;`
-    const sprkPos = `background-position: ${pxSpark}% ${pySpark}%;`
-    const opc = `opacity: ${pOpc / 100};`
+    const grad_pos = `background-position: ${lp}% ${tp}%;`
+    const sprk_pos = `background-position: ${px_spark}% ${py_spark}%;`
+    const opc = `opacity: ${p_opc / 100};`
     const tf = `transform: rotateX(${ty}deg) rotateY(${tx}deg)`
     // need to use a <style> tag for psuedo elements
     const style = `
-      .card:hover:before { ${gradPos} }  /* gradient */
-      .card:hover:after { ${sprkPos} ${opc} }   /* sparkles */
+      .card:hover:before { ${grad_pos} }  /* gradient */
+      .card:hover:after { ${sprk_pos} ${opc} }   /* sparkles */
     `
     // set / apply css class and style
     $cards.removeClass('active')
@@ -50,45 +59,17 @@ $cards
       return false
     }
     clearTimeout(x)
-  }).on('mouseout touchend touchcancel', function () {
-  // remove css, apply custom animation on end
+  })
+  .on('mouseout touchend touchcancel', function () {
+    // remove css, apply custom animation on end
     const $card = $(this)
     $style.html('')
     $card.removeAttr('style')
     x = setTimeout(function () {
       $card.addClass('animated')
-    }, 2500)
+    }, 100)
   })
 
-MicroModal.init()
-
-const swiperA = new Swiper('.mySwiperGallery', {
-  effect: 'cards',
-  grabCursor: true,
-  lazy: true
-  // preloadImages: true,
-  // slidesPerView: 3,
-  // // grid: {
-  // //   rows: 2
-  // // },
-  // effect: 'creative',
-  // creativeEffect: {
-  //   prev: {
-  //     // will set `translateZ(-400px)` on previous slides
-  //     translate: [0, 0, -400]
-  //   },
-  //   next: {
-  //     // will set `translateX(100%)` on next slides
-  //     translate: ['100%', 0, 0]
-  //   }
-  // },
-  // spaceBetween: 30,
-
-  // direction: 'horizntal',
-  // slidesPerView: 'auto',
-  // freeMode: true,
-  // scrollbar: {
-  //   el: '.swiper-scrollbar'
-  // },
-  // mousewheel: true
-})
+//
+// MicroModal.init()
+//

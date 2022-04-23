@@ -21,43 +21,42 @@ document.addEventListener('DOMContentLoaded', () => {
     behavior: 'smooth'
   })
 
-  if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    let _APP = null
-
-    window.addEventListener('DOMContentLoaded', () => {
-      _APP = new Animate3D()
-    })
-
-    window.addEventListener('scroll', (e) => {
-      _APP.OnScroll(window.scrollY)
-    })
-  }
-
+  // if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+  //   let _APP = null
+  //
+  //   window.addEventListener('DOMContentLoaded', () => {
+  //     _APP = new Animate3D()
+  //   })
+  //
+  //   window.addEventListener('scroll', (e) => {
+  //     _APP.OnScroll(window.scrollY)
+  //   })
+  // }
 })
-
-const metamoveDescription = document.querySelector('#metamove_description')
-
-const typewriter = new Typewriter(metamoveDescription, {
-  loop: false,
-  delay: 75
-})
-
-typewriter
-  .typeString('A NFT collection where all members are')
-  .typeString('.')
-  .pauseFor(1500)
-  .typeString('.')
-  .pauseFor(1500)
-  .typeString('.')
-  .pauseFor(1500)
-  .deleteChars(41)
-  .pauseFor(1000)
-  .typeString('A Novel NFT')
-  .pauseFor(300)
-  .typeString(' collection where all members are able to bring to life there digital avatars through custom\n' +
-    '      <span class="text-metablue">M̷o̸t̸i̶o̴n̶ ̴C̸a̸p̵t̸u̵r̴e̷.̵</span>')
-  .start()
-
+//
+// const metamoveDescription = document.querySelector('#metamove_description')
+//
+// const typewriter = new Typewriter(metamoveDescription, {
+//   loop: false,
+//   delay: 75
+// })
+//
+// typewriter
+//   .typeString('A NFT collection where all members are')
+//   .typeString('.')
+//   .pauseFor(1500)
+//   .typeString('.')
+//   .pauseFor(1500)
+//   .typeString('.')
+//   .pauseFor(1500)
+//   .deleteChars(41)
+//   .pauseFor(1000)
+//   .typeString('A Novel NFT')
+//   .pauseFor(300)
+//   .typeString(' collection where all members are able to bring to life there digital avatars through custom\n' +
+//     '      <span class="text-metablue">M̷o̸t̸i̶o̴n̶ ̴C̸a̸p̵t̸u̵r̴e̷.̵</span>')
+//   .start()
+//
 const visuals1 = document.querySelector('#visuals__1')
 visuals1.addEventListener('mouseover', () => {
   document.querySelector('#visuals__background_1').classList.add('visuals__rotation')
