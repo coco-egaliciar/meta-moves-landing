@@ -10,9 +10,12 @@
         content="width=device-width,user-scalable=0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
   <link rel="stylesheet"
         href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
-  <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+
 </head>
 <body class="font-nunito text-white">
+
+<div id="modal_container" style="z-index: 50;"></div>
+
 
 <!-- intercepted by a resourceQuery in the webpack config -->
 <%= require('./partials/nav.html?raw') %>
@@ -147,9 +150,11 @@
     <ul class="text-3xl font-thin mt-5 flex flex-row lg:flex-col flex-wrap lg:flex-nowrap">
       <li class="mt-5 text-[#A728F2] w-1/2"><a href="https://discord.gg/AgXjZpstPK" target="_blank">Discord</a>
       </li>
-      <li class="mt-5 text-[#34B3EF] w-1/2"><a href="https://twitter.com/metamovesnft?s=21&t=h4nylv_iNYkBJbKgJdozkw" target="_blank">Twitter</a>
+      <li class="mt-5 text-[#34B3EF] w-1/2"><a href="https://twitter.com/metamovesnft?s=21&t=h4nylv_iNYkBJbKgJdozkw"
+                                               target="_blank">Twitter</a>
       </li>
-      <li class="mt-5 text-[#F1972D] w-1/2"><a href="https://instagram.com/metamoves.nft?igshid=YmMyMTA2M2Y=" target="_blank">Instagram</a>
+      <li class="mt-5 text-[#F1972D] w-1/2"><a href="https://instagram.com/metamoves.nft?igshid=YmMyMTA2M2Y="
+                                               target="_blank">Instagram</a>
       </li>
       <li class="mt-5 text-[#F12D9C] w-1/2"><a href="https://vm.tiktok.com/ZMLbpT71j/" target="_blank">TikTok</a></li>
     </ul>
@@ -246,50 +251,33 @@
 <section id="gallery" class="h-full bg-black py-5">
   <div class="text-white text-4xl lg:p-12 p-2">Gallery</div>
   <div class="flex flex-col flex-wrap justify-center items-center">
-    <div class="flex flex-row flex-wrap flex-grow justify-center">
-      <div class="card animated ">
+    <div id="cards_container" class="flex flex-row flex-wrap flex-grow justify-center">
+      <div class="card" data-key="1d3a2s1d3as">
         <img class="h-full w-full" src="https://meta-moves.com/img/sceenshot/04.jpg"/>
       </div>
-      <div class="card animated">
+      <div class="card"  data-key="7a86sd">
         <img class="h-full w-full" src="https://meta-moves.com/img/sceenshot/05.jpg"/>
       </div>
-      <div class="card animated">
+      <div class="card"  data-key="a90s8d">
         <img class="h-full w-full" src="https://meta-moves.com/img/sceenshot/03.jpg"/>
       </div>
-      <div class="card animated">
+      <div class="card"  data-key="s132231sddd">
         <img class="h-full w-full" src="https://meta-moves.com/img/sceenshot/06.jpg"/>
       </div>
     </div>
 
-    <button class="bg-metapink-400 mt-4 py-2 px-4 rounded-3xl right-0 left-0 lg:w-2/12 w-1/2 items-center focus:shadow-outline hover:bg-metapink-100  hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0">View more...</button>
-    <style class="hover"></style>
+    <button
+      class="bg-metapink-400 mt-4 py-2 px-4 rounded-3xl right-0 left-0 lg:w-2/12 w-1/2 items-center focus:shadow-outline hover:bg-metapink-100  hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0">
+      View more...
+    </button>
+  </div>
+  <style class="hover"></style>
 </section>
 
-<div id="modal-1" aria-hidden="true">
 
-  <!-- [2] -->
-  <div tabindex="-1" data-micromodal-close>
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Open Modal</button>
 
-    <!-- [3] -->
-    <div role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-
-
-      <header>
-        <h2 id="modal-1-title">
-          Modal Title
-        </h2>
-
-        <!-- [4] -->
-        <button aria-label="Close modal" data-micromodal-close></button>
-      </header>
-
-      <div id="modal-1-content">
-        Modal Content
-      </div>
-
-    </div>
-  </div>
-</div>
 
 <!--<h1 class="page-title">-->
 <!--  <i class="fab fa-fort-awesome"></i>-->

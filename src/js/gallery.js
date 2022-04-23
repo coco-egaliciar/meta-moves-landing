@@ -1,16 +1,5 @@
-//
 import $ from 'jquery'
-// import MicroModal from 'micromodal'
-import { Swiper } from 'swiper'
 
-/*
-
-  using
-    - an animated gif of sparkles.
-    - an animated gradient as a holo effect.
-    - color-dodge mix blend mode
-
-*/
 let x
 const $cards = $('.card')
 const $style = $('.hover')
@@ -70,6 +59,48 @@ $cards
     }, 100)
   })
 
-//
-// MicroModal.init()
-//
+/* ----------------------------------- */
+
+const createModalHTML = () => `
+<!-- The Modal -->
+ <div id="myModal" class="modal lg:pt-4 pt-1">
+    <!-- Modal content -->
+    <div class=" m-auto p-5 w-full lg:w-9/12 flex lg:flex-row  flex-col">
+      <span id="close" class="cursor-pointer text-center text-[aaaaaa] text-xl font-bold hover:text-white float-left">&times;</span>
+      <div class="w-full lg:w-1/2 px-5">
+        <img class="" src="https://meta-moves.com/img/sceenshot/06.jpg" alt=""/>
+      </div>
+      <div class="w-full lg:w-1/2 flex flex-col items-center p-5">
+        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+          industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+          electronic typesetting, rem</p>
+
+        <button class='mt-5 bg-metapink-100 text-white font-bold px-2 py-2.5 rounded-3xl px-5'>
+          Connect
+          <span class="material-symbols-outlined">chevron_right</span>
+        </button>
+      </div>
+    </div>
+  </div>
+`
+
+const modalContainer = document.querySelector('#modal_container')
+
+modalContainer.addEventListener('click', function (e) {
+  console.log(e)
+  // But only alert for elements that have an alert-button class
+  if (e.target.id === 'close') {
+    document.querySelector('.modal').remove()
+  }
+})
+
+const cardsContainer = document.querySelector('#cards_container')
+
+// Click handler for entire DIV container
+cardsContainer.addEventListener('click', function (e) {
+  // But only alert for elements that have an alert-button class
+  if (e.target.classList.contains('card')) {
+    modalContainer.innerHTML = createModalHTML()
+  }
+})

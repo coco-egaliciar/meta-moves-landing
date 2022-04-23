@@ -8,8 +8,8 @@
 }
 
 .card {
-  width: 71.5vw;
-  height: 100vw;
+  /*width: 71.5vw;*/
+  /*height: 100vw;*/
   position: relative;
   overflow: hidden;
   margin: 20px;
@@ -29,7 +29,7 @@
 @media screen and (min-width: 600px) {
   .card {
     width: clamp(12.9vw, 61vh, 18vw);
-    height: clamp(18vw, 85vh, 25.2vw);
+    /*height: clamp(18vw, 85vh, 25.2vw);*/
   }
 }
 
@@ -86,19 +86,19 @@
 .card.animated {
   transition: none;
 
-  animation: holoCard 12s ease 0s 1;
+  animation: holoCard 5s ease 0s 1;
 }
 
 .card.animated:before {
   transition: none;
 
-  animation: holoGradient 12s ease 0s 1;
+  animation: holoGradient 7s ease 0s 1;
 }
 
 .card.animated:after {
   transition: none;
 
-  animation: holoSparkle 12s ease 0s 1;
+  animation: holoSparkle 9s ease 0s 1;
 }
 
 
@@ -184,3 +184,36 @@
 }
 
 
+/* The Modal (background) */
+.modal {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 1); /* Black w/ opacity */
+  z-index: 15;
+
+  opacity: 0.95;
+  background-color: #000000;
+}
+
+
+/*!* The Close Button *!*/
+/*.close {*/
+/*  color: #aaaaaa;*/
+/*  float: right;*/
+/*  font-size: 28px;*/
+/*  font-weight: bold;*/
+/*}*/
+
+/*.close:hover,*/
+/*.close:focus {*/
+/*  color: #000;*/
+/*  text-decoration: none;*/
+/*  cursor: pointer;*/
+/*}*/

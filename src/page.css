@@ -3,7 +3,7 @@
   top: calc(-10% - 100px);
   right: 0;
   width: 65%;
-  height: 600vh;
+  height: 100%;
   touch-action: none;
   position: absolute;
   z-index: -100;
