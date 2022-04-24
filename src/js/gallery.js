@@ -65,8 +65,8 @@ const createModalHTML = () => `
 <!-- The Modal -->
  <div id="myModal" class="modal lg:pt-4 pt-1">
     <!-- Modal content -->
-    <div class=" m-auto p-5 w-full lg:w-9/12 flex lg:flex-row  flex-col">
-      <span id="close" class="cursor-pointer text-center text-[aaaaaa] text-xl font-bold hover:text-white float-left">&times;</span>
+    <div class="xl:container xl:p-32 mx-auto p-5 2xl:p-32 w-full lg:w-9/12 flex lg:flex-row  flex-col">
+
       <div class="w-full lg:w-1/2 px-5">
         <img class="" src="https://meta-moves.com/img/sceenshot/06.jpg" alt=""/>
       </div>
@@ -81,6 +81,7 @@ const createModalHTML = () => `
           <span class="material-symbols-outlined">chevron_right</span>
         </button>
       </div>
+      <span id="close" class="cursor-pointer text-center text-[aaaaaa] text-xl font-bold hover:text-white float-right">&times;</span>
     </div>
   </div>
 `
