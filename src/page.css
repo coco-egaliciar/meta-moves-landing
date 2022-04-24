@@ -29,26 +29,24 @@
 
 
 .marquee {
-  width: 100vw;
+  width: 100%;
   max-width: 100%;
 
   overflow-x: hidden;
 }
 
 .track {
-  position: absolute;
+  width: 100%;
+  position: relative;
   white-space: nowrap;
-  will-change: transform;
-  animation: marquee 15s linear infinite;
+  animation: marquee 25s linear infinite;
+  overflow-x: unset;
 }
 
+/* keyframe */
 @keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+  0% { left: 0; }
+  100% { left: -100%; }
 }
 
 
