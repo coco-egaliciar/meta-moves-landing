@@ -1,9 +1,9 @@
 
 #model {
-  top: calc(-10% - 100px);
-  right: 2%;
-  width: 65%;
-  height: 350%;
+  /*width: 50%;*/
+  /*height: 2000px;*/
+  left: 0;
+  top: 100px;
   touch-action: none;
   position: fixed;
   z-index: -100;
@@ -45,8 +45,12 @@
 
 /* keyframe */
 @keyframes marquee {
-  0% { left: 0; }
-  100% { left: -100%; }
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
 }
 
 
