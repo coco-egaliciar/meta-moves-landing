@@ -16,15 +16,10 @@
 
 
 #metamoves {
-  /*background: linear-gradient(90deg, #e73c7e, #bd2a60, #ee7752, #f16b41);*/
-  /*background-clip: text;*/
-  /*color: transparent;*/
-
   width: inherit;
-  background: #7201EC;
-  background: repeating-linear-gradient(to right, #7201EC 0%, #A30EA7 50%, #cc186b 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(90deg, #7503E8, #A8109F, #BB1484, #D21A63);
+  background-clip: text;
+  color: transparent;
 }
 
 

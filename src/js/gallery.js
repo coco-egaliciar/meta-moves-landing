@@ -1,67 +1,68 @@
 import $ from 'jquery'
 
-let x
-const $cards = $('.card')
-const $style = $('.hover')
+const galleryScriot = () => {
+  let x
+  const $cards = $('.card')
+  const $style = $('.hover')
 
-$cards
-  .on('mousemove touchmove', function (e) {
-    // normalise touch/mouse
-    let pos = [e.offsetX, e.offsetY]
-    e.preventDefault()
-    if (e.type === 'touchmove') {
-      pos = [e.touches[0].clientX, e.touches[0].clientY]
-    }
-    const $card = $(this)
-    // math for mouse position
-    const l = pos[0]
-    const t = pos[1]
-    const h = $card.height()
-    const w = $card.width()
-    const px = Math.abs(Math.floor((100 / w) * l) - 100)
-    const py = Math.abs(Math.floor((100 / h) * t) - 100)
-    const pa = 50 - px + (50 - py)
-    // math for gradient / background positions
-    const lp = 50 + (px - 50) / 1.5
-    const tp = 50 + (py - 50) / 1.5
-    const px_spark = 50 + (px - 50) / 7
-    const py_spark = 50 + (py - 50) / 7
-    const p_opc = 20 + Math.abs(pa) * 1.5
-    const ty = ((tp - 50) / 2) * -1
-    const tx = ((lp - 50) / 1.5) * 0.5
-    // css to apply for active card
-    const grad_pos = `background-position: ${lp}% ${tp}%;`
-    const sprk_pos = `background-position: ${px_spark}% ${py_spark}%;`
-    const opc = `opacity: ${p_opc / 100};`
-    const tf = `transform: rotateX(${ty}deg) rotateY(${tx}deg)`
-    // need to use a <style> tag for psuedo elements
-    const style = `
+  $cards
+    .on('mousemove touchmove', function (e) {
+      // normalise touch/mouse
+      let pos = [e.offsetX, e.offsetY]
+      e.preventDefault()
+      if (e.type === 'touchmove') {
+        pos = [e.touches[0].clientX, e.touches[0].clientY]
+      }
+      const $card = $(this)
+      // math for mouse position
+      const l = pos[0]
+      const t = pos[1]
+      const h = $card.height()
+      const w = $card.width()
+      const px = Math.abs(Math.floor((100 / w) * l) - 100)
+      const py = Math.abs(Math.floor((100 / h) * t) - 100)
+      const pa = 50 - px + (50 - py)
+      // math for gradient / background positions
+      const lp = 50 + (px - 50) / 1.5
+      const tp = 50 + (py - 50) / 1.5
+      const px_spark = 50 + (px - 50) / 7
+      const py_spark = 50 + (py - 50) / 7
+      const p_opc = 20 + Math.abs(pa) * 1.5
+      const ty = ((tp - 50) / 2) * -1
+      const tx = ((lp - 50) / 1.5) * 0.5
+      // css to apply for active card
+      const grad_pos = `background-position: ${lp}% ${tp}%;`
+      const sprk_pos = `background-position: ${px_spark}% ${py_spark}%;`
+      const opc = `opacity: ${p_opc / 100};`
+      const tf = `transform: rotateX(${ty}deg) rotateY(${tx}deg)`
+      // need to use a <style> tag for psuedo elements
+      const style = `
       .card:hover:before { ${grad_pos} }  /* gradient */
       .card:hover:after { ${sprk_pos} ${opc} }   /* sparkles */
     `
-    // set / apply css class and style
-    $cards.removeClass('active')
-    $card.removeClass('animated')
-    $card.attr('style', tf)
-    $style.html(style)
-    if (e.type === 'touchmove') {
-      return false
-    }
-    clearTimeout(x)
-  })
-  .on('mouseout touchend touchcancel', function () {
-    // remove css, apply custom animation on end
-    const $card = $(this)
-    $style.html('')
-    $card.removeAttr('style')
-    x = setTimeout(function () {
-      $card.addClass('animated')
-    }, 100)
-  })
+      // set / apply css class and style
+      $cards.removeClass('active')
+      $card.removeClass('animated')
+      $card.attr('style', tf)
+      $style.html(style)
+      if (e.type === 'touchmove') {
+        return false
+      }
+      clearTimeout(x)
+    })
+    .on('mouseout touchend touchcancel', function () {
+      // remove css, apply custom animation on end
+      const $card = $(this)
+      $style.html('')
+      $card.removeAttr('style')
+      x = setTimeout(function () {
+        $card.addClass('animated')
+      }, 100)
+    })
 
-/* ----------------------------------- */
+  /* ----------------------------------- */
 
-const createModalHTML = () => `
+  const createModalHTML = () => `
 <!-- The Modal -->
  <div id="myModal" class="modal lg:pt-4 pt-1">
     <!-- Modal content -->
@@ -81,27 +82,37 @@ const createModalHTML = () => `
           <span class="material-symbols-outlined">chevron_right</span>
         </button>
       </div>
-      <span id="close" class="cursor-pointer text-center text-[aaaaaa] text-xl font-bold hover:text-white float-right">&times;</span>
+      <span id="close" class="cursor-pointer text-center text-[#aaaaaa] text-xl font-bold hover:text-white float-right">&times;</span>
     </div>
   </div>
 `
 
-const modalContainer = document.querySelector('#modal_container')
+  window.addEventListener('keydown', function (e) {
+    if ((e.key === 'Escape' || e.key === 'Esc' || e.keyCode === 27) && (e.target.nodeName === 'BODY')) {
+      e.preventDefault()
+      document.querySelector('.modal').remove()
+      return false
+    }
+  }, true)
 
-modalContainer.addEventListener('click', function (e) {
-  console.log(e)
-  // But only alert for elements that have an alert-button class
-  if (e.target.id === 'close') {
-    document.querySelector('.modal').remove()
-  }
-})
+  const modalContainer = document.querySelector('#modal_container')
 
-const cardsContainer = document.querySelector('#cards_container')
+  modalContainer.addEventListener('click', function (e) {
+    console.log(e)
+    // But only alert for elements that have an alert-button class
+    if (e.target.id === 'close') {
+      document.querySelector('.modal').remove()
+    }
+  })
 
-// Click handler for entire DIV container
-cardsContainer.addEventListener('click', function (e) {
-  // But only alert for elements that have an alert-button class
-  if (e.target.classList.contains('card')) {
-    modalContainer.innerHTML = createModalHTML()
-  }
-})
+  const cardsContainer = document.querySelector('#cards_container')
+
+  // Click handler for entire DIV container
+  cardsContainer.addEventListener('click', function (e) {
+    // But only alert for elements that have an alert-button class
+    if (e.target.classList.contains('card')) {
+      modalContainer.innerHTML = createModalHTML()
+    }
+  })
+}
+galleryScriot()
