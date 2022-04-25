@@ -12,6 +12,7 @@ require('./js/decentraland')
 require('./js/ourchannels')
 require('./js/gallery')
 require('./js/socialcause')
+require('./js/roadmap')
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOMContentLoaded', 'index')

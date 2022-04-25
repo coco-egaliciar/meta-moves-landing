@@ -6,6 +6,7 @@
 @import url('card.css');
 @import url('decentraland.css');
 @import url('ourchannels.css');
+@import url('roadmap.css');
 @import url('gallery.css');
 @import url('socialcause.css');
 
@@ -22,39 +23,6 @@ body {
   background-position: 50% 50%;
 }
 
-
-footer {
-  background: #282828;
-  color: beige;
-  flex: 1 0 auto;
-  padding-top: 20px;
-  z-index: 0;
-}
-
-footer a {
-  color: beige;
-}
-
-footer > ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-footer > ul > li {
-  display: block;
-
-}
-
-footer > ul > li > a {
-  display: block;
-  font-size: 21px;
-  padding: 10px 20px;
-
-}
-
-.spacer {
-  flex: 2 1 auto;
+html {
+  scroll-behavior: smooth;
 }
