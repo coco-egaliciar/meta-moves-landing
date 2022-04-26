@@ -9,20 +9,6 @@
   align-items: center;
 }
 
-.swiper-button-next-socialcause{
-  position: absolute !important;
-  top: 30px !important;
-  right: 0 !important;
-}
-
-.swiper-button-prev-socialcause{
-  position: absolute ;
-  right: 50px !important;
-  top: 30px !important;
-  left: auto !important;
-}
-
-
 .swiper-pagination-socialcause{
   bottom: -12px !important;
 }

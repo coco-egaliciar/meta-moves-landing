@@ -10,37 +10,28 @@
         content="width=device-width,user-scalable=0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
   <link rel="stylesheet"
         href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
-
 </head>
-<body class="font-nunito text-white xl:container xl:mx-auto">
-<!--<div class="page-bg"></div>-->
-<div class="animation-wrapper">
-  <div class="particle particle-1"></div>
-  <div class="particle particle-2"></div>
-  <div class="particle particle-3"></div>
-  <div class="particle particle-4"></div>
-</div>
+<body class="font-nunito text-white">
 
 <div id="modal_container" style="z-index: 50;"></div>
-
 
 <!-- intercepted by a resourceQuery in the webpack config -->
 <%= require('./partials/nav.html?raw') %>
 <div id="model"></div>
 
-<div class="px-2 lg:px-4 ">
-  <section id="home" class="flex flex-col justify-between h-screen">
+<div class="px-2 lg:px-4 xl:container xl:mx-auto">
+  <section id="home" class="flex flex-col justify-between xl:py-40 lg:py-5 py-2 h-screen">
 
     <img class="w-full lg:w-1/2" src=<%=require("./img/logo_principal.png")%> alt="">
-    <div class="py-2 lg:w-1/2 text-2xl" id="">
+    <div class="py-2 lg:w-1/2 text-2xl lg:text-base" id="">
       A Novel NFT collection where all members are able to bring to life there digital avatars through custom <span
       class="text-metablue">Motion Capture.</span>
     </div>
 
 
-    <div class="gradient-border bg-black text-white w-full lg:w-3/4 2xl:w-1/2 xl:w-/2 text-sm">
+    <div class="gradient-border bg-black text-white w-full lg:w-3/4 2xl:w-2/3 xl:w-/2">
 
-      <p class="p-2 lg:p-5 text-xl">
+      <p class="p-2 lg:p-5 text-base ">
         Meta-Moves is a stimulating collection of unique 1/1 animated and sound designed data files living on the
         Ethereum
         blockchain.
@@ -53,18 +44,17 @@
 
   </section>
 
-  <section id="decentraland" class="flex flex-col mt-5 lg:mt-14 lg:pt-5 pt-2 h-screen">
-
-    <div class="flex flex-col items-center w-full justify-between h-full">
-      <h1 class="text-6xl text-center my-4 font-dark">Visit us in Decentraland</h1>
+  <section id="decentraland" class="flex flex-col items-center justify-around w-full lg:h-screen lg:py-1 xl:py-20">
+    <div class="flex flex-col items-center justify-around w-full h-full">
+      <h1 class="text-5xl lg:text-6xl text-center font-dark">Visit us in Decentraland</h1>
       <p class="my-1 text-sm w-full flex flex-row">
-      <span class="px-2 lg:p-10 lg:mx-72 text-xl gradient-border bg-black ">
-        Metamoves has developed the first official Emote store located in the Decentraland Metaverse. Known as House of Moves, the venue not only  showcases our current  custom made motions but also allows users to  purchase and exchange there utility NFT´s in a decentrilized ecosystem.
-      </span>
+          <span class="px-2 lg:mx-64 lg:text-base xl:text-xl gradient-border bg-black ">
+            Metamoves has developed the first official Emote store located in the Decentraland Metaverse. Known as House of Moves, the venue not only  showcases our current  custom made motions but also allows users to  purchase and exchange there utility NFT´s in a decentrilized ecosystem.
+          </span>
       </p>
 
       <!-- Swiper -->
-      <div class="swiper mySwiperDecentraland mt-10 mx-0">
+      <div class="swiper mySwiperDecentraland xl:mt-10 lg:mt-4 mx-0">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <img id="img1" src=<%=require("./img/img1.png")%> alt="">
@@ -88,16 +78,17 @@
     </div>
   </section>
 
-  <section id="utility" class="flex-wrap h-screen flex flex-col justify-around">
+  <section id="utility" class="flex flex-col justify-between lg:py-10 py-5 lg:h-screen">
     <div>
-      <h1 class="text-metablue  text-5xl font-black">Take your NFT´s to the next level</h1>
-      <p class="lg:w-1/2 w-full mt-5">The purchase of an NFT from this collection grants the buyer the full rights to
+      <h1 class="text-metablue  text-4xl lg:text-5xl xl:text-6xl  font-black">Take your NFT´s to the next level</h1>
+      <p class="lg:w-3/4 xl:w-1/2 w-full">The purchase of an NFT from this collection grants the buyer the full rights
+        to
         the
         Motion Capture data, which can be used in the future to produce 3D Videos, Videogames, or even animations for
         avatars in the metaverse. The possibilities and potential applications are limitless.
       </p>
     </div>
-    <div class="gradient-border bg-black p-5 mt-5 lg:w-1/3 w-full left-0">
+    <div class="gradient-border bg-black p-5 lg:w-1/3 w-full left-0">
       <ul>
         <li>Adaptable to any T-pose avatar</li>
         <li>Metaverse Friendly</li>
@@ -139,397 +130,404 @@
 </div>
 
 
-<section id="ourchannels"
-         class="bg-[#0B1019] flex flex-row flex-wrap lg:flex-nowrap lg:items-stretch lg:justify-around mt-5 lg:mt-14 lg:pt-5 pt-2">
-  <div class="lg:w-1/2 lg:p-12 p-2">
-    <h1 class="text-white font-bold text-4xl ">Keep in touch with our team of creatives</h1>
-    <p class="mt-5 text-sm">Stay ahead and never miss a drop or special editions! As a member of our community, you will
-      be able to hang out with us during production and send messages to the director and actors.</p>
-
-    <ul class="text-3xl font-thin mt-5 flex flex-row lg:flex-col flex-wrap lg:flex-nowrap">
-      <li class="mt-5 text-[#A728F2] w-1/2"><a href="https://discord.gg/AgXjZpstPK" target="_blank">Discord</a>
-      </li>
-      <li class="mt-5 text-[#34B3EF] w-1/2"><a href="https://twitter.com/metamovesnft?s=21&t=h4nylv_iNYkBJbKgJdozkw"
-                                               target="_blank">Twitter</a>
-      </li>
-      <li class="mt-5 text-[#F1972D] w-1/2"><a href="https://instagram.com/metamoves.nft?igshid=YmMyMTA2M2Y="
-                                               target="_blank">Instagram</a>
-      </li>
-      <li class="mt-5 text-[#F12D9C] w-1/2"><a href="https://vm.tiktok.com/ZMLbpT71j/" target="_blank">TikTok</a></li>
-    </ul>
-  </div>
-  <div class="lg:w-1/2 lg:p-12 p-2 w-full">
-    <div
-      style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
-      class="swiper news och"
-    >
-      <div class="swiper-wrapper">
-        <div class="swiper-slide och">
-          <img
-            data-src="https://meta-moves.com/img/sceenshot/06.jpg"
-            class="swiper-lazy"
-          />
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-          <div class="absolute bottom-[40px] och">
-            <p class="text-white text-xl font-bold">
-              NFT Band Debuts with Performance on the Ellen DeGeneres Show
-            </p>
-            <button class="bg-metapink-400 text-white p-2 z-50 rounded-3xl text-base">
-              <a
-                href="https://www.globenewswire.com/news-release/2022/03/22/2408167/0/en/NFT-Band-Debuts-with-Performance-on-the-Ellen-DeGeneres-Show.html"
-                target="_blank">
-                Read more
-                <span class="material-symbols-outlined"> chevron_right </span>
-              </a>
-            </button>
+<section id="ourchannels" class="bg-[#0B1019] lg:py-10 py-5 lg:h-screen">
+  <div class="flex flex-col lg:flex-row">
+    <div class="lg:w-1/2 lg:py-0 px-2 flex flex-col justify-around">
+      <h1 class="text-white font-bold text-4xl lg:text-5xl xl:text-6xl">
+        Keep in touch with our team of creatives
+      </h1>
+      <p class="mt-5 text-xl">Stay ahead and never miss a drop or special editions! As a member of our community, you
+        will be able to hang out with us during production and send messages to the director and actors.</p>
+      <ul class="text-3xl lg:text-5xl xl:text-6xl font-thin mt-5 flex flex-row lg:flex-col flex-wrap lg:flex-nowrap">
+        <li class="mt-5 text-[#A728F2] w-1/2"><a href="https://discord.gg/AgXjZpstPK" target="_blank">Discord</a>
+        </li>
+        <li class="mt-5 text-[#34B3EF] w-1/2"><a href="https://twitter.com/metamovesnft?s=21&t=h4nylv_iNYkBJbKgJdozkw"
+                                                 target="_blank">Twitter</a>
+        </li>
+        <li class="mt-5 text-[#F1972D] w-1/2"><a href="https://instagram.com/metamoves.nft?igshid=YmMyMTA2M2Y="
+                                                 target="_blank">Instagram</a>
+        </li>
+        <li class="mt-5 text-[#F12D9C] w-1/2"><a href="https://vm.tiktok.com/ZMLbpT71j/" target="_blank">TikTok</a></li>
+      </ul>
+    </div>
+    <div class="lg:w-1/2  w-full">
+      <div
+        style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+        class="swiper news och"
+      >
+        <div class="swiper-wrapper">
+          <div class="swiper-slide och">
+            <img
+              data-src="https://meta-moves.com/img/sceenshot/06.jpg"
+              class="swiper-lazy"
+            />
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            <div class="absolute bottom-[40px] och">
+              <p class="text-white text-xl font-bold">
+                NFT Band Debuts with Performance on the Ellen DeGeneres Show
+              </p>
+              <button class="bg-metapink-400 text-white p-2 z-50 rounded-3xl text-base">
+                <a
+                  href="https://www.globenewswire.com/news-release/2022/03/22/2408167/0/en/NFT-Band-Debuts-with-Performance-on-the-Ellen-DeGeneres-Show.html"
+                  target="_blank">
+                  Read more
+                  <span class="material-symbols-outlined"> chevron_right </span>
+                </a>
+              </button>
+            </div>
           </div>
-        </div>
 
-        <div class="swiper-slide och">
-          <img
-            data-src="https://swiperjs.com/demos/images/nature-1.jpg"
-            class="swiper-lazy"
-          />
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-          <div class="absolute bottom-[40px] och">
-            <p class="text-white text-xl font-bold">
-              NFT Band Debuts With Singer Kiesza on Ellen Degeneres Show
-            </p>
-            <button class="bg-metapink-400 text-white p-2 z-50 rounded-3xl text-base">
-              <a
-                href="https://www.globenewswire.com/news-release/2022/03/22/2408167/0/en/NFT-Band-Debuts-with-Performance-on-the-Ellen-DeGeneres-Show.html"
-                target="_blank">
-                Read more
-                <span class="material-symbols-outlined"> chevron_right </span>
-              </a>
-            </button>
+          <div class="swiper-slide och">
+            <img
+              data-src="https://swiperjs.com/demos/images/nature-1.jpg"
+              class="swiper-lazy"
+            />
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            <div class="absolute bottom-[40px] och">
+              <p class="text-white text-xl font-bold">
+                NFT Band Debuts With Singer Kiesza on Ellen Degeneres Show
+              </p>
+              <button class="bg-metapink-400 text-white p-2 z-50 rounded-3xl text-base">
+                <a
+                  href="https://www.globenewswire.com/news-release/2022/03/22/2408167/0/en/NFT-Band-Debuts-with-Performance-on-the-Ellen-DeGeneres-Show.html"
+                  target="_blank">
+                  Read more
+                  <span class="material-symbols-outlined"> chevron_right </span>
+                </a>
+              </button>
+            </div>
           </div>
-        </div>
 
-        <div class="swiper-slide och">
-          <img
-            data-src="https://swiperjs.com/demos/images/nature-1.jpg"
-            class="swiper-lazy"
-          />
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-          <div class="absolute bottom-[40px] och">
-            <p class="text-white text-xl font-bold">
-              NFT Band Debuts with Performance on the Ellen DeGeneres Show
-            </p>
-            <button class="bg-metapink-400 text-white p-2 z-50 rounded-3xl text-base">
-              <a
-                href="https://www.investing.com/news/cryptocurrency-news/nft-band-debuts-with-performance-on-the-ellen-degeneres-show-2789946"
-                target="_blank">
-                Read more
-                <span class="material-symbols-outlined"> chevron_right </span>
-              </a>
-            </button>
+          <div class="swiper-slide och">
+            <img
+              data-src="https://swiperjs.com/demos/images/nature-1.jpg"
+              class="swiper-lazy"
+            />
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            <div class="absolute bottom-[40px] och">
+              <p class="text-white text-xl font-bold">
+                NFT Band Debuts with Performance on the Ellen DeGeneres Show
+              </p>
+              <button class="bg-metapink-400 text-white p-2 z-50 rounded-3xl text-base">
+                <a
+                  href="https://www.investing.com/news/cryptocurrency-news/nft-band-debuts-with-performance-on-the-ellen-degeneres-show-2789946"
+                  target="_blank">
+                  Read more
+                  <span class="material-symbols-outlined"> chevron_right </span>
+                </a>
+              </button>
+            </div>
           </div>
-        </div>
 
 
-        <div class="swiper-slide och">
-          <img
-            data-src="https://swiperjs.com/demos/images/nature-1.jpg"
-            class="swiper-lazy"
-          />
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-          <div class="absolute bottom-[40px] och">
-            <p class="text-white text-xl font-bold">
-              NFT Band Debuts with Performance on the Ellen DeGeneres Show
-            </p>
-            <button class="bg-metapink-400 text-white p-2 z-50 rounded-3xl text-base">
-              <a
-                href="https://finance.yahoo.com/news/nft-band-debuts-performance-ellen-155600437.html?guccounter=1&guce_referrer=aHR0cHM6Ly9wcm9qZWN0cy5pbnZpc2lvbmFwcC5jb20v&guce_referrer_sig=AQAAAAaqMQuR81QPZpmnJByRw-Qy1nbArfm13ay-8SyNvBvIBm3hlVvObwSjtCgxIg9gbngU-c6EkIkS6VWMDPN1sQUbiMpj8X_YQn-DdCHl0QBUp_LK1C7tS60LF27fv06a85xNa-t7ne4czKqZT9EOD7FmRqu8ovVNSaMj4MEZyqNF"
-                target="_blank">
-                Read more
-                <span class="material-symbols-outlined"> chevron_right </span>
-              </a>
-            </button>
+          <div class="swiper-slide och">
+            <img
+              data-src="https://swiperjs.com/demos/images/nature-1.jpg"
+              class="swiper-lazy"
+            />
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            <div class="absolute bottom-[40px] och">
+              <p class="text-white text-xl font-bold">
+                NFT Band Debuts with Performance on the Ellen DeGeneres Show
+              </p>
+              <button class="bg-metapink-400 text-white p-2 z-50 rounded-3xl text-base">
+                <a
+                  href="https://finance.yahoo.com/news/nft-band-debuts-performance-ellen-155600437.html?guccounter=1&guce_referrer=aHR0cHM6Ly9wcm9qZWN0cy5pbnZpc2lvbmFwcC5jb20v&guce_referrer_sig=AQAAAAaqMQuR81QPZpmnJByRw-Qy1nbArfm13ay-8SyNvBvIBm3hlVvObwSjtCgxIg9gbngU-c6EkIkS6VWMDPN1sQUbiMpj8X_YQn-DdCHl0QBUp_LK1C7tS60LF27fv06a85xNa-t7ne4czKqZT9EOD7FmRqu8ovVNSaMj4MEZyqNF"
+                  target="_blank">
+                  Read more
+                  <span class="material-symbols-outlined"> chevron_right </span>
+                </a>
+              </button>
+            </div>
           </div>
-        </div>
 
 
-        <div class="swiper-slide och">
-          <img
-            data-src="https://swiperjs.com/demos/images/nature-1.jpg"
-            class="swiper-lazy"
-          />
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-          <div class="absolute bottom-[40px] och">
-            <p class="text-white text-xl font-bold">
-              Cinetica Studio Drops MetaMoves on Portion, Adding Novel Utility to Motion Capture NFTs
+          <div class="swiper-slide och">
+            <img
+              data-src="https://swiperjs.com/demos/images/nature-1.jpg"
+              class="swiper-lazy"
+            />
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            <div class="absolute bottom-[40px] och">
+              <p class="text-white text-xl font-bold">
+                Cinetica Studio Drops MetaMoves on Portion, Adding Novel Utility to Motion Capture NFTs
 
-            </p>
-            <button class="bg-metapink-400 text-white p-2 z-50 rounded-3xl text-base">
-              <a
-                href="https://blog.portion.io/cinetica-studio-drops-metamoves-on-portion-adding-novel-utility-to-motion-capture-nfts/"
-                target="_blank">
-                Read more
-                <span class="material-symbols-outlined"> chevron_right </span>
-              </a>
-            </button>
+              </p>
+              <button class="bg-metapink-400 text-white p-2 z-50 rounded-3xl text-base">
+                <a
+                  href="https://blog.portion.io/cinetica-studio-drops-metamoves-on-portion-adding-novel-utility-to-motion-capture-nfts/"
+                  target="_blank">
+                  Read more
+                  <span class="material-symbols-outlined"> chevron_right </span>
+                </a>
+              </button>
+            </div>
           </div>
-        </div>
 
 
-        <div class="swiper-slide och">
-          <img
-            data-src="https://swiperjs.com/demos/images/nature-1.jpg"
-            class="swiper-lazy"
-          />
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-          <div class="absolute bottom-[40px] och">
-            <p class="text-white text-xl font-bold">
-              MetaMoves initiative to bring life essence through movement on both metaverse and real life
-            </p>
-            <button class="bg-metapink-400 text-white p-2 z-50 rounded-3xl text-base">
-              <a href="https://www.reddit.com/r/NFT/comments/tqoj06/metamoves_initiative_to_bring_life_essence/"
-                 target="_blank">
-                Read more
-                <span class="material-symbols-outlined"> chevron_right </span>
-              </a>
-            </button>
+          <div class="swiper-slide och">
+            <img
+              data-src="https://swiperjs.com/demos/images/nature-1.jpg"
+              class="swiper-lazy"
+            />
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            <div class="absolute bottom-[40px] och">
+              <p class="text-white text-xl font-bold">
+                MetaMoves initiative to bring life essence through movement on both metaverse and real life
+              </p>
+              <button class="bg-metapink-400 text-white p-2 z-50 rounded-3xl text-base">
+                <a href="https://www.reddit.com/r/NFT/comments/tqoj06/metamoves_initiative_to_bring_life_essence/"
+                   target="_blank">
+                  Read more
+                  <span class="material-symbols-outlined"> chevron_right </span>
+                </a>
+              </button>
+            </div>
           </div>
-        </div>
 
 
-        <div class="swiper-slide och">
-          <img
-            data-src="https://swiperjs.com/demos/images/nature-1.jpg"
-            class="swiper-lazy"
-          />
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-          <div class="absolute bottom-[40px] och">
-            <p class="text-white text-xl font-bold">
-              NFT Band Debuts with Performance on the Ellen DeGeneres Show
-            </p>
-            <button class="bg-metapink-400 text-white p-2 z-50 rounded-3xl text-base">
-              <a href="https://btcpeers.com/nft-band-debuts-with-performance-on-the-ellen-degeneres-show/"
-                 target="_blank">
-                Read more
-                <span class="material-symbols-outlined"> chevron_right </span>
-              </a>
-            </button>
+          <div class="swiper-slide och">
+            <img
+              data-src="https://swiperjs.com/demos/images/nature-1.jpg"
+              class="swiper-lazy"
+            />
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            <div class="absolute bottom-[40px] och">
+              <p class="text-white text-xl font-bold">
+                NFT Band Debuts with Performance on the Ellen DeGeneres Show
+              </p>
+              <button class="bg-metapink-400 text-white p-2 z-50 rounded-3xl text-base">
+                <a href="https://btcpeers.com/nft-band-debuts-with-performance-on-the-ellen-degeneres-show/"
+                   target="_blank">
+                  Read more
+                  <span class="material-symbols-outlined"> chevron_right </span>
+                </a>
+              </button>
+            </div>
           </div>
-        </div>
 
 
-        <div class="swiper-slide och">
-          <img
-            data-src="https://swiperjs.com/demos/images/nature-1.jpg"
-            class="swiper-lazy"
-          />
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-          <div class="absolute bottom-[40px] och">
-            <p class="text-white text-xl font-bold">
-              NFT Band Debuts with Performance on the Ellen DeGeneres Show By BTC Peers
-            </p>
-            <button class="bg-metapink-400 text-white p-2 z-50 rounded-3xl text-base">
-              <a
-                href="https://getarticlestoday.com/nft/nft-band-debuts-with-performance-on-the-ellen-degeneres-show-by-btc-peers/"
-                target="_blank">>
-                Read more
-                <span class="material-symbols-outlined"> chevron_right </span>
-              </a>
-            </button>
+          <div class="swiper-slide och">
+            <img
+              data-src="https://swiperjs.com/demos/images/nature-1.jpg"
+              class="swiper-lazy"
+            />
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            <div class="absolute bottom-[40px] och">
+              <p class="text-white text-xl font-bold">
+                NFT Band Debuts with Performance on the Ellen DeGeneres Show By BTC Peers
+              </p>
+              <button class="bg-metapink-400 text-white p-2 z-50 rounded-3xl text-base">
+                <a
+                  href="https://getarticlestoday.com/nft/nft-band-debuts-with-performance-on-the-ellen-degeneres-show-by-btc-peers/"
+                  target="_blank">>
+                  Read more
+                  <span class="material-symbols-outlined"> chevron_right </span>
+                </a>
+              </button>
+            </div>
           </div>
-        </div>
 
 
-        <div class="swiper-slide och">
-          <img
-            data-src="https://swiperjs.com/demos/images/nature-1.jpg"
-            class="swiper-lazy"
-          />
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-          <div class="absolute bottom-[40px] och">
-            <p class="text-white text-xl font-bold">
-              Ellen DeGeneres Hosts First Ever NFT Band on TV
-            </p>
-            <button class="bg-metapink-400 text-white p-2 z-50 rounded-3xl text-base">
-              <a href="https://www.cryptotimes.io/ellen-degeneres-hosts-first-ever-nft-band-on-tv/" target="_blank">>
-                Read more
-                <span class="material-symbols-outlined"> chevron_right </span>
-              </a>
-            </button>
+          <div class="swiper-slide och">
+            <img
+              data-src="https://swiperjs.com/demos/images/nature-1.jpg"
+              class="swiper-lazy"
+            />
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            <div class="absolute bottom-[40px] och">
+              <p class="text-white text-xl font-bold">
+                Ellen DeGeneres Hosts First Ever NFT Band on TV
+              </p>
+              <button class="bg-metapink-400 text-white p-2 z-50 rounded-3xl text-base">
+                <a href="https://www.cryptotimes.io/ellen-degeneres-hosts-first-ever-nft-band-on-tv/" target="_blank">>
+                  Read more
+                  <span class="material-symbols-outlined"> chevron_right </span>
+                </a>
+              </button>
+            </div>
           </div>
-        </div>
 
 
-        <div class="swiper-slide och">
-          <img
-            data-src="https://swiperjs.com/demos/images/nature-1.jpg"
-            class="swiper-lazy"
-          />
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-          <div class="absolute bottom-[40px] och">
-            <p class="text-white text-xl font-bold">
-              NFT band debuts with BTC peers performing at The Ellen DeGeneres Show
-            </p>
-            <button class="bg-metapink-400 text-white p-2 z-50 rounded-3xl text-base">
-              <a href="https://biz.crast.net/nft-band-debuts-with-btc-peers-performing-at-the-ellen-degeneres-show/"
-                 target="_blank">>
-                Read more
-                <span class="material-symbols-outlined"> chevron_right </span>
-              </a>
-            </button>
+          <div class="swiper-slide och">
+            <img
+              data-src="https://swiperjs.com/demos/images/nature-1.jpg"
+              class="swiper-lazy"
+            />
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            <div class="absolute bottom-[40px] och">
+              <p class="text-white text-xl font-bold">
+                NFT band debuts with BTC peers performing at The Ellen DeGeneres Show
+              </p>
+              <button class="bg-metapink-400 text-white p-2 z-50 rounded-3xl text-base">
+                <a href="https://biz.crast.net/nft-band-debuts-with-btc-peers-performing-at-the-ellen-degeneres-show/"
+                   target="_blank">>
+                  Read more
+                  <span class="material-symbols-outlined"> chevron_right </span>
+                </a>
+              </button>
+            </div>
           </div>
-        </div>
 
 
-        <div class="swiper-slide och">
-          <img
-            data-src="https://swiperjs.com/demos/images/nature-1.jpg"
-            class="swiper-lazy"
-          />
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-          <div class="absolute bottom-[40px] och">
-            <p class="text-white text-xl font-bold">
-              Group NFT Debuts With Performance On The Ellen DeGeneres Show – GlobeNewswire
-            </p>
-            <button class="bg-metapink-400 text-white p-2 z-50 rounded-3xl text-base">
-              <a href="https://oltnews.com/group-nft-debuts-with-performance-on-the-ellen-degeneres-show-globenewswire"
-                 target="_blank">>
-                Read more
-                <span class="material-symbols-outlined"> chevron_right </span>
-              </a>
-            </button>
+          <div class="swiper-slide och">
+            <img
+              data-src="https://swiperjs.com/demos/images/nature-1.jpg"
+              class="swiper-lazy"
+            />
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            <div class="absolute bottom-[40px] och">
+              <p class="text-white text-xl font-bold">
+                Group NFT Debuts With Performance On The Ellen DeGeneres Show – GlobeNewswire
+              </p>
+              <button class="bg-metapink-400 text-white p-2 z-50 rounded-3xl text-base">
+                <a
+                  href="https://oltnews.com/group-nft-debuts-with-performance-on-the-ellen-degeneres-show-globenewswire"
+                  target="_blank">>
+                  Read more
+                  <span class="material-symbols-outlined"> chevron_right </span>
+                </a>
+              </button>
+            </div>
           </div>
-        </div>
 
 
-        <div class="swiper-slide och">
-          <img
-            data-src="https://swiperjs.com/demos/images/nature-1.jpg"
-            class="swiper-lazy"
-          />
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-          <div class="absolute bottom-[40px] och">
-            <p class="text-white text-xl font-bold">
-              La banda de NFT debuta con la cantante Kiesza en el programa de Ellen Degeneres
+          <div class="swiper-slide och">
+            <img
+              data-src="https://swiperjs.com/demos/images/nature-1.jpg"
+              class="swiper-lazy"
+            />
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            <div class="absolute bottom-[40px] och">
+              <p class="text-white text-xl font-bold">
+                La banda de NFT debuta con la cantante Kiesza en el programa de Ellen Degeneres
 
-            </p>
-            <button class="bg-metapink-400 text-white p-2 z-50 rounded-3xl text-base">
-              <a
-                href="https://es.bitcoinethereumnews.com/technology/nft-band-debuts-with-singer-kiesza-on-ellen-degeneres-show/"
-                target="_blank">>
-                Read more
-                <span class="material-symbols-outlined"> chevron_right </span>
-              </a>
-            </button>
+              </p>
+              <button class="bg-metapink-400 text-white p-2 z-50 rounded-3xl text-base">
+                <a
+                  href="https://es.bitcoinethereumnews.com/technology/nft-band-debuts-with-singer-kiesza-on-ellen-degeneres-show/"
+                  target="_blank">>
+                  Read more
+                  <span class="material-symbols-outlined"> chevron_right </span>
+                </a>
+              </button>
+            </div>
           </div>
-        </div>
 
 
-        <div class="swiper-slide och">
-          <img
-            data-src="https://swiperjs.com/demos/images/nature-1.jpg"
-            class="swiper-lazy"
-          />
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-          <div class="absolute bottom-[40px] och">
-            <p class="text-white text-xl font-bold">
-              Milky Way Pirates, the first NFT musician band presents on Ellen DeGeneres’s show
+          <div class="swiper-slide och">
+            <img
+              data-src="https://swiperjs.com/demos/images/nature-1.jpg"
+              class="swiper-lazy"
+            />
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            <div class="absolute bottom-[40px] och">
+              <p class="text-white text-xl font-bold">
+                Milky Way Pirates, the first NFT musician band presents on Ellen DeGeneres’s show
 
-            </p>
-            <button class="bg-metapink-400 text-white p-2 z-50 rounded-3xl text-base">
-              <a
-                href="https://nftnewspro.com/milky-way-pirates-the-first-nft-musician-band-presents-on-ellen-degeneress-show/"
-                target="_blank">>
-                Read more
-                <span class="material-symbols-outlined"> chevron_right </span>
-              </a>
-            </button>
+              </p>
+              <button class="bg-metapink-400 text-white p-2 z-50 rounded-3xl text-base">
+                <a
+                  href="https://nftnewspro.com/milky-way-pirates-the-first-nft-musician-band-presents-on-ellen-degeneress-show/"
+                  target="_blank">>
+                  Read more
+                  <span class="material-symbols-outlined"> chevron_right </span>
+                </a>
+              </button>
+            </div>
           </div>
-        </div>
 
 
-        <div class="swiper-slide och">
-          <img
-            data-src="https://swiperjs.com/demos/images/nature-1.jpg"
-            class="swiper-lazy"
-          />
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-          <div class="absolute bottom-[40px] och">
-            <p class="text-white text-xl font-bold">
-              NFTs Are on ‘Ellen’ – This Time as Performers
+          <div class="swiper-slide och">
+            <img
+              data-src="https://swiperjs.com/demos/images/nature-1.jpg"
+              class="swiper-lazy"
+            />
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            <div class="absolute bottom-[40px] och">
+              <p class="text-white text-xl font-bold">
+                NFTs Are on ‘Ellen’ – This Time as Performers
 
-            </p>
-            <button class="bg-metapink-400 text-white p-2 z-50 rounded-3xl text-base">
-              <a href="https://www.coindesk.com/business/2022/03/22/nfts-are-on-ellen-this-time-as-performers/"
-                 target="_blank">>
-                Read more
-                <span class="material-symbols-outlined"> chevron_right </span>
-              </a>
-            </button>
+              </p>
+              <button class="bg-metapink-400 text-white p-2 z-50 rounded-3xl text-base">
+                <a href="https://www.coindesk.com/business/2022/03/22/nfts-are-on-ellen-this-time-as-performers/"
+                   target="_blank">>
+                  Read more
+                  <span class="material-symbols-outlined"> chevron_right </span>
+                </a>
+              </button>
+            </div>
           </div>
-        </div>
 
 
-        <div class="swiper-slide och">
-          <img
-            data-src="https://swiperjs.com/demos/images/nature-1.jpg"
-            class="swiper-lazy"
-          />
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-          <div class="absolute bottom-[40px] och">
-            <p class="text-white text-xl font-bold">
-              NFT Band And Kiesza Perform New Hit “Passenger” On The Ellen Show
-            </p>
-            <button class="bg-metapink-400 text-white p-2 z-50 rounded-3xl text-base">
-              <a href="https://www.electrowow.net/nft-band-and-kiesza-perform-new-hit-passenger-on-the-ellen-show"
-                 target="_blank">>
-                Read more
-                <span class="material-symbols-outlined"> chevron_right </span>
-              </a>
-            </button>
+          <div class="swiper-slide och">
+            <img
+              data-src="https://swiperjs.com/demos/images/nature-1.jpg"
+              class="swiper-lazy"
+            />
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            <div class="absolute bottom-[40px] och">
+              <p class="text-white text-xl font-bold">
+                NFT Band And Kiesza Perform New Hit “Passenger” On The Ellen Show
+              </p>
+              <button class="bg-metapink-400 text-white p-2 z-50 rounded-3xl text-base">
+                <a href="https://www.electrowow.net/nft-band-and-kiesza-perform-new-hit-passenger-on-the-ellen-show"
+                   target="_blank">>
+                  Read more
+                  <span class="material-symbols-outlined"> chevron_right </span>
+                </a>
+              </button>
+            </div>
           </div>
-        </div>
 
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
       </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-pagination"></div>
     </div>
   </div>
 </section>
 
-<section id="gallery" class="h-full bg-black py-5">
-  <div class="text-white text-4xl lg:p-12 p-2">Gallery</div>
-  <div class="flex flex-col flex-wrap justify-center items-center">
-    <div id="cards_container" class="flex flex-row flex-wrap flex-grow justify-center">
-      <div class="card" data-key="1d3a2s1d3as">
-        <img class="h-full w-full" src="https://meta-moves.com/img/sceenshot/06.jpg"/>
-      </div>
-      <div class="card" data-key="7a86sd">
-        <img class="h-full w-full" src="https://meta-moves.com/img/sceenshot/05.jpg"/>
-      </div>
-      <div class="card" data-key="a90s8d">
-        <img class="h-full w-full" src="https://meta-moves.com/img/sceenshot/03.jpg"/>
-      </div>
-      <div class="card" data-key="s132231sddd">
-        <img class="h-full w-full" src="https://meta-moves.com/img/sceenshot/06.jpg"/>
-      </div>
-    </div>
 
-    <button
-      class="bg-metapink-400 mt-4 py-2 px-4 rounded-3xl right-0 left-0 lg:w-2/12 w-1/2 items-center focus:shadow-outline hover:bg-metapink-100  hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0">
-      View more...
-    </button>
+<section id="gallery" class="bg-black lg:py-10 py-5 lg:h-screen">
+  <div class="px-2 lg:px-4 xl:container xl:mx-auto flex flex-col justify-between">
+    <div class="text-white text-6xl font-black p-2">Gallery</div>
+    <div class="flex flex-col flex-wrap justify-center items-center">
+      <div id="cards_container" class="flex flex-row flex-wrap flex-grow justify-center">
+        <div class="card" data-key="1d3a2s1d3as">
+          <img class="h-full w-full" src="https://meta-moves.com/img/sceenshot/06.jpg"/>
+        </div>
+        <div class="card" data-key="7a86sd">
+          <img class="h-full w-full" src="https://meta-moves.com/img/sceenshot/05.jpg"/>
+        </div>
+        <div class="card" data-key="a90s8d">
+          <img class="h-full w-full" src="https://meta-moves.com/img/sceenshot/03.jpg"/>
+        </div>
+        <div class="card" data-key="s132231sddd">
+          <img class="h-full w-full" src="https://meta-moves.com/img/sceenshot/06.jpg"/>
+        </div>
+      </div>
+
+      <button
+        class="bg-metapink-400 mt-4 py-2 px-4 rounded-3xl right-0 left-0 lg:w-2/12 w-1/2 items-center focus:shadow-outline hover:bg-metapink-100  hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0">
+        View more...
+      </button>
+    </div>
+    <style class="hover"></style>
   </div>
-  <style class="hover"></style>
 </section>
 
 
-<section id="roadmap" class="lg:p-12 p-2">
-  <h1 class="text-metablue text-4xl font-black">Our vision of the Future</h1>
-  <p class="text-white mt-6  w-full lg:w-1/2">We have set up the way to go and our next steps, once we he our targets
-    the path will evolve and grow Imo new member achlevmems and rewards. The following roadmap depicts Meta-Moves next
-    milestones for the first quarter of 2022 Our team is working rigorously in developing al Intellectual Property
-    required to keep the vision and goals of our company reliable.</p>
-
-  <div id="roadmapquarters" class="mt-12 flex flex-col lg:flex-row">
+<section id="roadmap" class="lg:py-5 py-2 lg:h-screen flex flex-col justify-around">
+  <div class="px-2 lg:px-4 xl:container xl:mx-auto  flex flex-col justify-around">
+    <h1 class="text-metablue text-4xl lg:text-5xl 2xl:text-6xl font-black">Our vision of the Future</h1>
+    <p class="text-white mt-6  w-full lg:w-1/2">We have set up the way to go and our next steps, once we he our targets
+      the path will evolve and grow Imo new member achlevmems and rewards. The following roadmap depicts Meta-Moves next
+      milestones for the first quarter of 2022 Our team is working rigorously in developing al Intellectual Property
+      required to keep the vision and goals of our company reliable.</p>
+  </div>
+  <div id="roadmapquarters" class="flex flex-col lg:flex-row">
     <div id="q1" class="flex flex-row bg-black rounded-xl w-full lg:w-1/3 mx-0 lg:mx-2.5 my-4 opacity-100 lg:opacity-5">
       <div class="w-3/12 text-5xl p-5 font-bold">Q1</div>
       <div class="w-9/12  p-5">
@@ -560,7 +558,6 @@
       </div>
     </div>
   </div>
-
   <div class="hidden lg:inline">
     <img id="moonwalk" height="117" class="-translate-x-12" src=<%=require("./img/moonwalk.gif")%> alt="moonwalk"/>
     <div class="progress_bar h-5 bg-gray-400 w-full rounded-xl">
@@ -570,97 +567,92 @@
 </section>
 
 
-<section id="socialcause" class="lg:p-12 p-2 bg-[#0B1019]">
-  <h1 class="text-white text-4xl font-black">Social Cause</h1>
+<section id="socialcause" class="lg:py-5 py-2 lg:h-screen bg-[#0B1019]">
+  <div class="h-full px-2 lg:px-4 xl:container xl:mx-auto flex flex-col justify-around">
+    <h1 class="text-white text-4xl lg:text-5xl text-6xl font-black">Social Cause</h1>
 
-  <div class="w-full my-5">
-    <p class="w-full lg:w-1/2 xl:w-2/3 text-sm">
-      Meta-Moves brings life through movement not only in the Metaverse but in real life to. It is our goal to
-      contribute to society and to give back to those who have lost a Limb the opportunity to move freely. State of the
-      art technology is used in order to produce each piece that is custom made. These are the steps to become part of
-      the community.
-    </p>
-  </div>
-  <div class="w-full mt-7">
-    <div class="swiper causasocial">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide swiper-slide-socialcause">
-          <img src=<%=require("./img/robot1.JPG")%> alt="" class="rounded-full h-32">
-          <p class="text-[#96BCFF] font-bold text-base my-5">Get a Metamove</p>
-          <p class="text-center text-white text-sm px-8">
-            You can find our collections on
-            multiple platforms, don’t forget your NFT´s hold Motion Capture Data.
-          </p>
-        </div>
-        <div class="swiper-slide swiper-slide-socialcause">
-          <img src=<%=require("./img/robot1.JPG")%> alt="" class="rounded-full h-32">
+    <div class="w-full my-5">
+      <p class="w-full lg:w-1/2 xl:w-2/3 text-xl">
+        Meta-Moves brings life through movement not only in the Metaverse but in real life to. It is our goal to
+        contribute to society and to give back to those who have lost a Limb the opportunity to move freely. State of
+        the
+        art technology is used in order to produce each piece that is custom made. These are the steps to become part of
+        the community.
+      </p>
+    </div>
+    <div class="w-full mt-7">
+      <div class="swiper causasocial">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide swiper-slide-socialcause">
+            <img src=<%=require("./img/robot1.JPG")%> alt="" class="rounded-full h-32">
+            <p class="text-[#96BCFF] font-bold text-base my-5">Get a Metamove</p>
+            <p class="text-center text-white text-sm px-8">
+              You can find our collections on
+              multiple platforms, don’t forget your NFT´s hold Motion Capture Data.
+            </p>
+          </div>
+          <div class="swiper-slide swiper-slide-socialcause">
+            <img src=<%=require("./img/robot1.JPG")%> alt="" class="rounded-full h-32">
 
-          <p class="text-[#96BCFF] font-bold text-base my-5">Candidate Search</p>
-          <p class="text-center text-white text-sm px-8">
-            For each NFT collection sold
-            we will donate prosthetic limbs both to Humans and Pets.
-          </p>
-        </div>
-        <div class="swiper-slide swiper-slide-socialcause">
-          <img src=<%=require("./img/robot1.JPG")%> alt="" class="rounded-full h-32">
+            <p class="text-[#96BCFF] font-bold text-base my-5">Candidate Search</p>
+            <p class="text-center text-white text-sm px-8">
+              For each NFT collection sold
+              we will donate prosthetic limbs both to Humans and Pets.
+            </p>
+          </div>
+          <div class="swiper-slide swiper-slide-socialcause">
+            <img src=<%=require("./img/robot1.JPG")%> alt="" class="rounded-full h-32">
 
-          <p class="text-[#96BCFF] font-bold text-base my-5">Custom 3D Scan</p>
-          <p class="text-center text-white text-sm px-8">
-            Each patient is body scanned in
-            order to obtain accurate 3D models of their extremity.
-          </p>
-        </div>
-        <div class="swiper-slide swiper-slide-socialcause">
-          <img src=<%=require("./img/robot1.JPG")%> alt="" class="rounded-full h-32">
+            <p class="text-[#96BCFF] font-bold text-base my-5">Custom 3D Scan</p>
+            <p class="text-center text-white text-sm px-8">
+              Each patient is body scanned in
+              order to obtain accurate 3D models of their extremity.
+            </p>
+          </div>
+          <div class="swiper-slide swiper-slide-socialcause">
+            <img src=<%=require("./img/robot1.JPG")%> alt="" class="rounded-full h-32">
 
-          <p class="text-[#96BCFF] font-bold text-base my-5">3D Printing and Assembly</p>
-          <p class="text-center text-white text-sm px-8">
-            Each Limb is printed and
-            manufactures as a one of a kind piece, since each patient is different.
-          </p>
-        </div>
-        <div class="swiper-slide swiper-slide-socialcause">
-          <img src=<%=require("./img/robot1.JPG")%> alt="" class="rounded-full h-32">
+            <p class="text-[#96BCFF] font-bold text-base my-5">3D Printing and Assembly</p>
+            <p class="text-center text-white text-sm px-8">
+              Each Limb is printed and
+              manufactures as a one of a kind piece, since each patient is different.
+            </p>
+          </div>
+          <div class="swiper-slide swiper-slide-socialcause">
+            <img src=<%=require("./img/robot1.JPG")%> alt="" class="rounded-full h-32">
 
-          <p class="text-[#96BCFF] font-bold text-base my-5">Fitting & Gifting</p>
-          <p class="text-center text-white text-sm px-8">
-            Our patients try for the
-            first time their new prosthesis, after a perfect fit inspection they get to
-            take home their piece.
-          </p>
-        </div>
-        <div class="swiper-slide swiper-slide-socialcause">
-          <img src=<%=require("./img/robot1.JPG")%> alt="" class="rounded-full h-32">
+            <p class="text-[#96BCFF] font-bold text-base my-5">Fitting & Gifting</p>
+            <p class="text-center text-white text-sm px-8">
+              Our patients try for the
+              first time their new prosthesis, after a perfect fit inspection they get to
+              take home their piece.
+            </p>
+          </div>
+          <div class="swiper-slide swiper-slide-socialcause">
+            <img src=<%=require("./img/robot1.JPG")%> alt="" class="rounded-full h-32">
 
-          <p class="text-[#96BCFF] font-bold text-base my-5">Testimonial</p>
-          <p class="text-center text-white text-sm px-8">
-            Holders will receive direct testimony through our Discord channel of these lifechanging moments.
-          </p>
+            <p class="text-[#96BCFF] font-bold text-base my-5">Testimonial</p>
+            <p class="text-center text-white text-sm px-8">
+              Holders will receive direct testimony through our Discord channel of these lifechanging moments.
+            </p>
+          </div>
         </div>
+        <div class="swiper-button-next swiper-button-next-socialcause"></div>
+        <div class="swiper-button-prev swiper-button-prev-socialcause"></div>
+        <div class="swiper-pagination swiper-pagination-socialcause"></div>
       </div>
-      <div class="swiper-button-next swiper-button-next-socialcause"></div>
-      <div class="swiper-button-prev swiper-button-prev-socialcause"></div>
-      <div class="swiper-pagination swiper-pagination-socialcause"></div>
     </div>
   </div>
 </section>
 
-<footer class="w-full bg-[#10131a] lg:p-12 p-2 flex lg:flex-row flex-col text-white py-5">
+<footer class="lg:p-5 p-2 w-full bg-[#10131a] flex lg:flex-row flex-col text-white h-full">
   <div class="lg:w-2/3 w-full ">
     <div class="w-full flex flex-row">
-      <div class="w-1/3">
-        <p class="lg:text-xl text-sm font-black">Cinetica Studio</p>
-        <ul class="mt-4 text-sm font-semibold">
-          <li><a href="/" target="_self">Home</a></li>
-          <li><a href="" target="_blank">Services</a></li>
-          <li><a href="" target="_blank">Demo Reel</a></li>
-          <li><a href="" target="_blank">MoCap</a></li>
-        </ul>
-      </div>
-      <div class="w-1/3">
+      <div class="w-1/2">
         <p class="lg:text-xl text-sm font-black">Useful Links</p>
         <ul class="mt-4 text-sm font-semibold">
           <li><a href="/faqs.html" target="_blank">FAQs</a></li>
+          <li><a href="https://meta-moves.com/" target="_blank">Cinetica Studio</a></li>
           <li><a
             href="https://portion.io/nft-marketplace?category=&collection=&artist=MetaMoves&chains=Ethereum&sortBy=newest&verified=true&tags="
             target="_blank">Portion</a></li>
@@ -668,7 +660,7 @@
           <li><a href="https://www.coinbase.com/es/price/ethereum" target="_blank">Ethereum Price</a></li>
         </ul>
       </div>
-      <div class="w-1/3">
+      <div class="w-1/2">
         <p class="lg:text-xl text-sm font-black">Social Media</p>
         <ul class="mt-4 text-sm font-semibold">
           <li><a href="https://discord.gg/AgXjZpstPK" target="_blank">Discord</a></li>

@@ -15,11 +15,12 @@ const roadmapScript = () => {
   const progressBarWidthPX = document.querySelector('.progress_bar').offsetWidth * 0.95
 
   window.addEventListener('scroll', function (e) {
-    const element = document.querySelector('#roadmapquarters')
+    const element = document.querySelector('#roadmap')
     const position = element.getBoundingClientRect()
     console.log('scrolling')
     // checking whether fully visible
-    if (position.top <= 15 && percentage <= 100) {
+    if (position.top <= 180 && percentage <= 100) {
+      e.preventDefault()
       element.scrollIntoView(true)
 
       percentage += percentageToAdd
@@ -49,22 +50,5 @@ const roadmapScript = () => {
   })
 }
 if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-  roadmapScript()
+  // roadmapScript()
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
