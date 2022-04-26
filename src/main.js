@@ -43,21 +43,20 @@ const typewriter = new Typewriter(metamoveDescription, {
   delay: 75
 })
 
-typewriter
-  .typeString('A NFT collection where all members are')
-  .typeString('.')
-  .pauseFor(1500)
-  .typeString('.')
-  .pauseFor(1500)
-  .typeString('.')
-  .pauseFor(1500)
-  .deleteChars(41)
-  .pauseFor(1000)
-  .typeString('A Novel NFT')
-  .pauseFor(300)
-  .typeString(' collection where all members are able to bring to life there digital avatars through custom\n' +
-    '      <span class="text-metablue">M̷o̸t̸i̶o̴n̶ ̴C̸a̸p̵t̸u̵r̴e̷.̵</span>')
-  .start()
+// typewriter
+//   .typeString('A NFT collection where all members are')
+//   .typeString('.')
+//   .pauseFor(1500)
+//   .typeString('.')
+//   .pauseFor(1500)
+//   .typeString('.')
+//   .pauseFor(1500)
+//   .deleteChars(41)
+//   .pauseFor(1000)
+//   .typeString('')
+//   .pauseFor(300)
+//   .typeString('')
+//   .start()
 //
 const visuals1 = document.querySelector('#visuals__1')
 visuals1.addEventListener('mouseover', () => {

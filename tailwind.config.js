@@ -187,7 +187,7 @@ module.exports = {
       emerald: colors.emerald,
       indigo: colors.indigo,
       yellow: colors.yellow,
-      metablue: '#0066FFFF',
+      metablue: '#00FFF7',
       metapink: {
         100: '#d02a6c',
         400: '#f30061'

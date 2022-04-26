@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Home</title>
+  <title>Meta-Moves - Powered by Cinetica studio</title>
   <meta charset="UTF-8">
   <meta http-equiv="cache-control" content="no-cache"/>
   <meta http-equiv="pragma" content="no-cache"/>
@@ -13,6 +13,13 @@
 
 </head>
 <body class="font-nunito text-white xl:container xl:mx-auto">
+<!--<div class="page-bg"></div>-->
+<div class="animation-wrapper">
+  <div class="particle particle-1"></div>
+  <div class="particle particle-2"></div>
+  <div class="particle particle-3"></div>
+  <div class="particle particle-4"></div>
+</div>
 
 <div id="modal_container" style="z-index: 50;"></div>
 
@@ -21,94 +28,38 @@
 <%= require('./partials/nav.html?raw') %>
 <div id="model"></div>
 
-<div id="home" class="px-2 lg:px-4 mt-5 lg:mt-14 lg:pt-5 pt-2">
-  <section class="flex flex-row lg:mt-12">
-    <div class="w-full">
-      <h1 id="metamoves" class="font-marker text-6xl lg:w-3/4">Meta-Moves</h1>
-      <div class="py-2 lg:w-1/2 text-2xl" id="metamove_description"></div>
+<div class="px-2 lg:px-4 ">
+  <section id="home" class="flex flex-col justify-between h-screen">
+
+    <img class="w-full lg:w-1/2" src=<%=require("./img/logo_principal.png")%> alt="">
+    <div class="py-2 lg:w-1/2 text-2xl" id="">
+      A Novel NFT collection where all members are able to bring to life there digital avatars through custom <span
+      class="text-metablue">Motion Capture.</span>
     </div>
+
+
+    <div class="gradient-border bg-black text-white w-full lg:w-3/4 2xl:w-1/2 xl:w-/2 text-sm">
+
+      <p class="p-2 lg:p-5 text-xl">
+        Meta-Moves is a stimulating collection of unique 1/1 animated and sound designed data files living on the
+        Ethereum
+        blockchain.
+        Your Meta-Moves not only are digital art and sound, but also exclusive utility animations for your Metaverse
+        Avatars and NFT's.
+        <span class="text-metablue">All Meta-Moves holders are granted permission to access exclusive behind the scenes content </span>
+        as well as live input in the design process of each animated piece.
+      </p>
+    </div>
+
   </section>
 
-  <section class="text-2xl mt-12 lg:mt-32">
-    <div class="marquee">
-      <div class="track">
-        <div class="font-bold">
-          <span class="text-metablue px-5">メタバースの動き</span>
-          <span class="text-white px-5">Life through movement</span>
-          <span class="text-metablue px-5">メタバースの動き</span>
-          <span class="text-white px-5">Life through movement</span>
-          <span class="text-metablue px-5">メタバースの動き</span>
-          <span class="text-white px-5">Life through movement</span>
-          <span class="text-metablue px-5">メタバースの動き</span>
-          <span class="text-white px-5">Life through movement</span>
-          <span class="text-metablue px-5">メタバースの動き</span>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section id="decentraland" class="flex flex-col mt-5 lg:mt-14 lg:pt-5 pt-2 h-screen">
 
-  <section class="gradient-border bg-black text-white w-full lg:w-3/4 2xl:w-1/2 xl:w-/2 text-sm mt-24 lg:mt-32 ">
-
-    <p class="p-2 lg:p-5">
-      Meta-Moves is a stimulating collection of unique 1/1 animated and sound designed data files living on the
-      Ethereum
-      blockchain.
-      Your Meta-Moves not only are digital art and sound, but also exclusive utility animations for your Metaverse
-      Avatars and NFT's.
-      <span class="text-metablue">All Meta-Moves holders are granted permission to access exclusive behind the scenes content </span>
-      as well as live input in the design process of each animated piece.
-    </p>
-  </section>
-
-  <section id="utility" class="items-stretch flex-wrap mt-5 lg:mt-14 lg:pt-5 pt-2">
-    <h1 class="text-[#4E7BE5] text-4xl font-black">Take your NFT´s to the next level.</h1>
-    <p class="lg:w-1/2 w-full mt-5">The purchase of an NFT from this collection grants the buyer the full rights to the
-      Motion Capture data, which can be used in the future to produce 3D Videos, Videogames, or even animations for
-      avatars in the metaverse. The possibilities and potential applications are limitless.</p>
-    <div class="gradient-border bg-black p-5 mt-5 lg:w-1/3 w-full left-0">
-      <ul>
-        <li>Adaptable to any T-pose avatar</li>
-        <li>Metaverse Friendly</li>
-        <li>Looped animations</li>
-      </ul>
-    </div>
-    <div class="flex flex-col lg:flex-row">
-      <div id="visuals__1" class="w-full lg:w-1/3 lg:px-5 px-2 lg:p-3 p-2 my-6 relative">
-        <div id="visuals__background_1" class="visuals"></div>
-        <p class="text-xl font-bold text-left">Hand Crafted Visuals</p>
-        <div class="mt-5 text-left text-bold text-sm">
-          Each one of our pieces is created individually by our highly creative team of cgi artists, engaging emotions
-          and feelings through vibrant eye candy, the devil´s in the details.
-        </div>
-      </div>
-
-      <div id="visuals__2" class="w-full lg:w-1/3 lg:px-5 px-2 lg:p-3 p-2 my-6 relative">
-        <div id="visuals__background_2" class="visuals"></div>
-        <p class="text-2xl font-bold text-left ">Custom Audio Engineering</p>
-        <div class="mt-5 text-left text-bold text-sm">
-          Our pieces are conceived to be coherent both visually and sonorously, sound is designed and mastered
-          specifically for your piece.
-        </div>
-      </div>
-
-      <div id="visuals__3" class="w-full lg:w-1/3 lg:px-5 px-2 lg:p-3 p-2 my-6 relative">
-        <div id="visuals__background_3" class="visuals"></div>
-        <div class="text-2xl font-bold text-left ">Motion Capture Utility</div>
-        <div class="mt-5 text-left text-bold text-sm">
-          We capture not only movement, but the essence of our performers in each piece transforming them in timeless
-          custom animations for your metaverse avatars.
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="decentraland" class="flex flex-col mt-5 lg:mt-14 lg:pt-5 pt-2">
-
-    <div class="flex flex-col items-center w-full">
-      <h1 class="text-4xl text-center my-4 font-bold">Visit us in Decentraland</h1>
+    <div class="flex flex-col items-center w-full justify-between h-full">
+      <h1 class="text-6xl text-center my-4 font-dark">Visit us in Decentraland</h1>
       <p class="my-1 text-sm w-full flex flex-row">
-      <span class="px-2 lg:px-72">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc fringilla viverra lorem, ut rutrum ligula molestie quis. Etiam tincidunt, tortor velLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc fringilla viverra lorem, ut rutrum ligula molestie quis. Etiam tincidunt, tortor vel
+      <span class="px-2 lg:p-10 lg:mx-72 text-xl gradient-border bg-black ">
+        Metamoves has developed the first official Emote store located in the Decentraland Metaverse. Known as House of Moves, the venue not only  showcases our current  custom made motions but also allows users to  purchase and exchange there utility NFT´s in a decentrilized ecosystem.
       </span>
       </p>
 
@@ -124,9 +75,6 @@
           <div class="swiper-slide decentraland">
             <img id="img1" src=<%=require("./img/img3.png")%> alt="">
           </div>
-          <div class="swiper-slide decentraland">
-            <img id="img1" src=<%=require("./img/img4.png")%> alt="">
-          </div>
         </div>
         <div class="swiper-pagination"></div>
       </div>
@@ -140,10 +88,59 @@
     </div>
   </section>
 
+  <section id="utility" class="flex-wrap h-screen flex flex-col justify-around">
+    <div>
+      <h1 class="text-metablue  text-5xl font-black">Take your NFT´s to the next level</h1>
+      <p class="lg:w-1/2 w-full mt-5">The purchase of an NFT from this collection grants the buyer the full rights to
+        the
+        Motion Capture data, which can be used in the future to produce 3D Videos, Videogames, or even animations for
+        avatars in the metaverse. The possibilities and potential applications are limitless.
+      </p>
+    </div>
+    <div class="gradient-border bg-black p-5 mt-5 lg:w-1/3 w-full left-0">
+      <ul>
+        <li>Adaptable to any T-pose avatar</li>
+        <li>Metaverse Friendly</li>
+        <li>Looped animations</li>
+      </ul>
+    </div>
+    <div class="flex flex-col lg:flex-row">
+      <div id="visuals__1" class="w-full lg:w-1/3 lg:px-5 px-2 lg:p-3 p-2 my-6 relative">
+        <div id="visuals__background_1" class="visuals"></div>
+        <img src=<%=require("./img/icon1.png")%> />
+        <p class="text-xl font-bold text-left">Hand Crafted Visuals</p>
+        <div class="mt-5 text-left text-bold text-sm">
+          Each one of our pieces is created individually by our highly creative team of cgi artists, engaging emotions
+          and feelings through vibrant eye candy, the devil´s in the details.
+        </div>
+      </div>
+
+      <div id="visuals__2" class="w-full lg:w-1/3 lg:px-5 px-2 lg:p-3 p-2 my-6 relative">
+        <div id="visuals__background_2" class="visuals"></div>
+        <img src=<%=require("./img/icon2.png")%> />
+        <p class="text-2xl font-bold text-left ">Custom Audio Engineering</p>
+        <div class="mt-5 text-left text-bold text-sm">
+          Our pieces are conceived to be coherent both visually and sonorously, sound is designed and mastered
+          specifically for your piece.
+        </div>
+      </div>
+
+      <div id="visuals__3" class="w-full lg:w-1/3 lg:px-5 px-2 lg:p-3 p-2 my-6 relative">
+        <div id="visuals__background_3" class="visuals"></div>
+        <img src=<%=require("./img/icon3.png")%> />
+        <div class="text-2xl font-bold text-left ">Motion Capture Utility</div>
+        <div class="mt-5 text-left text-bold text-sm">
+          We capture not only movement, but the essence of our performers in each piece transforming them in timeless
+          custom animations for your metaverse avatars.
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
+
+
 <section id="ourchannels"
          class="bg-[#0B1019] flex flex-row flex-wrap lg:flex-nowrap lg:items-stretch lg:justify-around mt-5 lg:mt-14 lg:pt-5 pt-2">
-
   <div class="lg:w-1/2 lg:p-12 p-2">
     <h1 class="text-white font-bold text-4xl ">Keep in touch with our team of creatives</h1>
     <p class="mt-5 text-sm">Stay ahead and never miss a drop or special editions! As a member of our community, you will
@@ -169,7 +166,7 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide och">
           <img
-            data-src="https://swiperjs.com/demos/images/nature-1.jpg"
+            data-src="https://meta-moves.com/img/sceenshot/06.jpg"
             class="swiper-lazy"
           />
           <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
@@ -503,7 +500,7 @@
   <div class="flex flex-col flex-wrap justify-center items-center">
     <div id="cards_container" class="flex flex-row flex-wrap flex-grow justify-center">
       <div class="card" data-key="1d3a2s1d3as">
-        <img class="h-full w-full" src="https://meta-moves.com/img/sceenshot/04.jpg"/>
+        <img class="h-full w-full" src="https://meta-moves.com/img/sceenshot/06.jpg"/>
       </div>
       <div class="card" data-key="7a86sd">
         <img class="h-full w-full" src="https://meta-moves.com/img/sceenshot/05.jpg"/>
@@ -565,7 +562,7 @@
   </div>
 
   <div class="hidden lg:inline">
-    <img id="moonwalk" class="-translate-x-12" src=<%=require("./img/moonwalk.gif")%> alt="moonwalk"/>
+    <img id="moonwalk" height="117" class="-translate-x-12" src=<%=require("./img/moonwalk.gif")%> alt="moonwalk"/>
     <div class="progress_bar h-5 bg-gray-400 w-full rounded-xl">
       <div class="progress_bar__progress rounded-xl"></div>
     </div>
@@ -663,10 +660,12 @@
       <div class="w-1/3">
         <p class="lg:text-xl text-sm font-black">Useful Links</p>
         <ul class="mt-4 text-sm font-semibold">
-          <li><a href="" target="_blank">FAQs</a></li>
-          <li><a href="" target="_blank">Portion</a></li>
-          <li><a href="" target="_blank">Open Sea</a></li>
-          <li><a href="" target="_blank">Ethereum Price</a></li>
+          <li><a href="/faqs.html" target="_blank">FAQs</a></li>
+          <li><a
+            href="https://portion.io/nft-marketplace?category=&collection=&artist=MetaMoves&chains=Ethereum&sortBy=newest&verified=true&tags="
+            target="_blank">Portion</a></li>
+          <li><a href="https://opensea.io/Meta-Moves?tab=created" target="_blank">Open Sea</a></li>
+          <li><a href="https://www.coinbase.com/es/price/ethereum" target="_blank">Ethereum Price</a></li>
         </ul>
       </div>
       <div class="w-1/3">
@@ -687,6 +686,9 @@
       <div class="w-1/2">
         <span class="material-symbols-outlined">pin_drop</span> 13914 Bora Bora Way
         Marina Del Rey. California
+      </div>
+      <div class="w-1/2">
+        <span class="material-symbols-outlined">pin_drop</span> Gutemberg 51 Verónica Anzurez, México
       </div>
     </div>
   </div>

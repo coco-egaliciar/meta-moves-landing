@@ -5,9 +5,9 @@ import Swiper from 'swiper/bundle'
 import 'swiper/css/bundle'
 
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-  var slidesPerView = 2
+  var slidesPerView = 1
 } else {
-  var slidesPerView = 4
+  var slidesPerView = 3
 }
 
 const swiper = new Swiper('.mySwiperDecentraland', {

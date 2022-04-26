@@ -11,7 +11,8 @@
 }
 
 .swiper-slide #img1{
-  height: 180px;
+  /*height: 180px;*/
+  width: 100%;
 }
 
 

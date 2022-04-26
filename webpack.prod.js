@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 const buildPath = path.resolve(__dirname, 'dist')
 
@@ -103,6 +104,7 @@ module.exports = {
 
   // https://webpack.js.org/concepts/plugins/
   plugins: [
+    new FaviconsWebpackPlugin('./src/img/logo metamoves.jpg'),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       inject: true,
