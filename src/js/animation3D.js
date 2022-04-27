@@ -5,7 +5,7 @@ import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
 import File3D from '../resource/scene.glb'
-import HDRTexture from '../resource/snowy_field_1k.hdr'
+import HDRTexture from '../resource/venice_dawn_1_1k.hdr'
 
 import Stats from 'three/examples/jsm/libs/stats.module.js'
 import { GUI } from 'three/examples/jsm/libs/lil-gui.module.min.js'
@@ -76,7 +76,7 @@ export class Animate3D {
 
         // scene.background = envMap
         scene.environment = envMap
-
+        scene.environment.
         // const material = new THREE.MeshBasicMaterial({ map: texture })
 
         // const quad = new THREE.PlaneGeometry(5.5 * textureData.width / textureData.height, 5.5)
@@ -99,7 +99,7 @@ export class Animate3D {
     model.appendChild(renderer.domElement)
 
     const gui = new GUI()
-    gui.add(params, 'exposure', 0, 4, 0.01).onChange(render)
+    gui.add(params, 'exposure', 0, 20, 0.01).onChange(render)
     gui.open()
 
     const controls = new OrbitControls(camera, model)
