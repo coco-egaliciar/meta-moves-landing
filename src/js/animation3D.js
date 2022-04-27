@@ -13,7 +13,7 @@ import { GUI } from 'three/examples/jsm/libs/lil-gui.module.min.js'
 export class Animate3D {
   constructor () {
     const params = {
-      exposure: 2.0
+      exposure: 12
     }
 
     const scene = new THREE.Scene()
