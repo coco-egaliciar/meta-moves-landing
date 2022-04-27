@@ -3,15 +3,15 @@
   /*width: 50%;*/
   /*height: 2000px;*/
   right: -20%;
-  top: 100px;
+  top: 0;
   touch-action: none;
   position: fixed;
   /*z-index: -100;*/
   z-index: 100;
 
-  /*border-color: red;*/
-  /*border-width: 2px;*/
-  /*border-style: solid;*/
+  border-color: red;
+  border-width: 2px;
+  border-style: solid;
 
 }
 

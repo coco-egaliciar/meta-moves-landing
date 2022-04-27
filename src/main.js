@@ -1,7 +1,5 @@
 import { Animate3D } from './js/animation3D'
 
-import $ from 'jquery'
-
 const _ = require('lodash')
 
 require('normalize.css/normalize.css')
@@ -33,34 +31,37 @@ document.addEventListener('DOMContentLoaded', () => {
       _APP = new Animate3D()
     })
 
-    window.addEventListener('scroll', (e) => {
-      _APP.OnScroll(window.scrollY)
+    class ScrollPosition {
+      consytructor () {
+        this.scrollPos = 0
+      }
+
+      isUP () {
+        if ((document.body.getBoundingClientRect()).top > this.scrollPos) {
+          return true
+        } else {
+          this.scrollPos = (document.body.getBoundingClientRect()).top
+          return false
+        }
+      }
+    }
+
+    const isUP = new ScrollPosition()
+
+    window.addEventListener('wheel', function (event) {
+      if (event.deltaY <= 0) {
+        console.log('scrolling up')
+        _APP.OnScroll(window.scrollY, true)
+      } else if (event.deltaY > 0) {
+        _APP.OnScroll(window.scrollY, false)
+        console.log('scrolling down')
+      }
     })
+
+    // window.addEventListener('scroll', (e) => {})
   }
 })
-//
-// const metamoveDescription = document.querySelector('#metamove_description')
 
-// const typewriter = new Typewriter(metamoveDescription, {
-//   loop: false,
-//   delay: 75
-// })
-
-// typewriter
-//   .typeString('A NFT collection where all members are')
-//   .typeString('.')
-//   .pauseFor(1500)
-//   .typeString('.')
-//   .pauseFor(1500)
-//   .typeString('.')
-//   .pauseFor(1500)
-//   .deleteChars(41)
-//   .pauseFor(1000)
-//   .typeString('')
-//   .pauseFor(300)
-//   .typeString('')
-//   .start()
-//
 const visuals1 = document.querySelector('#visuals__1')
 visuals1.addEventListener('mouseover', () => {
   document.querySelector('#visuals__background_1').classList.add('visuals__rotation')
@@ -146,14 +147,14 @@ App.setup = function () {
         busyAge: 0,
         spotIndex: i,
         isEdge: (xx === -500
-            ? 'left'
-            : (xx === (-500 + this.gridSize * (this.gridSteps - 1))
-                ? 'right'
-                : (yy === -500
-                    ? 'top'
-                    : (yy === (-500 + this.gridSize * (this.gridSteps - 1))
-                        ? 'bottom'
-                        : false
+          ? 'left'
+          : (xx === (-500 + this.gridSize * (this.gridSteps - 1))
+              ? 'right'
+              : (yy === -500
+                  ? 'top'
+                  : (yy === (-500 + this.gridSize * (this.gridSteps - 1))
+                      ? 'bottom'
+                      : false
                     )
                 )
             )
@@ -394,4 +395,3 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   frame()
 })
-
