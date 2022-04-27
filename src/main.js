@@ -85,7 +85,7 @@ App.setup = function () {
   this.canvas = canvas
   document.querySelector('html').appendChild(canvas)
 
-  canvas.style.zIndex = -5000
+  canvas.style.zIndex = -400000
   canvas.style.position = 'fixed'
   canvas.style.top = 0
   canvas.style.right = 0

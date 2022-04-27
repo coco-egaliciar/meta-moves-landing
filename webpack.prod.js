@@ -4,7 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin')
 
 const buildPath = path.resolve(__dirname, 'dist')
 
@@ -45,7 +46,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(fbx|glb|gltf)$/,
+        test: /\.(fbx|glb|gltf|hdr|exr)$/,
         use: [
           {
             loader: 'file-loader'
@@ -120,6 +121,27 @@ module.exports = {
   optimization: {
     minimize: true,
     minimizer: [
+      new ImageMinimizerPlugin({
+        minimizer: {
+          implementation: ImageMinimizerPlugin.squooshMinify,
+          options: {
+            encodeOptions: {
+              mozjpeg: {
+                // That setting might be close to lossless, but it’s not guaranteed
+                // https://github.com/GoogleChromeLabs/squoosh/issues/85
+                quality: 50
+              },
+              webp: {
+                lossless: 1
+              },
+              avif: {
+                // https://github.com/GoogleChromeLabs/squoosh/blob/dev/codecs/avif/enc/README.md
+                cqLevel: 0
+              }
+            }
+          }
+        }
+      }),
       // https://webpack.js.org/plugins/terser-webpack-plugin/
       new TerserPlugin({
         parallel: true

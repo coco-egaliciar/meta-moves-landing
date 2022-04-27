@@ -7,7 +7,7 @@
   touch-action: none;
   position: fixed;
   /*z-index: -100;*/
-  -z-index: 100;
+  z-index: -350000;
 
   /*border-color: red;*/
   /*border-width: 2px;*/
