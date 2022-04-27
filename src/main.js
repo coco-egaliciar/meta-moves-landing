@@ -31,22 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
       _APP = new Animate3D()
     })
 
-    class ScrollPosition {
-      consytructor () {
-        this.scrollPos = 0
-      }
-
-      isUP () {
-        if ((document.body.getBoundingClientRect()).top > this.scrollPos) {
-          return true
-        } else {
-          this.scrollPos = (document.body.getBoundingClientRect()).top
-          return false
-        }
-      }
-    }
-
-    const isUP = new ScrollPosition()
 
     window.addEventListener('wheel', function (event) {
       if (event.deltaY <= 0) {
@@ -57,8 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('scrolling down')
       }
     })
-
-    // window.addEventListener('scroll', (e) => {})
   }
 })
 
@@ -115,15 +97,15 @@ App.setup = function () {
   this.ctx.imageSmoothingEnabled = false
   this.ctx.webkitImageSmoothingEnabled = false
   this.ctx.msImageSmoothingEnabled = false
-  this.xC = this.width / 2
-  this.yC = this.height / 2
+  this.widthHalf = this.width / 2
+  this.heightHalf = this.height / 2
 
   this.stepCount = 0
   this.particles = []
-  this.lifespan = 1000
+  this.lifespan = 100
   this.popPerBirth = 10
   this.maxPop = 200
-  this.birthFreq = 5
+  this.birthFreq = 1
 
   // Build grid
   this.gridSize = 8// Motion coords
@@ -134,9 +116,8 @@ App.setup = function () {
     for (let yy = -500; yy < 500; yy += this.gridSize) {
       // Radial field, triangular function of r with max around r0
       const r = Math.abs(xx) + Math.abs(yy)
-      const // Math.sqrt(xx*xx+yy*yy),
-        r0 = 100
-      var field
+      const r0 = 10
+      let field
 
       if (r < r0) field = 255 / r0 * r
       else if (r > r0) field = 255 - Math.min(255, (r - r0) / 2)
@@ -200,9 +181,9 @@ App.birth = function () {
   var y = gridSpot.y
 
   const particle = {
-    hue: -10, // + Math.floor(50*Math.random()),
-    sat: 95, // 30 + Math.floor(70*Math.random()),
-    lum: 20 + Math.floor(40 * Math.random()),
+    hue: 189, // + Math.floor(50*Math.random()),
+    sat: 82, // 30 + Math.floor(70*Math.random()),
+    lum: 2 + Math.floor(54 * Math.random()),
     x: x,
     y: y,
     xLast: x,
@@ -239,7 +220,7 @@ App.move = function () {
     let gridSpot = this.grid[index]
 
     // Maybe move attractor and with certain constraints
-    if (Math.random() < 0.5) {
+    if (Math.random() < 0.65) {
       // Move attractor
       if (!gridSpot.isEdge) {
         // Change particle's attractor grid spot and local move function's grid spot
@@ -378,9 +359,9 @@ App.draw = function () {
   }
 }
 App.dataXYtoCanvasXY = function (x, y) {
-  const zoom = 1.6
-  const xx = this.xC + x * zoom * this.dataToImageRatio
-  const yy = this.yC + y * zoom * this.dataToImageRatio
+  const zoom = 2
+  const xx = this.widthHalf + x * zoom * this.dataToImageRatio
+  const yy = this.heightHalf + y * zoom * this.dataToImageRatio
 
   return { x: xx, y: yy }
 }

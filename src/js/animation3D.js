@@ -31,22 +31,21 @@ export class Animate3D {
     }
 
     const scene = new THREE.Scene()
-    const ar = window.innerWidth / window.innerHeight
+
     const camera = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 0.5, 5)
-    // const camera = new THREE.OrthographicCamera(-ar, ar, ar / 2, -ar / 2, 0.1, 5)
 
     camera.position.set(params.x, params.y, params.z)
 
     camera.lookAt(0, 1.2, 0)
 
-    const helper = new THREE.CameraHelper(camera)
-    scene.add(helper)
+    // const helper = new THREE.CameraHelper(camera)
+    // scene.add(helper)
 
     // scene.background = new THREE.Color(0x000000)
-    scene.add(new THREE.AxesHelper(50))
+    // scene.add(new THREE.AxesHelper(50))
 
     const bulbLight3 = new THREE.PointLight(0x00FFF7, 1, 100, 2)
-    bulbLight3.power = 110000 / 10000
+    bulbLight3.power = 11
 
     const initialLightDeep = 2
     bulbLight3.position.set(params.lightRange, 0.8, initialLightDeep)
@@ -59,7 +58,7 @@ export class Animate3D {
         // console.log( texture );
 
         texture.mapping = THREE.EquirectangularReflectionMapping
-        const envMap = texture // pmremGenerator.fromEquirectangular(texture).texture;
+        const envMap = texture
 
         // scene.background = envMap
         scene.environment = envMap
@@ -69,7 +68,7 @@ export class Animate3D {
     const renderer = new THREE.WebGLRenderer({ alpha: true })
     renderer.toneMappingExposure = params.exposure
     renderer.physicallyCorrectLights = true
-    // renderer.shadowMap.enabled = true
+    renderer.shadowMap.enabled = true
     renderer.toneMapping = THREE.ReinhardToneMapping
     renderer.setPixelRatio(window.devicePixelRatio)
     renderer.setSize(window.innerWidth, window.innerHeight)
@@ -85,13 +84,13 @@ export class Animate3D {
     gui.add(params, 'y', -2, 2, 0.05).onChange(moveCamera)
     gui.add(params, 'z', -2, 2, 0.05).onChange(moveCamera)
     gui.add(params, 'zoom', -5, 10, 0.1).onChange(moveCamera)
-
-    gui.open()
+    gui.hide()
+    // gui.open()
 
     const controls = new OrbitControls(camera, model)
     // controls.enableDamping = true
     controls.target.set(0, 1, 0)
-    controls.enabled = true
+    controls.enabled = false
 
     const File3DLoader = new GLTFLoader()
     File3DLoader.load(
