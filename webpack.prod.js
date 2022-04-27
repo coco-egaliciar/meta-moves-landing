@@ -104,7 +104,6 @@ module.exports = {
 
   // https://webpack.js.org/concepts/plugins/
   plugins: [
-    new FaviconsWebpackPlugin('./src/img/logo metamoves.jpg'),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       inject: true,

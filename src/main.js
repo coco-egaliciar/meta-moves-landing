@@ -395,13 +395,3 @@ document.addEventListener('DOMContentLoaded', function () {
   frame()
 })
 
-/**
- * Some old util I use at times
- *
- * @param {Number} Xstart X value of the segment starting point
- * @param {Number} Ystart Y value of the segment starting point
- * @param {Number} Xtarget X value of the segment target point
- * @param {Number} Ytarget Y value of the segment target point
- * @param {Boolean} realOrWeb true if Real (Y towards top), false if Web (Y towards bottom)
- * @returns {Number} Angle between 0 and 2PI
- */

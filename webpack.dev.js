@@ -38,7 +38,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(fbx|glb|gltf)$/,
+        test: /\.(fbx|glb|gltf|hdr|exr)$/,
         use: [
           {
             loader: 'file-loader'
