@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
       _APP = new Animate3D()
     })
 
-
     window.addEventListener('wheel', function (event) {
       if (event.deltaY <= 0) {
         console.log('scrolling up')
@@ -128,14 +127,14 @@ App.setup = function () {
         busyAge: 0,
         spotIndex: i,
         isEdge: (xx === -500
-          ? 'left'
-          : (xx === (-500 + this.gridSize * (this.gridSteps - 1))
-              ? 'right'
-              : (yy === -500
-                  ? 'top'
-                  : (yy === (-500 + this.gridSize * (this.gridSteps - 1))
-                      ? 'bottom'
-                      : false
+            ? 'left'
+            : (xx === (-500 + this.gridSize * (this.gridSteps - 1))
+                ? 'right'
+                : (yy === -500
+                    ? 'top'
+                    : (yy === (-500 + this.gridSize * (this.gridSteps - 1))
+                        ? 'bottom'
+                        : false
                     )
                 )
             )
@@ -181,7 +180,7 @@ App.birth = function () {
   var y = gridSpot.y
 
   const particle = {
-    hue: 189, // + Math.floor(50*Math.random()),
+    hue: 180, // + Math.floor(50*Math.random()),
     sat: 82, // 30 + Math.floor(70*Math.random()),
     lum: 2 + Math.floor(54 * Math.random()),
     x: x,
@@ -315,6 +314,9 @@ App.draw = function () {
     var h, s, l, a
 
     h = p.hue + this.stepCount / 30
+    if (h > 300) {
+      h = 300
+    }
     s = p.sat
     l = p.lum
     a = 1
@@ -328,8 +330,9 @@ App.draw = function () {
 
     this.ctx.beginPath()
 
-    this.ctx.strokeStyle = 'hsla(' + h + ', ' + s + '%, ' + l + '%, ' + a + ')'
-    this.ctx.fillStyle = 'hsla(' + h + ', ' + s + '%, ' + l + '%, ' + a + ')'
+    this.ctx.strokeStyle = `hsla( ${h},${s}%,${l}%,${a})`
+
+    this.ctx.fillStyle = `hsla( ${h},${s}%,${l}%,${a})`
 
     // Particle trail
     this.ctx.moveTo(last.x, last.y)
