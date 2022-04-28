@@ -31,13 +31,25 @@ document.addEventListener('DOMContentLoaded', () => {
       _APP = new Animate3D()
     })
 
+    const onScroll = (isUp) => {
+      const ThirtytreePercent = 33
+      for (let i = 0; i < ThirtytreePercent; i++) {
+        setTimeout(() => {
+          _APP.OnScroll(isUp)
+        }, i * 10)
+      }
+    }
+
+    const onScrollDebouncedUp = _.debounce(() => onScroll(true), 100)
+    const onScrollDebouncedDown = _.debounce(() => onScroll(false), 100)
+    document.body.style.overflow = 'hidden'
     window.addEventListener('wheel', function (event) {
       if (event.deltaY <= 0) {
         console.log('scrolling up')
-        _APP.OnScroll(window.scrollY, true)
+        onScrollDebouncedUp()
       } else if (event.deltaY > 0) {
-        _APP.OnScroll(window.scrollY, false)
         console.log('scrolling down')
+        onScrollDebouncedDown()
       }
     })
   }
@@ -74,7 +86,7 @@ visuals3.addEventListener('mouseleave', () => {
  * @author Alex Andrix <alex@alexandrix.com>
  * @since 2018-12-02
  */
-
+// TODO probar https://codepen.io/iamtheWraith/pen/QjawpE
 const App = {}
 App.setup = function () {
   const canvas = document.createElement('canvas')

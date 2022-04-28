@@ -15,7 +15,7 @@ export class Animate3D {
     this.currenrStep = 0
     this.maxSteps = 100
     this.heightSteps = _.range(-0.4 * 10, 0.7 * 10, (Math.abs(-0.4 * 10 - 0.7 * 10)) / 100)
-    this.angleSteps = _.range(-35, 100, (Math.abs(-35 - 100)) / 100)
+    this.angleSteps = _.range(-35, 50, (Math.abs(-35 - 50)) / 100)
 
     console.log(this.heightSteps)
     console.log(this.angleSteps)
@@ -27,7 +27,7 @@ export class Animate3D {
       x: 0,
       y: 1.2,
       z: 0.85,
-      zoom: 1
+      zoom: 0.6
     }
 
     const scene = new THREE.Scene()
@@ -36,7 +36,7 @@ export class Animate3D {
 
     camera.position.set(params.x, params.y, params.z)
 
-    camera.lookAt(0, 1.2, 0)
+
 
     // const helper = new THREE.CameraHelper(camera)
     // scene.add(helper)
@@ -75,6 +75,8 @@ export class Animate3D {
     const model = document.querySelector('#model')
     model.appendChild(renderer.domElement)
 
+    moveCamera()
+
     const gui = new GUI()
     gui.add(params, 'exposure', 0, 20, 0.01).onChange(render)
     gui.add(params, 'lightRange', -2, 2, 0.01).onChange(render)
@@ -96,7 +98,7 @@ export class Animate3D {
     File3DLoader.load(
       File3D,
       (object) => {
-        // object.scene.scale.set(2, 2, 2)
+        // object.scene.scale.set(0.85)
         object.scene.position.y = -0.4
         object.scene.rotateY(THREE.Math.degToRad(-35))
         window.o = object.scene
@@ -187,7 +189,7 @@ export class Animate3D {
     return this.angleSteps[this.currenrStep]
   }
 
-  OnScroll (position, isUp) {
+  OnScroll (isUp) {
     if (isUp === true) {
       this.backStep()
       this.moveRobotPosition(this.getHeigh())
