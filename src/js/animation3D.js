@@ -12,14 +12,17 @@ const _ = require('lodash')
 
 export class Animate3D {
   constructor () {
-    this.currenrStep = 0
-    this.maxSteps = 100
-    this.heightSteps = _.range(-0.4 * 10, 0.7 * 10, (Math.abs(-0.4 * 10 - 0.7 * 10)) / 100)
-    this.angleSteps = _.range(-35, 50, (Math.abs(-35 - 50)) / 100)
+    this.currentStep = 0
+
+    this.currentPercentage = 0
+    this.maxPercentage = 100
+    this.heightPercentage = _.range(-0.4 * 10, 0.7 * 10, (Math.abs(-0.4 * 10 - 0.7 * 10)) / this.maxPercentage)
+    this.anglePercentage = _.range(-35, 50, (Math.abs(-35 - 50)) / this.maxPercentage)
+
     document.body.style.overflow = 'hidden'
 
-    console.log(this.heightSteps)
-    console.log(this.angleSteps)
+    console.log(this.heightPercentage)
+    console.log(this.anglePercentage)
 
     const params = {
       exposure: 12,
@@ -158,6 +161,25 @@ export class Animate3D {
     }
   }
 
+  animationCurrentStep (isUp) {
+    if (isUp === false) {
+      this.currentStep += 1
+    }
+
+    console.log(`this.currentStep->${this.currentStep}`)
+    if (this.currentStep === 1) {
+      document.querySelector('#a1').classList.add('fade-in-left')
+    }
+
+    if (this.currentStep === 2) {
+      document.querySelector('#a2').classList.add('fade-in-left')
+      document.body.style.overflow = 'visible'
+    }
+    if (this.currentStep === 3) {
+      document.querySelector('#decentraland').scrollIntoView()
+    }
+  }
+
   moveRobotPosition (yPosition) {
     if (window.o) {
       window.o.position.set(0, yPosition, 0)
@@ -165,33 +187,30 @@ export class Animate3D {
   }
 
   nextStep () {
-    if (this.currenrStep >= 0 && this.currenrStep < 99) {
-      this.currenrStep += 1
-      if (this.currenrStep === 99) {
-        const event = new Event('animationFinished')
-        document.body.dispatchEvent(event)
-      }
+    if (this.currentPercentage >= 0 && this.currentPercentage < 99) {
+      this.currentPercentage += 1
     }
-    console.log(`Next ->this.currenrStep:${this.currenrStep}`)
+    console.log(`Next ->this.currentPercentage:${this.currentPercentage}`)
   }
 
   backStep () {
-    if (this.currenrStep > 0 && this.currenrStep <= 99) {
-      this.currenrStep -= 1
+    if (this.currentPercentage > 0 && this.currentPercentage <= 99) {
+      this.currentPercentage -= 1
     }
-    console.log(`Back ->this.currenrStep:${this.currenrStep}`)
+    console.log(`Back ->this.currentPercentage:${this.currentPercentage}`)
   }
 
   getHeigh () {
-    return this.heightSteps[this.currenrStep] / 10
+    return this.heightPercentage[this.currentPercentage] / 10
   }
 
   getAngle () {
-    return this.angleSteps[this.currenrStep]
+    return this.anglePercentage[this.currentPercentage]
   }
 
   OnScroll (isUp) {
-    if (isUp === true) {
+
+    if (isUp === true || this.currentStep >= 3) {
       this.backStep()
       this.moveRobotPosition(this.getHeigh())
       this.rotateRobot(this.getAngle())

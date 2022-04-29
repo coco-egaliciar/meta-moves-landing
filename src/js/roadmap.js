@@ -14,7 +14,7 @@ const roadmapScript = () => {
   const moonwalk = document.querySelector('#moonwalk')
   const progressBarWidthPX = document.querySelector('.progress_bar').offsetWidth * 0.95
 
-  window.addEventListener('scroll', function (e) {
+  window.addEventListener('wheel', function (e) {
     const element = document.querySelector('#roadmap')
     const position = element.getBoundingClientRect()
     console.log('scrolling')

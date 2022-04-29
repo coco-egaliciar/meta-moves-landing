@@ -25,20 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    //eslint-disable-next-line new-cap
-    // const app = new onePageScroll({
-    //   el: document.querySelectorAll('section,footer')
-    // })
-    //
-    //
 
     const _APP = new Animate3D()
 
-    document.body.addEventListener('animationFinished', function (e) {
-      
-    }, false)
-
     const onScroll = (isUp) => {
+      _APP.animationCurrentStep(isUp)
       const ThirtytreePercent = 49.5
       for (let i = 0; i < ThirtytreePercent; i++) {
         setTimeout(() => {
@@ -57,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     document.body.addEventListener('keydown', (e) => {
-      console.log(e.keyCode)
+      console.log(`keyCode -> ${e.keyCode}`)
       switch (e.keyCode) {
         case 34:
         case 40:
