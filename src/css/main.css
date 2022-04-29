@@ -38,12 +38,20 @@ nav,
 #decentraland,
 #utility,
 #roadmap,
+#gallery,
 #socialcause,
-#ourchannels
- {
+#ourchannels {
   scroll-snap-align: start;
 }
 
+#decentraland,
+#utility,
+#roadmap,
+#gallery,
+#socialcause,
+#ourchannels {
+  opacity: 0;
+}
 
 
 /* Scrollbar styles */
@@ -84,6 +92,7 @@ nav,
     opacity: 1;
   }
 }
+
 @keyframes fade-in-left {
   0% {
     transform: translateX(-50px);
