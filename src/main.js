@@ -25,14 +25,21 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    let _APP = null
+    //eslint-disable-next-line new-cap
+    // const app = new onePageScroll({
+    //   el: document.querySelectorAll('section,footer')
+    // })
+    //
+    //
 
-    window.addEventListener('DOMContentLoaded', () => {
-      _APP = new Animate3D()
-    })
+    const _APP = new Animate3D()
+
+    document.body.addEventListener('animationFinished', function (e) {
+      
+    }, false)
 
     const onScroll = (isUp) => {
-      const ThirtytreePercent = 33
+      const ThirtytreePercent = 49.5
       for (let i = 0; i < ThirtytreePercent; i++) {
         setTimeout(() => {
           _APP.OnScroll(isUp)
@@ -40,9 +47,32 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    const onScrollDebouncedUp = _.debounce(() => onScroll(true), 100)
-    const onScrollDebouncedDown = _.debounce(() => onScroll(false), 100)
-    document.body.style.overflow = 'hidden'
+    const onScrollDebouncedUp = _.debounce(() => onScroll(true), 250, {
+      leading: true,
+      trailing: false
+    })
+    const onScrollDebouncedDown = _.debounce(() => onScroll(false), 250, {
+      leading: true,
+      trailing: false
+    })
+
+    document.body.addEventListener('keydown', (e) => {
+      console.log(e.keyCode)
+      switch (e.keyCode) {
+        case 34:
+        case 40:
+        case 39:
+        case 32:
+          onScrollDebouncedDown()
+          break
+        case 33:
+        case 38:
+        case 37:
+          onScrollDebouncedUp()
+          break
+      }
+    })
+
     window.addEventListener('wheel', function (event) {
       if (event.deltaY <= 0) {
         console.log('scrolling up')

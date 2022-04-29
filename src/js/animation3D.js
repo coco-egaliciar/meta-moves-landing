@@ -16,6 +16,7 @@ export class Animate3D {
     this.maxSteps = 100
     this.heightSteps = _.range(-0.4 * 10, 0.7 * 10, (Math.abs(-0.4 * 10 - 0.7 * 10)) / 100)
     this.angleSteps = _.range(-35, 50, (Math.abs(-35 - 50)) / 100)
+    document.body.style.overflow = 'hidden'
 
     console.log(this.heightSteps)
     console.log(this.angleSteps)
@@ -35,8 +36,6 @@ export class Animate3D {
     const camera = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 0.5, 5)
 
     camera.position.set(params.x, params.y, params.z)
-
-
 
     // const helper = new THREE.CameraHelper(camera)
     // scene.add(helper)
@@ -168,17 +167,19 @@ export class Animate3D {
   nextStep () {
     if (this.currenrStep >= 0 && this.currenrStep < 99) {
       this.currenrStep += 1
+      if (this.currenrStep === 99) {
+        const event = new Event('animationFinished')
+        document.body.dispatchEvent(event)
+      }
     }
-
-    console.log(`this.currenrStep:${this.currenrStep}`)
+    console.log(`Next ->this.currenrStep:${this.currenrStep}`)
   }
 
   backStep () {
     if (this.currenrStep > 0 && this.currenrStep <= 99) {
       this.currenrStep -= 1
     }
-
-    console.log(`this.currenrStep:${this.currenrStep}`)
+    console.log(`Back ->this.currenrStep:${this.currenrStep}`)
   }
 
   getHeigh () {
