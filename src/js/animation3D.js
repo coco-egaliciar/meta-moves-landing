@@ -209,7 +209,6 @@ export class Animate3D {
   }
 
   OnScroll (isUp) {
-
     if (isUp === true || this.currentStep >= 3) {
       this.backStep()
       this.moveRobotPosition(this.getHeigh())
