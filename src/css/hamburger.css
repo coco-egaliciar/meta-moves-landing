@@ -1,10 +1,10 @@
 
 .hamburger-lines {
+  z-index: 150000;
   height: 26px;
   width: 32px;
   top: 17px;
   left: 20px;
-  z-index: 500;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -65,6 +65,8 @@ input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
   /*border-color: green;*/
   background: transparent;
   height: 100%;
+  position: relative;
+  z-index: 450000;
 }
 
 .navbar {
@@ -83,14 +85,14 @@ input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
 }
 
 
-#menu{
-  height: 0;
-}
+/*#menu{*/
+/*  height: 0;*/
+/*}*/
 
 .menu__show {
+  position: absolute;
+  z-index: 350000;
   animation: myAnimIn 200ms ease 0s 1 normal forwards;
-
-
 }
 
 .menu__hidden {

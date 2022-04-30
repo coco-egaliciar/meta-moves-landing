@@ -204,7 +204,8 @@ module.exports = {
       '2xl': 'calc(4vh)',
       '3xl': 'calc(6vh)',
       '4xl': 'calc(8vh)',
-      '5xl': 'calc(10vh - 2em)'
+      '5xl': 'calc(10vh - 2em)',
+      '6xl': 'calc(12vh - 2em)'
     },
     fontFamily: {
       marker: ['Permanent Marker'],

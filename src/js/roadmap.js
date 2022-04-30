@@ -29,6 +29,7 @@ const roadmapScript = () => {
     }
 
     if (positionWrapper.top <= window.innerHeight/4 && percentage < 100) {
+      roadmapWrapper.scrollIntoView(true)
       document.body.style.overflow = 'hidden'
       roadmapWrapper.scrollIntoView(true)
 

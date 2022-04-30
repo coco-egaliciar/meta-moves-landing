@@ -24,11 +24,12 @@
 
 </head>
 <body class="font-nunito text-white">
+<div id="menu"></div>
 <div id="modal_container" style="z-index: 50;"></div>
 
 
 <%= require('./partials/nav.html?raw') %>
-<section id="home" class="lg:py-32 lg:px-24 flex flex-col justify-evenly h-screen relative">
+<section id="home" class="contains flex flex-col justify-evenly relative">
   <div id="model"></div>
   <img class="w-full lg:w-1/2" src=<%=require("./img/logo_principal.png")%> alt="">
   <div id="a1" class="lg:-mt-5 lg:w-1/2  lg:text-xl2 lg:opacity-0">
@@ -137,8 +138,8 @@
 </section>
 
 
-<section data-aos="fade-right" id="gallery" class="lg:px-20 lg:py-12 bg-bold lg:h-screen">
-  <div class="text-white text-5xl font-black p-2">Gallery</div>
+<section data-aos="fade-right" id="gallery" class="contains bg-bold ">
+  <div class="text-white text-5xl font-black">Gallery</div>
   <div class="flex flex-col flex-wrap justify-center items-center">
     <div id="cards_container" class="flex flex-row flex-wrap flex-grow justify-center">
       <div class="card" data-key="1d3a2s1d3as">
@@ -155,18 +156,18 @@
       </div>
     </div>
 
-    <button class="btn-13 custom-btn">
-      View more...
-    </button>
+<!--    <button class="btn-13 custom-btn">-->
+<!--      View more...-->
+<!--    </button>-->
   </div>
   <style class="hover"></style>
   </div>
 </section>
 
 
-<section data-aos="fade-left" id="roadmap__wrapper" class="lg:h-screen ">
-  <div id="roadmap__content flex flex-col justify-around">
-    <div class="flex flex-col justify-around lg:px-20 lg:py-12">
+<section data-aos="fade-left" id="roadmap__wrapper" class="contains">
+  <div id="roadmap__content" class="h-full flex flex-col justify-around">
+    <div class="flex flex-col justify-around">
       <h1 class="text-metablue text-3xl lg:text-5xl font-bold">Our vision of the Future</h1>
       <p class="text-white mt-6 w-full lg:w-1/2 text-base">We have set up the way to go and our next steps, once we he our
         targets
@@ -178,7 +179,7 @@
     <div id="roadmapquarters" class="flex flex-col lg:flex-row">
       <div id="q1"
            class="flex flex-row bg-black rounded-xl w-full lg:w-1/3 mx-0 lg:mx-2.5 my-4 opacity-100 lg:opacity-5">
-        <div class="w-3/12 text-5xl p-5 font-bold">Q1</div>
+        <div class="w-3/12 text-6xl font-bold flex flex-col items-center justify-center">Q1</div>
         <div class="w-9/12  p-5">
           <p class="text-white text-xs mt-2"> PROJECT LAUNCH 50 TOKENIZED MOTIONS </p>
           <p class="text-metablue text-xs mt-2"> METAVERSE AVATAR INTEGRATION REDY </p>
@@ -189,7 +190,7 @@
 
       <div id="q2"
            class="flex flex-row bg-black rounded-xl w-full lg:w-1/3 mx-0 lg:mx-2.5 my-4 opacity-100 lg:opacity-0">
-        <div class="w-3/12 text-5xl p-5 font-bold">Q2</div>
+        <div class="w-3/12 text-6xl font-bold flex flex-col items-center justify-center">Q2</div>
         <div class="w-9/12  p-5">
           <p class="text-white text-xs mt-2"> ESTABLISH CELEBRITY ROYALTY AND COMMERCIAL LICENSING </p>
           <p class="text-metablue text-xs mt-2"> LAUNCH META MOVES OFFICIAL AVATARS </p>
@@ -200,7 +201,7 @@
 
       <div id="q3"
            class="flex flex-row bg-black rounded-xl w-full lg:w-1/3 mx-0 lg:mx-2.5 my-4 opacity-100 lg:opacity-0">
-        <div class="w-3/12 text-5xl p-5 font-bold">Q3</div>
+        <div class="w-3/12 text-6xl font-bold flex flex-col items-center justify-center">Q3</div>
         <div class="w-9/12  p-5">
           <p class="text-white text-xs mt-2"> ESTABLISH METAMOVES RENTAL STRATEGY</p>
           <p class="text-metablue text-xs mt-2"> FIRST WEB LIBRARY UI VIEW</p>
@@ -210,8 +211,8 @@
       </div>
     </div>
     <div class="hidden lg:inline">
-      <img id="moonwalk" height="117" class="-translate-x-12" src=<%=require("./img/moonwalk.gif")%> alt="moonwalk"/>
-      <div class="progress_bar h-5 bg-gray-400 w-full rounded-xl">
+      <img id="moonwalk" class="-translate-x-12 h-12 xl:h-48" src=<%=require("./img/moonwalk.gif")%> alt="moonwalk"/>
+      <div class="progress_bar lg:h-4 xl:h-5 bg-gray-400 w-full rounded-xl">
         <div class="progress_bar__progress rounded-xl"></div>
       </div>
     </div>
@@ -219,12 +220,12 @@
 </section>
 
 
-<section data-aos="fade-left" id="socialcause__wrapper" class="lg:h-screen bg-[#0B1019]">
-  <div id="socialcause__content" class="lg:px-20 lg:py-12 flex flex-col justify-around h-full">
+<section data-aos="fade-left" id="socialcause__wrapper" class="contains bg-[#0B1019]">
+  <div id="socialcause__content" class="flex flex-col justify-around h-full">
     <h1 class="text-white text-3xl lg:text-5xl  font-black">Social Cause</h1>
 
     <div class="w-full my-5">
-      <p class="w-full lg:w-1/2 xl:w-2/3 text-xl">
+      <p class="w-full lg:w-1/2 xl:w-2/3 text-tiny lg:text-xl">
         Meta-Moves brings life through movement not only in the Metaverse but in real life to. It is our goal to
         contribute to society and to give back to those who have lost a Limb the opportunity to move freely. State of
         the
@@ -236,7 +237,7 @@
       <div class="swiper causasocial">
         <div class="swiper-wrapper">
           <div class="swiper-slide swiper-slide-socialcause">
-            <img src=<%=require("./img/wallet_logo.jpg")%> alt="" class="rounded-full lg:h-48">
+            <img src=<%=require("./img/wallet_logo.jpg")%> alt="" class="rounded-full lg:h-24 xl:h-48">
             <p class="text-[#96BCFF] font-bold text-tiny my-5">Get a Metamove</p>
             <p class="text-center text-white text-tiny px-8">
               You can find our collections on
@@ -244,7 +245,7 @@
             </p>
           </div>
           <div class="swiper-slide swiper-slide-socialcause">
-            <img src=<%=require("./img/protesis_logo.jpg")%> alt="" class="rounded-full lg:h-48">
+            <img src=<%=require("./img/protesis_logo.jpg")%> alt="" class="rounded-full lg:h-24 xl:h-48">
 
             <p class="text-[#96BCFF] font-bold text-tiny my-5">Candidate Search</p>
             <p class="text-center text-white text-sm px-8">
@@ -253,7 +254,7 @@
             </p>
           </div>
           <div class="swiper-slide swiper-slide-socialcause">
-            <img src=<%=require("./img/dscan_logo.jpg")%> alt="" class="rounded-full lg:h-48">
+            <img src=<%=require("./img/dscan_logo.jpg")%> alt="" class="rounded-full lg:h-24 xl:h-48">
 
             <p class="text-[#96BCFF] font-bold text-tiny my-5">Custom 3D Scan</p>
             <p class="text-center text-white text-sm px-8">
@@ -262,7 +263,7 @@
             </p>
           </div>
           <div class="swiper-slide swiper-slide-socialcause">
-            <img src=<%=require("./img/dprinter_logo.jpg")%> alt="" class="rounded-full lg:h-48">
+            <img src=<%=require("./img/dprinter_logo.jpg")%> alt="" class="rounded-full lg:h-24 xl:h-48">
 
             <p class="text-[#96BCFF] font-bold text-tiny my-5">3D Printing and Assembly</p>
             <p class="text-center text-white text-sm px-8">
@@ -271,7 +272,7 @@
             </p>
           </div>
           <div class="swiper-slide swiper-slide-socialcause">
-            <img src=<%=require("./img/gift_logo.jpg")%> alt="" class="rounded-full lg:h-48">
+            <img src=<%=require("./img/gift_logo.jpg")%> alt="" class="rounded-full lg:h-24 xl:h-48">
 
             <p class="text-[#96BCFF] font-bold text-tiny my-5">Fitting & Gifting</p>
             <p class="text-center text-white text-sm px-8">
@@ -281,7 +282,7 @@
             </p>
           </div>
           <div class="swiper-slide swiper-slide-socialcause">
-            <img src=<%=require("./img/testimonial_logo.jpg")%> alt="" class="rounded-full lg:h-48">
+            <img src=<%=require("./img/testimonial_logo.jpg")%> alt="" class="rounded-full lg:h-24 xl:h-48">
 
             <p class="text-[#96BCFF] font-bold text-tiny my-5">Testimonial</p>
             <p class="text-center text-white text-sm px-8">

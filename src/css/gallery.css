@@ -7,6 +7,10 @@
 
 }
 
+#cards_container{
+  width: 102%;
+}
+
 .card {
   /*width: 71.5vw;*/
   /*height: 100vw;*/
