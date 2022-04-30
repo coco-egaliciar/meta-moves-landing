@@ -1,5 +1,8 @@
 import { Animate3D } from './js/animation3D'
 
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 const _ = require('lodash')
 
 require('normalize.css/normalize.css')
@@ -16,12 +19,12 @@ require('./js/ourchannels')
 require('./js/roadmap')
 require('./js/socialcause')
 
+AOS.init()
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOMContentLoaded', 'index')
 
   if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-
     const _APP = new Animate3D()
 
     const onScroll = (isUp) => {
@@ -156,14 +159,14 @@ App.setup = function () {
         busyAge: 0,
         spotIndex: i,
         isEdge: (xx === -500
-            ? 'left'
-            : (xx === (-500 + this.gridSize * (this.gridSteps - 1))
-                ? 'right'
-                : (yy === -500
-                    ? 'top'
-                    : (yy === (-500 + this.gridSize * (this.gridSteps - 1))
-                        ? 'bottom'
-                        : false
+          ? 'left'
+          : (xx === (-500 + this.gridSize * (this.gridSteps - 1))
+              ? 'right'
+              : (yy === -500
+                  ? 'top'
+                  : (yy === (-500 + this.gridSize * (this.gridSteps - 1))
+                      ? 'bottom'
+                      : false
                     )
                 )
             )
