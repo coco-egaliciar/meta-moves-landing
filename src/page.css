@@ -2,8 +2,8 @@
 #model {
   /*width: 50%;*/
   /*height: 2000px;*/
-  right: -35%;
-  top: -10%;
+  right: -25%;
+  top: 0;
   touch-action: none;
   position: absolute;
   /*z-index: -100;*/

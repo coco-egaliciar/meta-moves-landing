@@ -1,4 +1,6 @@
+// eslint-disable-next-line no-unused-vars
 const roadmapScript = () => {
+  console.log('Roadmap')
   const percentageToAdd = 1.5
   const q1Percentage = 33.33
   const q2Percentage = 66.66
@@ -13,15 +15,22 @@ const roadmapScript = () => {
   const progressBarProgress = document.querySelector('.progress_bar__progress')
   const moonwalk = document.querySelector('#moonwalk')
   const progressBarWidthPX = document.querySelector('.progress_bar').offsetWidth * 0.95
-
+  const roadmapContent = document.querySelector('#roadmap__content')
+  const roadmapWrapper = document.querySelector('#roadmap__wrapper')
   window.addEventListener('wheel', function (e) {
-    const element = document.querySelector('#roadmap')
-    const position = element.getBoundingClientRect()
+    console.log('Content wrapper Roadmap scrolling')
+    const positionWrapper = roadmapWrapper.getBoundingClientRect()
+    console.log(`Roadmap T:${positionWrapper.top}, B:${positionWrapper.bottom}`)
     console.log('scrolling')
     // checking whether fully visible
-    if (position.top <= 180 && percentage <= 100) {
-      e.preventDefault()
-      element.scrollIntoView(true)
+
+    if (percentage >= 100) {
+      document.body.style.overflow = 'visible'
+    }
+
+    if (positionWrapper.top <= window.innerHeight/4 && percentage < 100) {
+      document.body.style.overflow = 'hidden'
+      roadmapWrapper.scrollIntoView(true)
 
       percentage += percentageToAdd
       progressBarProgress.style.width = `${percentage}%`
@@ -50,5 +59,5 @@ const roadmapScript = () => {
   })
 }
 if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-  // roadmapScript()
+  roadmapScript()
 }

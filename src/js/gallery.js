@@ -41,8 +41,10 @@ const galleryScriot = () => {
       .card:hover:after { ${sprk_pos} ${opc} }   /* sparkles */
     `
       // set / apply css class and style
-      $cards.removeClass('active')
-      $card.removeClass('animated')
+      // $cards.removeClass('active')
+      // $card.removeClass('animated')
+
+      $card.addClass('animated')
       $card.attr('style', tf)
       $style.html(style)
       if (e.type === 'touchmove') {
@@ -56,7 +58,9 @@ const galleryScriot = () => {
       $style.html('')
       $card.removeAttr('style')
       x = setTimeout(function () {
-        $card.addClass('animated')
+        // $card.addClass('animated')
+        $cards.removeClass('active')
+        $card.removeClass('animated')
       }, 100)
     })
 
@@ -64,7 +68,7 @@ const galleryScriot = () => {
 
   const createModalHTML = () => `
 <!-- The Modal -->
- <div id="myModal" class="modal lg:pt-4 pt-1">
+ <div id="myModal" class="modal ">
     <!-- Modal content -->
     <div class="xl:container xl:p-32 mx-auto p-5 2xl:p-32 w-full lg:w-9/12 flex lg:flex-row  flex-col">
 

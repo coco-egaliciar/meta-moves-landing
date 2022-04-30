@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
-@import url('../menu/css/app.8af041ab.css');
+
 @import url('hamburger.css');
-@import url('card.css');
+
 @import url('decentraland.css');
+@import url('gallery.css');
+@import url('card.css');
 @import url('ourchannels.css');
 @import url('roadmap.css');
-@import url('gallery.css');
+
 @import url('socialcause.css');
 
 
@@ -15,43 +17,20 @@
 @tailwind components;
 @tailwind utilities;
 
-
-/*body {*/
-/*  !*backdrop-filter: blur(5px);*!*/
-/*  background: linear-gradient(90deg, rgba(0, 0, 0, 0.79) 0%, rgba(46, 46, 46, 0.2345678) 100%), no-repeat center center fixed url('../img/background.png');*/
-/*  background-size: cover;*/
-/*  background-position: 50% 50%;*/
-/*}*/
-
-/*html {*/
-/*  scroll-behavior: smooth;*/
+/*body>*{*/
+/*  border-color: green;*/
+/*  border-width: 1px;*/
+/*  border-style: solid;*/
 /*}*/
 
 
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
+  background: #000000;
+  /*overflow-x: hidden;*/
 }
 
-footer,
-nav,
-#decentraland,
-#utility,
-#roadmap,
-#gallery,
-#socialcause,
-#ourchannels {
-  scroll-snap-align: start;
-}
-
-#decentraland,
-#utility,
-#roadmap,
-#gallery,
-#socialcause,
-#ourchannels {
-  opacity: 0;
-}
 
 
 /* Scrollbar styles */

@@ -24,22 +24,21 @@
 
 </head>
 <body class="font-nunito text-white">
-
 <div id="modal_container" style="z-index: 50;"></div>
 
-<div class="px-2 lg:px-4 xl:container xl:mx-auto">
-  <%= require('./partials/nav.html?raw') %>
-  <section id="home" class="flex flex-col justify-between xl:py-40 lg:py-5 py-2 h-screen relative">
-    <div id="model"></div>
-    <img class="w-full lg:w-1/2" src=<%=require("./img/logo_principal.png")%> alt="">
-    <div id="a1" class="py-2 lg:w-1/2 text-2xl lg:text-base lg:opacity-0">
-      A Novel NFT collection where all members are able to bring to life there digital avatars through custom <span
-      class="text-metablue">Motion Capture.</span>
-    </div>
 
-    <span class="lg:opacity-0" id="a2">
-    <div  class="gradient-border bg-black text-white w-full lg:w-3/4 2xl:w-2/3 xl:w-/2">
-      <p class="p-2 lg:p-5 text-base ">
+<%= require('./partials/nav.html?raw') %>
+<section id="home" class="lg:py-32 lg:px-24 flex flex-col justify-evenly h-screen relative">
+  <div id="model"></div>
+  <img class="w-full lg:w-1/2" src=<%=require("./img/logo_principal.png")%> alt="">
+  <div id="a1" class="lg:-mt-5 lg:w-1/2  lg:text-xl2 lg:opacity-0">
+    A Novel NFT collection where all members are able to bring to life there digital avatars through custom <span
+    class="text-metablue">Motion Capture.</span>
+  </div>
+
+  <span class="lg:opacity-0" id="a2">
+    <div class="gradient-border bg-black text-white w-full lg:w-3/4 2xl:w-7/12 xl:w-/2">
+      <p class="p-2 lg:p-5 lg:text-xs">
         Meta-Moves is a stimulating collection of unique 1/1 animated and sound designed data files living on the
         Ethereum
         blockchain.
@@ -51,175 +50,179 @@
     </div>
       </span>
 
-  </section>
+</section>
 
-  <section id="decentraland"
-           class="container flex flex-col items-center justify-around w-full lg:h-screen lg:py-1 xl:py-20">
-    <div class="flex flex-col items-center justify-around w-full h-full">
-      <h1 class="text-5xl lg:text-6xl text-center font-dark">Visit us in Decentraland</h1>
-      <p class="my-1 text-sm w-full flex flex-row">
+<div id="decentraland" class="h-screen">
+  <section class="flex flex-col items-center justify-around w-full h-full">
+    <h1 class="text-5xl text-center font-bold">Visit us in Decentraland</h1>
+    <p class="my-1 text-sm w-full flex flex-row">
           <span class="px-2 lg:mx-64 lg:text-base xl:text-xl gradient-border bg-black ">
             Metamoves has developed the first official Emote store located in the Decentraland Metaverse. Known as House of Moves, the venue not only  showcases our current  custom made motions but also allows users to  purchase and exchange there utility NFT´s in a decentrilized ecosystem.
           </span>
-      </p>
+    </p>
 
-      <!-- Swiper -->
-      <div class="swiper mySwiperDecentraland xl:mt-10 lg:mt-4 mx-0">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img id="img1" src=<%=require("./img/img1.jpg")%> alt="">
-          </div>
-          <div class="swiper-slide decentraland">
-            <img id="img1" src=<%=require("./img/img2.jpg")%> alt="">
-          </div>
-          <div class="swiper-slide decentraland">
-            <img id="img1" src=<%=require("./img/img3.jpg")%> alt="">
-          </div>
+    <!-- Swiper -->
+    <div class="swiper mySwiperDecentraland xl:mt-10 lg:mt-4 mx-0">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img id="img1" src=<%=require("./img/img1.jpg")%> alt="">
         </div>
-        <div class="swiper-pagination"></div>
+        <div class="swiper-slide decentraland">
+          <img id="img1" src=<%=require("./img/img2.jpg")%> alt="">
+        </div>
+        <div class="swiper-slide decentraland">
+          <img id="img1" src=<%=require("./img/img3.jpg")%> alt="">
+        </div>
       </div>
-
-      <button class='bg-metapink-100 text-white font-bold px-2 py-2.5 rounded-3xl mt-10 px-5 w-full lg:w-1/4'>
-        <a href="https://play.decentraland.org/?island=I177d&position=47%2C-42&realm=dg" target="_blank">
-          <span class="material-symbols-outlined">pin_drop</span>
-          Visit now
-        </a>
-      </button>
+      <div class="swiper-pagination"></div>
     </div>
-  </section>
 
-  <section id="utility" class="flex flex-col justify-between lg:py-10 py-5 lg:h-screen">
-    <span>
-      <h1 class="text-metablue  text-4xl lg:text-5xl xl:text-6xl  font-black">Take your NFT´s to the next level</h1>
-      <p class="lg:w-3/4 xl:w-1/2 w-full">The purchase of an NFT from this collection grants the buyer the full rights
+    <button class='bg-metapink-100 text-white font-bold px-2 py-2.5 rounded-3xl mt-10 px-5 w-full lg:w-1/4'>
+      <a href="https://play.decentraland.org/?island=I177d&position=47%2C-42&realm=dg" target="_blank">
+        <span class="material-symbols-outlined">pin_drop</span>
+        Visit now
+      </a>
+    </button>
+  </section>
+</div>
+
+<section id="utility" class="flex flex-col justify-between lg:h-screen font-semibold">
+    <span class="lg:px-20 lg:py-12">
+      <h1 class="text-metablue  text-5xl">Take your NFT´s to the next level</h1>
+      <p class="lg:w-3/4 xl:w-1/2 w-full text-base">The purchase of an NFT from this collection grants the buyer the full rights
         to
         the
         Motion Capture data, which can be used in the future to produce 3D Videos, Videogames, or even animations for
         avatars in the metaverse. The possibilities and potential applications are limitless.
       </p>
     </span>
-    <div class="gradient-border bg-black p-5 lg:w-1/3 w-full left-0">
-      <ul>
-        <li>Adaptable to any T-pose avatar</li>
-        <li>Metaverse Friendly</li>
-        <li>Looped animations</li>
-      </ul>
-    </div>
-    <div class="flex flex-col lg:flex-row">
-      <div id="visuals__1" class="w-full lg:w-1/3 lg:px-5 px-2 lg:p-3 p-2 my-6 relative">
-        <div id="visuals__background_1" class="visuals"></div>
-        <img src=<%=require("./img/icon1.png")%> />
-        <p class="text-xl font-bold text-left">Hand Crafted Visuals</p>
-        <div class="mt-5 text-left text-bold text-sm">
-          Each one of our pieces is created individually by our highly creative team of cgi artists, engaging emotions
-          and feelings through vibrant eye candy, the devil´s in the details.
-        </div>
-      </div>
-
-      <div id="visuals__2" class="w-full lg:w-1/3 lg:px-5 px-2 lg:p-3 p-2 my-6 relative">
-        <div id="visuals__background_2" class="visuals"></div>
-        <img src=<%=require("./img/icon2.png")%> />
-        <p class="text-2xl font-bold text-left ">Custom Audio Engineering</p>
-        <div class="mt-5 text-left text-bold text-sm">
-          Our pieces are conceived to be coherent both visually and sonorously, sound is designed and mastered
-          specifically for your piece.
-        </div>
-      </div>
-
-      <div id="visuals__3" class="w-full lg:w-1/3 lg:px-5 px-2 lg:p-3 p-2 my-6 relative">
-        <div id="visuals__background_3" class="visuals"></div>
-        <img src=<%=require("./img/icon3.png")%> />
-        <div class="text-2xl font-bold text-left ">Motion Capture Utility</div>
-        <div class="mt-5 text-left text-bold text-sm">
-          We capture not only movement, but the essence of our performers in each piece transforming them in timeless
-          custom animations for your metaverse avatars.
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-
-
-<section id="gallery" class="bg-black lg:py-10 py-5 lg:h-screen">
-  <div class="px-2 lg:px-4 xl:container xl:mx-auto flex flex-col justify-between">
-    <div class="text-white text-6xl font-black p-2">Gallery</div>
-    <div class="flex flex-col flex-wrap justify-center items-center">
-      <div id="cards_container" class="flex flex-row flex-wrap flex-grow justify-center">
-        <div class="card" data-key="1d3a2s1d3as">
-          <img class="h-full w-full" src="https://meta-moves.com/img/sceenshot/06.jpg"/>
-        </div>
-        <div class="card" data-key="7a86sd">
-          <img class="h-full w-full" src="https://meta-moves.com/img/sceenshot/05.jpg"/>
-        </div>
-        <div class="card" data-key="a90s8d">
-          <img class="h-full w-full" src="https://meta-moves.com/img/sceenshot/03.jpg"/>
-        </div>
-        <div class="card" data-key="s132231sddd">
-          <img class="h-full w-full" src="https://meta-moves.com/img/sceenshot/06.jpg"/>
-        </div>
-      </div>
-
-      <button
-        class="bg-metapink-400 mt-4 py-2 px-4 rounded-3xl right-0 left-0 lg:w-2/12 w-1/2 items-center focus:shadow-outline hover:bg-metapink-100  hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0">
-        View more...
-      </button>
-    </div>
-    <style class="hover"></style>
+  <div class="gradient-border bg-black p-5 lg:w-1/3 w-full left-0 text-base">
+    <ul>
+      <li>Adaptable to any T-pose avatar</li>
+      <li>Metaverse Friendly</li>
+      <li>Looped animations</li>
+    </ul>
   </div>
-</section>
-
-
-<section id="roadmap" class="lg:py-5 py-2 lg:h-screen flex flex-col justify-around">
-  <div class="px-2 lg:px-4 xl:container xl:mx-auto  flex flex-col justify-around">
-    <h1 class="text-metablue text-4xl lg:text-5xl 2xl:text-6xl font-black">Our vision of the Future</h1>
-    <p class="text-white mt-6  w-full lg:w-1/2">We have set up the way to go and our next steps, once we he our targets
-      the path will evolve and grow Imo new member achlevmems and rewards. The following roadmap depicts Meta-Moves next
-      milestones for the first quarter of 2022 Our team is working rigorously in developing al Intellectual Property
-      required to keep the vision and goals of our company reliable.</p>
-  </div>
-  <div id="roadmapquarters" class="flex flex-col lg:flex-row">
-    <div id="q1" class="flex flex-row bg-black rounded-xl w-full lg:w-1/3 mx-0 lg:mx-2.5 my-4 opacity-100 lg:opacity-5">
-      <div class="w-3/12 text-5xl p-5 font-bold">Q1</div>
-      <div class="w-9/12  p-5">
-        <p class="text-white text-xs mt-2"> PROJECT LAUNCH 50 TOKENIZED MOTIONS </p>
-        <p class="text-metablue text-xs mt-2"> METAVERSE AVATAR INTEGRATION REDY </p>
-        <p class="text-white text-xs mt-2">MOCAP SURVEY-POLLS METAVERSE XR EVENT </p>
-        <p class="text-metablue text-xs mt-2">FIRST CELEBES, VIP LISTING</p>
+  <div class="flex flex-col lg:flex-row lg:px-20">
+    <div id="visuals__1" class="w-full lg:w-1/3 lg:px-5 px-2 lg:p-3 p-2 my-6 relative">
+      <div id="visuals__background_1" class="visuals"></div>
+      <img src=<%=require("./img/icon1.png")%> />
+      <p class="text-2xl font-bold text-left">Hand Crafted Visuals</p>
+      <div class="mt-5 text-left text-bold text-sm">
+        Each one of our pieces is created individually by our highly creative team of cgi artists, engaging emotions
+        and feelings through vibrant eye candy, the devil´s in the details.
       </div>
     </div>
 
-    <div id="q2" class="flex flex-row bg-black rounded-xl w-full lg:w-1/3 mx-0 lg:mx-2.5 my-4 opacity-100 lg:opacity-0">
-      <div class="w-3/12 text-5xl p-5 font-bold">Q2</div>
-      <div class="w-9/12  p-5">
-        <p class="text-white text-xs mt-2"> ESTABLISH CELEBRITY ROYALTY AND COMMERCIAL LICENSING </p>
-        <p class="text-metablue text-xs mt-2"> LAUNCH META MOVES OFFICIAL AVATARS </p>
-        <p class="text-white text-xs mt-2">DEPLOY CELEBRITY MOVES COLLECTION </p>
-        <p class="text-metablue text-xs mt-2">WEB RETARGETTING TOOL INCREASE PRODUCTION SPEED</p>
+    <div id="visuals__2" class="w-full lg:w-1/3 lg:px-5 px-2 lg:p-3 p-2 my-6 relative">
+      <div id="visuals__background_2" class="visuals"></div>
+      <img src=<%=require("./img/icon2.png")%> />
+      <p class="text-2xl font-bold text-left ">Custom Audio Engineering</p>
+      <div class="mt-5 text-left text-bold text-sm">
+        Our pieces are conceived to be coherent both visually and sonorously, sound is designed and mastered
+        specifically for your piece.
       </div>
     </div>
 
-    <div id="q3" class="flex flex-row bg-black rounded-xl w-full lg:w-1/3 mx-0 lg:mx-2.5 my-4 opacity-100 lg:opacity-0">
-      <div class="w-3/12 text-5xl p-5 font-bold">Q3</div>
-      <div class="w-9/12  p-5">
-        <p class="text-white text-xs mt-2"> ESTABLISH METAMOVES RENTAL STRATEGY</p>
-        <p class="text-metablue text-xs mt-2"> FIRST WEB LIBRARY UI VIEW</p>
-        <p class="text-white text-sm mt-2">DEPLOY CELEBRITY AVATARS COLLECTION </p>
-        <p class="text-metablue text-xs mt-2">100 TOKENIZED MOTIONS CELEBRITY-HOLDER 1 ON 1</p>
+    <div id="visuals__3" class="w-full lg:w-1/3 lg:px-5 px-2 lg:p-3 p-2 my-6 relative">
+      <div id="visuals__background_3" class="visuals"></div>
+      <img src=<%=require("./img/icon3.png")%> />
+      <div class="text-2xl font-bold text-left ">Motion Capture Utility</div>
+      <div class="mt-5 text-left text-bold text-sm">
+        We capture not only movement, but the essence of our performers in each piece transforming them in timeless
+        custom animations for your metaverse avatars.
       </div>
-    </div>
-  </div>
-  <div class="hidden lg:inline">
-    <img id="moonwalk" height="117" class="-translate-x-12" src=<%=require("./img/moonwalk.gif")%> alt="moonwalk"/>
-    <div class="progress_bar h-5 bg-gray-400 w-full rounded-xl">
-      <div class="progress_bar__progress rounded-xl"></div>
     </div>
   </div>
 </section>
 
 
-<section id="socialcause" class="lg:py-5 py-2 lg:h-screen bg-[#0B1019]">
-  <div class="h-full px-2 lg:px-4 xl:container xl:mx-auto flex flex-col justify-around">
-    <h1 class="text-white text-4xl lg:text-5xl text-6xl font-black">Social Cause</h1>
+<section id="gallery" class="lg:px-20 lg:py-12 bg-bold lg:h-screen">
+  <div class="text-white text-5xl font-black p-2">Gallery</div>
+  <div class="flex flex-col flex-wrap justify-center items-center">
+    <div id="cards_container" class="flex flex-row flex-wrap flex-grow justify-center">
+      <div class="card" data-key="1d3a2s1d3as">
+        <img class="h-full w-full" src="https://meta-moves.com/img/sceenshot/06.jpg"/>
+      </div>
+      <div class="card" data-key="7a86sd">
+        <img class="h-full w-full" src="https://meta-moves.com/img/sceenshot/05.jpg"/>
+      </div>
+      <div class="card" data-key="a90s8d">
+        <img class="h-full w-full" src="https://meta-moves.com/img/sceenshot/03.jpg"/>
+      </div>
+      <div class="card" data-key="s132231sddd">
+        <img class="h-full w-full" src="https://meta-moves.com/img/sceenshot/06.jpg"/>
+      </div>
+    </div>
+
+    <button
+      class="bg-metapink-400 mt-4 py-2 px-4 rounded-3xl right-0 left-0 lg:w-2/12 w-1/2 items-center focus:shadow-outline hover:bg-metapink-100  hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0">
+      View more...
+    </button>
+  </div>
+  <style class="hover"></style>
+  </div>
+</section>
+
+
+<section id="roadmap__wrapper" class="lg:h-screen ">
+  <div id="roadmap__content flex flex-col justify-around">
+    <div class="flex flex-col justify-around lg:px-20 lg:py-12">
+      <h1 class="text-metablue text-3xl lg:text-5xl font-bold">Our vision of the Future</h1>
+      <p class="text-white mt-6 w-full lg:w-1/2 text-base">We have set up the way to go and our next steps, once we he our
+        targets
+        the path will evolve and grow Imo new member achlevmems and rewards. The following roadmap depicts Meta-Moves
+        next
+        milestones for the first quarter of 2022 Our team is working rigorously in developing al Intellectual Property
+        required to keep the vision and goals of our company reliable.</p>
+    </div>
+    <div id="roadmapquarters" class="flex flex-col lg:flex-row">
+      <div id="q1"
+           class="flex flex-row bg-black rounded-xl w-full lg:w-1/3 mx-0 lg:mx-2.5 my-4 opacity-100 lg:opacity-5">
+        <div class="w-3/12 text-5xl p-5 font-bold">Q1</div>
+        <div class="w-9/12  p-5">
+          <p class="text-white text-xs mt-2"> PROJECT LAUNCH 50 TOKENIZED MOTIONS </p>
+          <p class="text-metablue text-xs mt-2"> METAVERSE AVATAR INTEGRATION REDY </p>
+          <p class="text-white text-xs mt-2">MOCAP SURVEY-POLLS METAVERSE XR EVENT </p>
+          <p class="text-metablue text-xs mt-2">FIRST CELEBES, VIP LISTING</p>
+        </div>
+      </div>
+
+      <div id="q2"
+           class="flex flex-row bg-black rounded-xl w-full lg:w-1/3 mx-0 lg:mx-2.5 my-4 opacity-100 lg:opacity-0">
+        <div class="w-3/12 text-5xl p-5 font-bold">Q2</div>
+        <div class="w-9/12  p-5">
+          <p class="text-white text-xs mt-2"> ESTABLISH CELEBRITY ROYALTY AND COMMERCIAL LICENSING </p>
+          <p class="text-metablue text-xs mt-2"> LAUNCH META MOVES OFFICIAL AVATARS </p>
+          <p class="text-white text-xs mt-2">DEPLOY CELEBRITY MOVES COLLECTION </p>
+          <p class="text-metablue text-xs mt-2">WEB RETARGETTING TOOL INCREASE PRODUCTION SPEED</p>
+        </div>
+      </div>
+
+      <div id="q3"
+           class="flex flex-row bg-black rounded-xl w-full lg:w-1/3 mx-0 lg:mx-2.5 my-4 opacity-100 lg:opacity-0">
+        <div class="w-3/12 text-5xl p-5 font-bold">Q3</div>
+        <div class="w-9/12  p-5">
+          <p class="text-white text-xs mt-2"> ESTABLISH METAMOVES RENTAL STRATEGY</p>
+          <p class="text-metablue text-xs mt-2"> FIRST WEB LIBRARY UI VIEW</p>
+          <p class="text-white text-sm mt-2">DEPLOY CELEBRITY AVATARS COLLECTION </p>
+          <p class="text-metablue text-xs mt-2">100 TOKENIZED MOTIONS CELEBRITY-HOLDER 1 ON 1</p>
+        </div>
+      </div>
+    </div>
+    <div class="hidden lg:inline">
+      <img id="moonwalk" height="117" class="-translate-x-12" src=<%=require("./img/moonwalk.gif")%> alt="moonwalk"/>
+      <div class="progress_bar h-5 bg-gray-400 w-full rounded-xl">
+        <div class="progress_bar__progress rounded-xl"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="socialcause__wrapper" class="lg:h-screen bg-[#0B1019]">
+  <div id="socialcause__content" class="lg:px-20 lg:py-12 flex flex-col justify-around h-full">
+    <h1 class="text-white text-3xl lg:text-5xl  font-black">Social Cause</h1>
 
     <div class="w-full my-5">
       <p class="w-full lg:w-1/2 xl:w-2/3 text-xl">
@@ -234,44 +237,44 @@
       <div class="swiper causasocial">
         <div class="swiper-wrapper">
           <div class="swiper-slide swiper-slide-socialcause">
-            <img src=<%=require("./img/robot1.JPG")%> alt="" class="rounded-full h-32">
-            <p class="text-[#96BCFF] font-bold text-base my-5">Get a Metamove</p>
-            <p class="text-center text-white text-sm px-8">
+            <img src=<%=require("./img/wallet_logo.jpg")%> alt="" class="rounded-full lg:h-48">
+            <p class="text-[#96BCFF] font-bold text-tiny my-5">Get a Metamove</p>
+            <p class="text-center text-white text-tiny px-8">
               You can find our collections on
               multiple platforms, don’t forget your NFT´s hold Motion Capture Data.
             </p>
           </div>
           <div class="swiper-slide swiper-slide-socialcause">
-            <img src=<%=require("./img/robot1.JPG")%> alt="" class="rounded-full h-32">
+            <img src=<%=require("./img/protesis_logo.jpg")%> alt="" class="rounded-full lg:h-48">
 
-            <p class="text-[#96BCFF] font-bold text-base my-5">Candidate Search</p>
+            <p class="text-[#96BCFF] font-bold text-tiny my-5">Candidate Search</p>
             <p class="text-center text-white text-sm px-8">
               For each NFT collection sold
               we will donate prosthetic limbs both to Humans and Pets.
             </p>
           </div>
           <div class="swiper-slide swiper-slide-socialcause">
-            <img src=<%=require("./img/robot1.JPG")%> alt="" class="rounded-full h-32">
+            <img src=<%=require("./img/dscan_logo.jpg")%> alt="" class="rounded-full lg:h-48">
 
-            <p class="text-[#96BCFF] font-bold text-base my-5">Custom 3D Scan</p>
+            <p class="text-[#96BCFF] font-bold text-tiny my-5">Custom 3D Scan</p>
             <p class="text-center text-white text-sm px-8">
               Each patient is body scanned in
               order to obtain accurate 3D models of their extremity.
             </p>
           </div>
           <div class="swiper-slide swiper-slide-socialcause">
-            <img src=<%=require("./img/robot1.JPG")%> alt="" class="rounded-full h-32">
+            <img src=<%=require("./img/dprinter_logo.jpg")%> alt="" class="rounded-full lg:h-48">
 
-            <p class="text-[#96BCFF] font-bold text-base my-5">3D Printing and Assembly</p>
+            <p class="text-[#96BCFF] font-bold text-tiny my-5">3D Printing and Assembly</p>
             <p class="text-center text-white text-sm px-8">
               Each Limb is printed and
               manufactures as a one of a kind piece, since each patient is different.
             </p>
           </div>
           <div class="swiper-slide swiper-slide-socialcause">
-            <img src=<%=require("./img/robot1.JPG")%> alt="" class="rounded-full h-32">
+            <img src=<%=require("./img/gift_logo.jpg")%> alt="" class="rounded-full lg:h-48">
 
-            <p class="text-[#96BCFF] font-bold text-base my-5">Fitting & Gifting</p>
+            <p class="text-[#96BCFF] font-bold text-tiny my-5">Fitting & Gifting</p>
             <p class="text-center text-white text-sm px-8">
               Our patients try for the
               first time their new prosthesis, after a perfect fit inspection they get to
@@ -279,9 +282,9 @@
             </p>
           </div>
           <div class="swiper-slide swiper-slide-socialcause">
-            <img src=<%=require("./img/robot1.JPG")%> alt="" class="rounded-full h-32">
+            <img src=<%=require("./img/testimonial_logo.jpg")%> alt="" class="rounded-full lg:h-48">
 
-            <p class="text-[#96BCFF] font-bold text-base my-5">Testimonial</p>
+            <p class="text-[#96BCFF] font-bold text-tiny my-5">Testimonial</p>
             <p class="text-center text-white text-sm px-8">
               Holders will receive direct testimony through our Discord channel of these lifechanging moments.
             </p>
@@ -295,27 +298,27 @@
   </div>
 </section>
 
-<section id="ourchannels" class="bg-[#0B1019] lg:py-10 py-5 lg:h-screen">
-  <div class="flex flex-col lg:flex-row">
-    <div class="lg:w-1/2 lg:py-0 px-2 flex flex-col justify-around">
-      <h1 class="text-white font-bold text-4xl lg:text-5xl xl:text-6xl">
+<section id="ourchannels" class="bg-[#0B1019] lg:h-screen">
+  <div class="flex flex-col lg:flex-row lg:h-full">
+    <div class="lg:px-20 lg:py-12 lg:w-7/12 flex flex-col justify-around">
+      <h1 class="text-white font-bold text-3xl lg:text-5xl">
         Keep in touch with our team of creatives
       </h1>
-      <p class="mt-5 text-xl">Stay ahead and never miss a drop or special editions! As a member of our community, you
+      <p class="mt-5 text-xl font-semibold">Stay ahead and never miss a drop or special editions! As a member of our community, you
         will be able to hang out with us during production and send messages to the director and actors.</p>
-      <ul class="text-3xl lg:text-5xl xl:text-6xl font-thin mt-5 flex flex-row lg:flex-col flex-wrap lg:flex-nowrap">
-        <li class="mt-5 text-[#A728F2] w-1/2"><a href="https://discord.gg/AgXjZpstPK" target="_blank">Discord</a>
+      <ul class="text-2xl lg:text-4xl font-thin mt-5 flex flex-row lg:flex-col flex-wrap lg:flex-nowrap">
+        <li class="text-[#A728F2] w-1/2"><a href="https://discord.gg/AgXjZpstPK" target="_blank">Discord</a>
         </li>
-        <li class="mt-5 text-[#34B3EF] w-1/2"><a href="https://twitter.com/metamovesnft?s=21&t=h4nylv_iNYkBJbKgJdozkw"
+        <li class="text-[#34B3EF] w-1/2"><a href="https://twitter.com/metamovesnft?s=21&t=h4nylv_iNYkBJbKgJdozkw"
                                                  target="_blank">Twitter</a>
         </li>
-        <li class="mt-5 text-[#F1972D] w-1/2"><a href="https://instagram.com/metamoves.nft?igshid=YmMyMTA2M2Y="
+        <li class="text-[#F1972D] w-1/2"><a href="https://instagram.com/metamoves.nft?igshid=YmMyMTA2M2Y="
                                                  target="_blank">Instagram</a>
         </li>
-        <li class="mt-5 text-[#F12D9C] w-1/2"><a href="https://vm.tiktok.com/ZMLbpT71j/" target="_blank">TikTok</a></li>
+        <li class="text-[#F12D9C] w-1/2"><a href="https://vm.tiktok.com/ZMLbpT71j/" target="_blank">TikTok</a></li>
       </ul>
     </div>
-    <div class="lg:w-1/2  w-full">
+    <div class="lg:w-5/12  w-full">
       <div
         style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
         class="swiper news och"
@@ -328,7 +331,7 @@
             />
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
             <div class="absolute bottom-[40px] och">
-              <p class="text-white text-xl font-bold">
+              <p class="text-white lg:text-xl2 lg:mx-auto lg:w-8/12 font-bold">
                 NFT Band Debuts with Performance on the Ellen DeGeneres Show
               </p>
               <button class="bg-metapink-400 text-white p-2 z-50 rounded-3xl text-base">
@@ -662,7 +665,7 @@
         <p class="lg:text-xl text-sm font-black">Useful Links</p>
         <ul class="mt-4 text-sm font-semibold">
           <li><a href="/faqs.html" target="_blank">FAQs</a></li>
-          <li><a href="https://meta-moves.com/" target="_blank">Cinetica Studio</a></li>
+          <li><a href="https://www.cinetica.studio/" target="_blank">Cinetica Studio</a></li>
           <li><a
             href="https://portion.io/nft-marketplace?category=&collection=&artist=MetaMoves&chains=Ethereum&sortBy=newest&verified=true&tags="
             target="_blank">Portion</a></li>

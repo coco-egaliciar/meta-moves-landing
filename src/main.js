@@ -10,19 +10,15 @@ require('./page.css')
 // require('./menu/js/chunk-vendors.955db42e')
 require('./js/hamburger')
 require('./js/decentraland')
-require('./js/ourchannels')
 require('./js/gallery')
-require('./js/socialcause')
+require('./js/ourchannels')
+
 require('./js/roadmap')
+require('./js/socialcause')
+
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOMContentLoaded', 'index')
-
-  window.scroll({
-    top: 0,
-    left: 0,
-    behavior: 'smooth'
-  })
 
   if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 

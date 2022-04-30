@@ -193,6 +193,19 @@ module.exports = {
         400: '#f30061'
       }
     },
+    fontSize: {
+      xs: '1.9vh',
+      sm: '2.1vh',
+      tiny: '2.3vh',
+      base: '2.4vh',
+      lg: 'calc(2.5vh)',
+      xl: 'calc(3vh)',
+      xl2: 'calc(3.5vh)',
+      '2xl': 'calc(4vh)',
+      '3xl': 'calc(6vh)',
+      '4xl': 'calc(8vh)',
+      '5xl': 'calc(10vh - 2em)'
+    },
     fontFamily: {
       marker: ['Permanent Marker'],
       nunito: ['Nunito Sans']

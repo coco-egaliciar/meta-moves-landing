@@ -6,53 +6,35 @@
 }
 
 .gradient-border:after {
-  content: '';
   position: absolute;
-  top: calc(-1 * var(--borderWidth));
-  left: calc(-1 * var(--borderWidth));
-  height: calc(100% + var(--borderWidth) * 2);
-  width: calc(100% + var(--borderWidth) * 2);
-  background: linear-gradient(60deg, #5ddcff, #3c67e3 43%, #4e00c2);
-  border-radius: calc(2 * var(--borderWidth));
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: -1;
-  -webkit-animation: animatedgradient 3s ease alternate infinite;
-  animation: animatedgradient 3s ease alternate infinite;
-  background-size: 300% 300%;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(1.1);
+  filter: blur(2vw);
+  background: linear-gradient(297deg, #0fffc1, #7e0fff);
+  background-size: 200% 200%;
+  animation: animateGlow 5s ease infinite;
 }
 
 
-@-webkit-keyframes animatedgradient {
+@keyframes animateGlow {
   0% {
-    background-position: 0 50%;
+    background-position: 0% 50%;
   }
   50% {
     background-position: 100% 50%;
   }
   100% {
-    background-position: 0 50%;
+    background-position: 0% 50%;
   }
 }
 
-
-@keyframes animatedgradient {
-  0% {
-    background-position: 0 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0 50%;
-  }
-}
-
-
-.gradient-border:hover:before, .gradient-border:hover:after {
-  animation: none;
-  opacity: 0;
-  height: 0;
-  width: 0;
-}
 
 
 /*TODO Probar https://codepen.io/georgehastings/pen/xgwxgo*/
