@@ -413,3 +413,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   frame()
 })
+
+setTimeout(() => {
+  window.scrollTo(0, 0)
+  document.querySelector('.se-pre-con').remove()
+}, 1400)
