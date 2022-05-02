@@ -120,3 +120,10 @@ h1{
   75%  { transform: translateY(0.6em); }
   100% { transform: translateY(0); }
 }
+
+
+
+.icon__background{
+  background: rgb(0,192,250);
+  background: linear-gradient(90deg, rgba(0,192,250,1) 0%, rgba(1,94,234,1) 100%);
+}
