@@ -8,7 +8,7 @@ import File3D from '../resource/scene.glb'
 import HDRTexture from '../resource/venice_dawn_1_1k.hdr'
 import { GUI } from 'three/examples/jsm/libs/lil-gui.module.min.js'
 
-const _ = require('lodash')
+import { range } from 'lodash'
 
 export class Animate3D {
   constructor () {
@@ -16,8 +16,8 @@ export class Animate3D {
 
     this.currentPercentage = 0
     this.maxPercentage = 100
-    this.heightPercentage = _.range(-0.4 * 10, 0.7 * 10, (Math.abs(-0.4 * 10 - 0.7 * 10)) / this.maxPercentage)
-    this.anglePercentage = _.range(-35, 50, (Math.abs(-35 - 50)) / this.maxPercentage)
+    this.heightPercentage = range(-0.4 * 10, 0.7 * 10, (Math.abs(-0.4 * 10 - 0.7 * 10)) / this.maxPercentage)
+    this.anglePercentage = range(-35, 50, (Math.abs(-35 - 50)) / this.maxPercentage)
 
     document.body.style.overflow = 'hidden'
 
@@ -162,7 +162,7 @@ export class Animate3D {
   }
 
   animationCurrentStep (isUp) {
-    if (isUp === false) {
+    if (isUp === false && this.currentStep <= 4) {
       this.currentStep += 1
     }
 
@@ -173,10 +173,10 @@ export class Animate3D {
 
     if (this.currentStep === 2) {
       document.querySelector('#a2').classList.add('fade-in-left')
-      document.body.style.overflow = 'visible'
     }
-    if (this.currentStep === 3) {
-      document.querySelector('#decentraland').scrollIntoView()
+    if (this.currentStep === 4) {
+      document.body.style.overflow = 'visible'
+      // document.querySelector('#decentraland').scrollIntoView()
     }
   }
 
@@ -209,7 +209,10 @@ export class Animate3D {
   }
 
   OnScroll (isUp) {
-    if (isUp === true || this.currentStep >= 3) {
+    if (this.currentStep >= 4) {
+      return false
+    }
+    if (isUp === true) {
       this.backStep()
       this.moveRobotPosition(this.getHeigh())
       this.rotateRobot(this.getAngle())

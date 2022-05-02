@@ -32,8 +32,8 @@
 
 @media screen and (min-width: 600px) {
   .card {
-    width: clamp(12.9vw, 61vh, 18vw);
-    /*height: clamp(18vw, 85vh, 25.2vw);*/
+    width: 20vw;
+    height: 75vh;
   }
 }
 

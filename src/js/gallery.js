@@ -1,6 +1,9 @@
 import $ from 'jquery'
+import BrowserDetector from 'browser-dtector'
 
-const galleryScriot = () => {
+const browser = new BrowserDetector(window.navigator.userAgent)
+
+const galleryScript = () => {
   let x
   const $cards = $('.card')
   const $style = $('.hover')
@@ -56,12 +59,12 @@ const galleryScriot = () => {
       // remove css, apply custom animation on end
       const $card = $(this)
       $style.html('')
-      $card.removeAttr('style')
+      // $card.removeAttr('style')
       x = setTimeout(function () {
         // $card.addClass('animated')
         $cards.removeClass('active')
         $card.removeClass('animated')
-      }, 100)
+      }, 2000)
     })
 
   /* ----------------------------------- */
@@ -119,4 +122,9 @@ const galleryScriot = () => {
     }
   })
 }
-galleryScriot()
+
+const platform = browser.parseUserAgent()
+
+if (!(platform.platform.toLowerCase() === 'macintosh' && platform.isDesktop === true)) {
+  galleryScript()
+}

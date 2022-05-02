@@ -1,3 +1,5 @@
+import BrowserDetector from 'browser-dtector'
+
 // eslint-disable-next-line no-unused-vars
 const roadmapScript = () => {
   console.log('Roadmap')
@@ -28,7 +30,7 @@ const roadmapScript = () => {
       document.body.style.overflow = 'visible'
     }
 
-    if (positionWrapper.top <= window.innerHeight/4 && percentage < 100) {
+    if (positionWrapper.top <= window.innerHeight / 4 && percentage < 100) {
       roadmapWrapper.scrollIntoView(true)
       document.body.style.overflow = 'hidden'
       roadmapWrapper.scrollIntoView(true)
@@ -59,6 +61,10 @@ const roadmapScript = () => {
     }
   })
 }
-if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+
+const browser = new BrowserDetector(window.navigator.userAgent)
+const platform = browser.parseUserAgent()
+
+if (platform.isMobile === false) {
   roadmapScript()
 }

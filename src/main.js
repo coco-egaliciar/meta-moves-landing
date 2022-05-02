@@ -1,9 +1,14 @@
 import { Animate3D } from './js/animation3D'
 
+import BrowserDetector from 'browser-dtector'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-const _ = require('lodash')
+import { cloneDeep, debounce, maxBy, reject } from 'lodash'
+
+const browser = new BrowserDetector(window.navigator.userAgent)
+const platform = browser.parseUserAgent()
+console.log(platform)
 
 require('normalize.css/normalize.css')
 require('./css/main.css')
@@ -26,7 +31,7 @@ AOS.init()
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOMContentLoaded', 'index')
 
-  if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+  if (platform.isMobile === false) {
     const _APP = new Animate3D()
 
     const onScroll = (isUp) => {
@@ -39,11 +44,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    const onScrollDebouncedUp = _.debounce(() => onScroll(true), 250, {
+    const onScrollDebouncedUp = debounce(() => onScroll(true), 250, {
       leading: true,
       trailing: false
     })
-    const onScrollDebouncedDown = _.debounce(() => onScroll(false), 250, {
+    const onScrollDebouncedDown = debounce(() => onScroll(false), 250, {
       leading: true,
       trailing: false
     })
@@ -161,14 +166,14 @@ App.setup = function () {
         busyAge: 0,
         spotIndex: i,
         isEdge: (xx === -500
-          ? 'left'
-          : (xx === (-500 + this.gridSize * (this.gridSteps - 1))
-              ? 'right'
-              : (yy === -500
-                  ? 'top'
-                  : (yy === (-500 + this.gridSize * (this.gridSteps - 1))
-                      ? 'bottom'
-                      : false
+            ? 'left'
+            : (xx === (-500 + this.gridSize * (this.gridSteps - 1))
+                ? 'right'
+                : (yy === -500
+                    ? 'top'
+                    : (yy === (-500 + this.gridSize * (this.gridSteps - 1))
+                        ? 'bottom'
+                        : false
                     )
                 )
             )
@@ -234,10 +239,10 @@ App.birth = function () {
   this.particles.push(particle)
 }
 App.kill = function (particleName) {
-  const newArray = _.reject(this.particles, function (seed) {
+  const newArray = reject(this.particles, function (seed) {
     return (seed.name === particleName)
   })
-  this.particles = _.cloneDeep(newArray)
+  this.particles = cloneDeep(newArray)
 }
 App.move = function () {
   for (let i = 0; i < this.particles.length; i++) {
@@ -268,7 +273,7 @@ App.move = function () {
 
         // Choose neighbour with highest field value (with some desobedience...)
         const chaos = 30
-        const maxFieldSpot = _.maxBy([topSpot, bottomSpot, leftSpot, rightSpot], function (e) {
+        const maxFieldSpot = maxBy([topSpot, bottomSpot, leftSpot, rightSpot], function (e) {
           return e.field + chaos * Math.random()
         })
 

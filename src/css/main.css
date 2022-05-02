@@ -62,17 +62,6 @@ html {
 }
 
 
-@-webkit-keyframes fade-in-left {
-  0% {
-    transform: translateX(-50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
 @keyframes fade-in-left {
   0% {
     transform: translateX(-50px);
@@ -84,7 +73,7 @@ html {
   }
 }
 
-
+/* splash*/
 .se-pre-con {
   background: url('../img/moonwalk.gif') center no-repeat #000000;
 }

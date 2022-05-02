@@ -77,7 +77,9 @@ module.exports = {
                 plugins: [
                   [
                     'postcss-preset-env',
-                    'tailwindcss'
+                    'tailwindcss',
+                    require('autoprefixer'),
+                    'cssnano'
                   ]
                 ]
               }

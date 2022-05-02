@@ -1,6 +1,13 @@
 .gradient-border {
   --borderWidth: 4px;
   /*background: #1D1F20;*/
+  border-width: 4px;
+  border-style: solid;
+  border-left-color: #002DBBFF;
+  border-top-color: #023a9c;
+  border-right-color: #02479c;
+  border-bottom-color: #02479c;
+  writing-mode: horizontal-tb;
   position: relative;
   border-radius: var(--borderWidth);
 }
