@@ -107,3 +107,16 @@ html {
 h1{
   @apply text-metablue tracking-wider text-6xl font-therhog font-bold
 }
+
+
+.scroll{
+  animation: scroll_1 2s cubic-bezier(0.36, 0.85, 0.66, 0.23) infinite both;
+}
+
+@keyframes scroll_1 {
+  0%   { transform: translateY(0); }
+  25%  { transform: translateY(-0.6em); }
+  50%  { transform: translateY(0); }
+  75%  { transform: translateY(0.6em); }
+  100% { transform: translateY(0); }
+}

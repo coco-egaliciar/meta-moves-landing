@@ -31,7 +31,7 @@ export class Animate3D {
       x: 0,
       y: 1.2,
       z: 0.85,
-      zoom: 0.6
+      zoom: 0.9
     }
 
     const scene = new THREE.Scene()
@@ -88,8 +88,8 @@ export class Animate3D {
     gui.add(params, 'y', -2, 2, 0.05).onChange(moveCamera)
     gui.add(params, 'z', -2, 2, 0.05).onChange(moveCamera)
     gui.add(params, 'zoom', -5, 10, 0.1).onChange(moveCamera)
-    gui.hide()
-    // gui.open()
+    // gui.hide()
+    gui.open()
 
     const controls = new OrbitControls(camera, model)
     // controls.enableDamping = true
@@ -168,6 +168,7 @@ export class Animate3D {
 
     console.log(`this.currentStep->${this.currentStep}`)
     if (this.currentStep === 1) {
+      document.querySelector('#scroll').style.display = 'none'
       document.querySelector('#a1').classList.add('fade-in-left')
     }
 
@@ -209,11 +210,7 @@ export class Animate3D {
     if (this.currentStep >= 4) {
       return false
     }
-    if (isUp === true) {
-      this.backStep()
-      this.moveRobotPosition(this.getHeigh())
-      this.rotateRobot(this.getAngle())
-    } else {
+    if (isUp === false) {
       this.nextStep()
       this.moveRobotPosition(this.getHeigh())
       this.rotateRobot(this.getAngle())
