@@ -171,9 +171,6 @@ export class Animate3D {
       document.querySelector('#a1').classList.add('fade-in-left')
     }
 
-    if (this.currentStep === 2) {
-      document.querySelector('#a2').classList.add('fade-in-left')
-    }
     if (this.currentStep === 4) {
       document.body.style.overflow = 'visible'
       // document.querySelector('#decentraland').scrollIntoView()
