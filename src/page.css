@@ -6,6 +6,7 @@
   top: 0;
   touch-action: none;
   position: absolute;
+  overflow-x: hidden;
   /*z-index: -100;*/
   z-index: -350000;
 
