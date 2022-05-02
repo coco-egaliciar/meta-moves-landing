@@ -1,17 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-
 
 @import url('hamburger.css');
-
-
 @import url('decentraland.css');
-@import url('gallery.css');
 @import url('card.css');
 @import url('ourchannels.css');
 @import url('roadmap.css');
 
 @import url('socialcause.css');
+@import url('gallery.css');
+
+
+
+@font-face {
+  font-family: 'Therhog';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Therhog.ttf')
+  format('truetype');
+}
+
+
 
 
 @tailwind base;
@@ -93,4 +101,9 @@ html {
   width: 100vw;
   height: 100vh;
   z-index: 6000000;
+}
+
+
+h1{
+  @apply text-metablue tracking-wider text-6xl font-therhog font-bold
 }

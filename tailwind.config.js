@@ -188,7 +188,7 @@ module.exports = {
       emerald: colors.emerald,
       indigo: colors.indigo,
       yellow: colors.yellow,
-      metablue: '#00FFF7',
+      metablue: '#3878ef',
       metapink: {
         100: '#d02a6c',
         400: '#f30061'
@@ -209,7 +209,7 @@ module.exports = {
       '6xl': 'calc(12vh - 2em)'
     },
     fontFamily: {
-      marker: ['Permanent Marker'],
+      therhog: ['Therhog'],
       nunito: ['Nunito Sans']
     },
     screens: {
