@@ -64,7 +64,7 @@
 }
 
 
-#connect{
+.button{
   position: relative;
   display: inline-block;
   @apply p-2;
@@ -76,7 +76,7 @@
   overflow: hidden;
 
 }
-#connect:hover{
+.button:hover{
   background: #03e9f4;
   color: #050801;
   box-shadow: 0 0 5px #03e9f4,
@@ -86,14 +86,14 @@
   -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 }
 
-#connect{
+.button{
   filter: hue-rotate(110deg);
 }
-#connect span{
+.button span.btn__item{
   position: absolute;
   display: block;
 }
-#connect span:nth-child(1){
+.button span.btn__item:nth-child(1){
   top: 0;
   left: 0;
   width: 100%;
@@ -109,7 +109,7 @@
     left: 100%;
   }
 }
-#connect span:nth-child(2){
+.button span.btn__item:nth-child(2){
   top: -100%;
   right: 0;
   width: 2px;
@@ -126,7 +126,7 @@
     top: 100%;
   }
 }
-#connect span:nth-child(3){
+.button span.btn__item:nth-child(3){
   bottom: 0;
   right: 0;
   width: 100%;
@@ -145,7 +145,7 @@
 }
 
 
-#connect span:nth-child(4){
+.button span.btn__item:nth-child(4){
   bottom: -100%;
   left: 0;
   width: 2px;
@@ -165,60 +165,6 @@
 
 
 
-/* 13 */
-.btn-13 {
-  background-color: #89d8d3;
-  background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
-  border: none;
-  z-index: 1;
-}
-.btn-13:after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  border-radius: 5px;
-  background-color: #DF1E62;
-  background-image: linear-gradient(315deg, #771193 0%, #96095D 74%);
-  box-shadow:
-    -7px -7px 20px 0 #fff9,
-    -4px -4px 5px 0 #fff9,
-    7px 7px 20px 0 #0002,
-    4px 4px 5px 0 #0001;
-  transition: all 0.3s ease;
-}
-.btn-13:hover {
-  color: #fff;
-}
-.btn-13:hover:after {
-  top: 0;
-  height: 100%;
-}
-.btn-13:active {
-  top: 2px;
-}
-
-.custom-btn {
-  /*width: 130px;*/
-  /*height: 40px;*/
-  color: #fff;
-  border-radius: 5px;
-  padding: 10px 25px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 500;
-  background: #D02A6C;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
-  box-shadow:inset 2px 2px 2px 0 rgba(255,255,255,.5),
-  7px 7px 20px 0 rgba(0,0,0,.1),
-  4px 4px 5px 0 rgba(0,0,0,.1);
-  outline: none;
-}
 
 
 .contains{
