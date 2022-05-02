@@ -83,32 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 })
 
-const visuals1 = document.querySelector('#visuals__1')
-visuals1.addEventListener('mouseover', () => {
-  document.querySelector('#visuals__background_1').classList.add('visuals__rotation')
-})
 
-visuals1.addEventListener('mouseleave', () => {
-  document.querySelector('#visuals__background_1').classList.remove('visuals__rotation')
-})
-
-const visuals2 = document.querySelector('#visuals__2')
-visuals2.addEventListener('mouseover', () => {
-  document.querySelector('#visuals__background_2').classList.add('visuals__rotation')
-})
-
-visuals2.addEventListener('mouseleave', () => {
-  document.querySelector('#visuals__background_2').classList.remove('visuals__rotation')
-})
-
-const visuals3 = document.querySelector('#visuals__3')
-visuals3.addEventListener('mouseover', () => {
-  document.querySelector('#visuals__background_3').classList.add('visuals__rotation')
-})
-
-visuals3.addEventListener('mouseleave', () => {
-  document.querySelector('#visuals__background_3').classList.remove('visuals__rotation')
-})
 
 /**
  * @author Alex Andrix <alex@alexandrix.com>

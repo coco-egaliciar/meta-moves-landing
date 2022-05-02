@@ -1,7 +1,7 @@
 import { Swiper } from 'swiper'
 
 const swiper = new Swiper('.causasocial', {
-  slidesPerView: window.innerWidth <= 768 ? 1 : 3,
+  slidesPerView: window.innerWidth <= 768 ? 1 : 6,
   spaceBetween: 30,
   // slidesPerGroup: 3,
   // loop: true,

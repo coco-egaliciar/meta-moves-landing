@@ -88,8 +88,8 @@ export class Animate3D {
     gui.add(params, 'y', -2, 2, 0.05).onChange(moveCamera)
     gui.add(params, 'z', -2, 2, 0.05).onChange(moveCamera)
     gui.add(params, 'zoom', -5, 10, 0.1).onChange(moveCamera)
-    // gui.hide()
-    gui.open()
+    gui.hide()
+    // gui.open()
 
     const controls = new OrbitControls(camera, model)
     // controls.enableDamping = true
