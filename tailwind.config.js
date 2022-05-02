@@ -170,7 +170,8 @@ module.exports = {
     'whitespace',
     'width',
     'willChange',
-    'wordBreak'
+    'wordBreak',
+    'zIndex'
 
   ],
   // important: true,
