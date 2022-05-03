@@ -1,5 +1,5 @@
 .progress_bar__progress{
   height: 100%;
   width: 2%;
-  background: linear-gradient(142.32deg, #D21A63 0%, #6B00F7 100%);
+  background: linear-gradient(90deg, rgba(0,192,250,1) 0%, rgba(1,94,234,1) 100%);
 }
