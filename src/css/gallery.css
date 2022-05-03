@@ -32,8 +32,8 @@
 
 @media screen and (min-width: 600px) {
   .card {
-    width: 20vw;
-    height: 75vh;
+    /*width: 20vw;*/
+    height: 35vh;
   }
 }
 
@@ -75,14 +75,14 @@
   filter: brightness(1) contrast(1);
   transition: all 0.312s ease;
   mix-blend-mode: color-dodge;
-  opacity: 0.75;
+  opacity: 0.25;
 }
 
 .card.active:before,
 .card:hover:before,
 .card.active:after,
 .card:hover:after {
-
+  opacity: 0.25;
   animation: none;
   transition: none;
 }
@@ -222,3 +222,65 @@
 /*  text-decoration: none;*/
 /*  cursor: pointer;*/
 /*}*/
+
+
+:root {
+  --main-color: white;
+  --shadow-border: cyan;
+}
+
+.neon-button {
+  transition: all ease-in-out 0.1s, transform ease-in-out 0.05s;
+  animation: flicker 5s 1s linear infinite;
+  /*font-size: 3em;*/
+  cursor: pointer;
+  outline: none;
+  color: var(--main-color);
+  background: transparent;
+  border-radius: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 10px var(--shadow-border), inset 0 0 20px var(--shadow-border), inset 0 0 40px var(--shadow-border), 0 0 50px var(--shadow-border), 0 0 100px var(--shadow-border), 0 0 200px var(--shadow-border);
+  border: solid 5px var(--main-color);
+  font-family: Verdana, sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px var(--shadow-border), 0 0 20px var(--shadow-border);
+}
+.neon-button:hover, .neon-button:focus {
+  animation: none;
+  color: var(--shadow-border);
+  background: var(--main-color);
+  box-shadow: 0 0 50px var(--shadow-border), 0 0 100px var(--shadow-border), 0 0 200px var(--shadow-border);
+  text-shadow: 0 0 5px var(--shadow-border);
+}
+.neon-button:active {
+  transition: all ease-in-out 0.05s;
+  transform: translate(0, 2px);
+  background: var(--shadow-border);
+  color: var(--main-color);
+  border-color: var(--shadow-border);
+  box-shadow: 0 0 50px var(--shadow-border);
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 1;
+  }
+  4% {
+    opacity: 0.1;
+  }
+  8% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}

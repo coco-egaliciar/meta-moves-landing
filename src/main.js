@@ -15,9 +15,9 @@ require('normalize.css/normalize.css')
 require('./css/main.css')
 require('./page.css')
 
-require('./menu/js/app.3a96c780')
-require('./menu/js/chunk-vendors.ec07dc43')
-require('./menu/css/app.8b0ee1d8.css')
+require('./menu/js/app.min')
+require('./menu/js/chunk-vendors.min')
+require('./menu/css/app.ee881b01.css')
 
 require('./js/hamburger')
 require('./js/decentraland')

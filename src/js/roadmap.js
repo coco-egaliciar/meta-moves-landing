@@ -22,9 +22,13 @@ const roadmapScript = () => {
 
   const progressBarWidthPX = document.querySelector('.progress_bar').offsetWidth * 0.95
   const roadmapContent = document.querySelector('#roadmap__content')
-  const roadmapWrapper = document.querySelector('#roadmap__wrapper')
+  const roadmapWrapper = document.querySelector('.roadmap__wrapper')
 
   window.addEventListener('wheel', function (e) {
+    if (e.deltaY <= 0) {
+      return true
+    }
+
     console.log('Content wrapper Roadmap scrolling')
     const positionWrapper = roadmapWrapper.getBoundingClientRect()
     console.log(`Roadmap T:${positionWrapper.top}, B:${positionWrapper.bottom}`)
