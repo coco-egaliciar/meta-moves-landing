@@ -67,7 +67,7 @@ export class Animate3D {
         render()
       })
 
-    const renderer = new THREE.WebGLRenderer({ alpha: true })
+    const renderer = new THREE.WebGLRenderer({ alpha: true,antialias:true })
     renderer.toneMappingExposure = params.exposure
     renderer.physicallyCorrectLights = true
     renderer.shadowMap.enabled = true
