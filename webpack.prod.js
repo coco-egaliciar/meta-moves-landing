@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin')
 
@@ -111,6 +112,13 @@ module.exports = {
 
   // https://webpack.js.org/concepts/plugins/
   plugins: [
+
+    new HtmlWebpackPlugin({
+      template: './src/faqs.html',
+      inject: true,
+      chunks: ['faqs'],
+      filename: 'faqs.html'
+    }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       inject: true,
@@ -126,6 +134,12 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
       chunkFilename: '[id].[contenthash].css'
+    }),
+    new FaviconsWebpackPlugin({
+      logo: './src/fav.png',
+      prefix: '',
+      outputPath: '.',
+      cache: true
     })
   ],
 

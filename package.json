@@ -1,11 +1,11 @@
 {
-  "name": "webpack-static-html-pages",
-  "version": "2.0.0",
+  "name": "meta-moves",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/ivarprudnikov/webpack-static-html-pages"
   },
-  "description": "Example of a static website assembled by using webpack v5",
+  "description": "A Novel NFT collection where all members are able to bring to life their digital avatars through custom Motion Capture",
   "keywords": [
     "webpack",
     "static",
@@ -42,8 +42,8 @@
     "css-minimizer-webpack-plugin": "^3.4.1",
     "cssnano": "^5.1.7",
     "cypress": "^9.5.2",
-    "favicons": "^7.0.0-beta.4",
-    "favicons-webpack-plugin": "^5.0.2",
+    "favicons": "6.2.2",
+    "favicons-webpack-plugin": "5.0.0",
     "file-loader": "^6.2.0",
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",

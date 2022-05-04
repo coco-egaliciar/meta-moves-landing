@@ -13,7 +13,7 @@ module.exports = {
   devtool: 'eval-cheap-module-source-map',
   devServer: {
     allowedHosts: [
-      'ak8se.localtonet.com'
+      'all'
     ],
     magicHtml: false,
     hot: false,
@@ -123,6 +123,12 @@ module.exports = {
       inject: true,
       chunks: ['gallery'],
       filename: 'gallery.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/faqs.html',
+      inject: true,
+      chunks: ['faqs'],
+      filename: 'faqs.html'
     })
   ]
 }
