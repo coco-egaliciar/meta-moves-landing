@@ -3,7 +3,7 @@ import BrowserDetector from 'browser-dtector'
 // eslint-disable-next-line no-unused-vars
 const roadmapScript = () => {
   console.log('Roadmap')
-  const percentageToAdd = 1.5
+  const percentageToAdd = 8.5
   const q1Percentage = 12
   const q2Percentage = 33
   const q3Percentage = 66
