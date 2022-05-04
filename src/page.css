@@ -169,5 +169,5 @@
 
 
 .contains{
-  @apply lg:px-12 lg:py-4 xl:px-20 xl:py-12 lg:h-screen
+  @apply py-5  lg:px-12 xl:px-20 xl:py-12 lg:h-screen
 }

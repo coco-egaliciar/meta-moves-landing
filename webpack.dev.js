@@ -12,6 +12,9 @@ module.exports = {
   target: 'web',
   devtool: 'eval-cheap-module-source-map',
   devServer: {
+    allowedHosts: [
+      'ak8se.localtonet.com'
+    ],
     magicHtml: false,
     hot: false,
     server: 'http',
@@ -82,6 +85,7 @@ module.exports = {
         type: 'asset/source'
       },
       {
+        test: /\.html$/i,
         // https://webpack.js.org/loaders/html-loader/#usage
         resourceQuery: /template/,
         loader: 'html-loader',
@@ -113,6 +117,12 @@ module.exports = {
       inject: true,
       chunks: ['index'],
       filename: 'index.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/gallery.html',
+      inject: true,
+      chunks: ['gallery'],
+      filename: 'gallery.html'
     })
   ]
 }

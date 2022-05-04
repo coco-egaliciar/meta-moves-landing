@@ -117,6 +117,12 @@ module.exports = {
       chunks: ['index'],
       filename: 'index.html'
     }),
+    new HtmlWebpackPlugin({
+      template: './src/gallery.html',
+      inject: true,
+      chunks: ['gallery'],
+      filename: 'gallery.html'
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
       chunkFilename: '[id].[contenthash].css'

@@ -11,15 +11,31 @@
 }
 
 .och.swiper-slide img {
+  min-height: 501px !important;
   width: auto;
   height: auto;
-  min-height: 850px;
+  left: 0;
   max-width: 100%;
   max-height: 100%;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
   position: absolute;
-  left: 50%;
+  /* left: 50%; */
   top: 50%;
+  bottom: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .och.swiper-slide img {
+    width: auto;
+    height: auto;
+    min-height: 850px;
+    max-width: 100%;
+    max-height: 100%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
 }
 
 /* 13 */

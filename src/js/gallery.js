@@ -125,6 +125,6 @@ const galleryScript = () => {
 
 const platform = browser.parseUserAgent()
 
-if (!(platform.platform.toLowerCase() === 'macintosh' && platform.isDesktop === true)) {
+if (!(platform.platform.toLowerCase() === 'macintosh')) {
   galleryScript()
 }

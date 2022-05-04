@@ -67,7 +67,7 @@ export class Animate3D {
         render()
       })
 
-    const renderer = new THREE.WebGLRenderer({ alpha: true,antialias:true })
+    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true })
     renderer.toneMappingExposure = params.exposure
     renderer.physicallyCorrectLights = true
     renderer.shadowMap.enabled = true
@@ -209,6 +209,11 @@ export class Animate3D {
   OnScroll (isUp) {
     if (this.currentStep >= 4) {
       return false
+    }
+    if (isUp === true) {
+      this.backStep()
+      this.moveRobotPosition(this.getHeigh())
+      this.rotateRobot(this.getAngle())
     }
     if (isUp === false) {
       this.nextStep()
