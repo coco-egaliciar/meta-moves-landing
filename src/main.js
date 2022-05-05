@@ -1,5 +1,6 @@
 import { Animate3D } from './js/animation3D'
 
+import video from './video/video.mp4';
 
 import BrowserDetector from 'browser-dtector'
 import AOS from 'aos'
