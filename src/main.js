@@ -17,7 +17,7 @@ require('./page.css')
 
 require('./menu/js/app.min')
 require('./menu/js/chunk-vendors.min')
-require('./menu/css/app.ee881b01.css')
+require('./menu/css/app.c26ea9af.css')
 
 require('./js/hamburger')
 require('./js/decentraland')
