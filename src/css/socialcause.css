@@ -1,14 +1,30 @@
-.swiper-slide-socialcause {
-  text-align: center;
+.swiper {
+  width: 100%;
+}
+
+.swiper-slide {
   background: transparent;
 
   /* Center slide text vertically */
   display: flex;
-  flex-flow: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
-.swiper-pagination-socialcause{
-  bottom: -12px !important;
+.swiper-slide #img1{
+  height: 50vh;
+}
+
+
+.SocialCause.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+}
+
+.swiper-slide:nth-child(2n) {
+  width: 60%;
+}
+
+.swiper-slide:nth-child(3n) {
+  width: 40%;
 }

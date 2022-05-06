@@ -22,8 +22,6 @@ require('./menu/css/app.c26ea9af.css')
 
 require('./js/hamburger')
 
-require('./js/ourchannels')
-
 require('./js/roadmap')
 require('./js/socialcause')
 
