@@ -33,91 +33,6 @@
 
 <%= require('./partials/nav.html?raw') %>
 
-<section data-aos="fade-left" id="aboutus" class="contains bg-black flex flex-col justify-evenly">
-
-  <div>
-    <h1 class="capitalize ">About us</h1>
-  </div>
-  <div class="w-full lg:w-7/12 my-5 lg:p-12">
-    <p class="text-white text-sm mt-2">
-      MetaMoves is the first NFT project of its kind, leading the movement of moves which is about to explode! We are a
-      passionate team of creators helping avatars come to life to express and communicate their feelings, thoughts, and
-      strengths by movement.
-    </p>
-  </div>
-  <div class="team_member h-full flex lg:flex-row lg:justify-around" >
-    <div class="flex flex-col justify-between">
-      <div class="mt-5 lg:mt-0 flex items-center space-x-4">
-        <img class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/avatar.jpg")%>   alt="Lio.Bot">
-        <div class="space-y-1 font-medium">
-          <div class="lg:text-tiny text-sm text-white">Lio.Bot</div>
-          <div class="lg:text-sm text-xs text-white">Metaverse architect</div>
-        </div>
-      </div>
-
-      <div class="mt-5 lg:mt-0 flex items-center space-x-4">
-        <img class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/avatar.jpg")%>   alt="Daniela.Bot">
-        <div class="space-y-1 font-medium dark:text-white">
-          <div class="lg:text-tiny text-sm">Daniela.Bot</div>
-          <div class="lg:text-sm text-xs text-white">Marketing & strategy</div>
-        </div>
-      </div>
-
-      <div class="mt-5 lg:mt-0 flex items-center space-x-4">
-        <img class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/avatar.jpg")%>   alt="Jorge.Bot">
-        <div class="space-y-1 font-medium dark:text-white">
-          <div class="lg:text-tiny text-sm">Jorge.Bot</div>
-          <div class="lg:text-sm text-xs text-white">Web3 solutions</div>
-        </div>
-      </div>
-
-      <div class="mt-5 lg:mt-0 flex items-center space-x-4">
-        <img class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/avatar.jpg")%>   alt="Alex.Bot">
-        <div class="space-y-1 font-medium dark:text-white">
-          <div class="lg:text-tiny text-sm">Alex.Bot</div>
-          <div class="lg:text-sm text-xs text-white">Artist relations</div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="flex flex-col justify-between">
-      <div class="mt-5 lg:mt-0 flex items-center space-x-4">
-        <img class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/avatar.jpg")%>   alt="Jon.Bot">
-        <div class="space-y-1 font-medium dark:text-white">
-          <div class="lg:text-tiny text-sm">Jon.Bot</div>
-          <div class="lg:text-sm text-xs text-white">Motion capture director</div>
-        </div>
-      </div>
-
-      <div class="mt-5 lg:mt-0 flex items-center space-x-4">
-        <img class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/avatar.jpg")%>   alt="Zaid.Bot">
-        <div class="space-y-1 font-medium dark:text-white">
-          <div class="lg:text-tiny text-sm">Zaid.Bot</div>
-          <div class="lg:text-sm text-xs text-white">Biomechanics engineer </div>
-        </div>
-      </div>
-
-      <div class="mt-5 lg:mt-0 flex items-center space-x-4">
-        <img class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/avatar.jpg")%>   alt="Esteban.Bot">
-        <div class="space-y-1 font-medium dark:text-white">
-          <div class="lg:text-tiny text-sm">Esteban.Bot</div>
-          <div class="lg:text-sm text-xs text-white">Web3 development</div>
-        </div>
-      </div>
-
-      <div class="mt-5 lg:mt-0 flex items-center space-x-4">
-        <img class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/avatar.jpg")%>   alt="Moise.Bot">
-        <div class="space-y-1 font-medium dark:text-white">
-          <div class="lg:text-tiny text-sm">Moise.Bot</div>
-          <div class="lg:text-sm text-xs text-white">Research & advisor</div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
 
 <section id="home" class="contains flex flex-col justify-center lg:justify-evenly relative h-screen">
   <div id="model" class="hidden lg:block"></div>
@@ -147,7 +62,7 @@
 <section id="specsandutility" class="contains flex flex-col justify-between bg-black">
   <div>
     <h1 class="capitalize">SPECS & UTILITY</h1>
-    <p class="text-tiny lg:text-xl capitalize">
+    <p class="text-tiny lg:text-xl">
       All MetaMoves are adaptable to any T-pose avatar, can be used several times, and are Metaverse friendly.
     </p>
   </div>
@@ -263,7 +178,7 @@
   </div>
 
   <div class="w-full my-5">
-    <p class="text-white text-sm mt-2">
+    <p class="text-white text-tiny lg:text-xl mt-2">
       MetaMoves is committed to bringing life through movement not only for NFTs, but for humans and pets too. To that
       end, we are partnering with MediPrint, a Mexican 3D printer company that creates robotic limbs which are
       controlled by the human mind using portable electroencephalography and AI. The financial aspect is covered by
@@ -331,44 +246,162 @@
   </div>
 </section>
 
+<section data-aos="fade-left" id="aboutus" class="contains bg-black flex flex-col justify-evenly">
 
-
-<footer class="lg:p-1 w-full bg-[#10131a] flex lg:flex-row flex-col text-white h-full text-xs">
-  <div class="lg:w-1/3 w-full text-xs flex flex-col justify-center items-center">
-    <div class="w-full flex flex-col items-center justify-center">
-
-      <p class="text-sm text-center font-bold">Useful Links</p>
-      <ul class="mt-2 flex flex-row items-center justify-center">
-        <div class="w-full lg:w-1/2 mx-2">
-          <li><a href="/faqs.html" target="_blank">FAQs</a></li>
-          <li><a href="https://www.cinetica.studio/" target="_blank">Cinetica Studio</a></li>
-          <li><a
-            href="https://portion.io/nft-marketplace?category=&collection=&artist=MetaMoves&chains=Ethereum&sortBy=newest&verified=true&tags="
-            target="_blank">Portion</a></li>
+  <div>
+    <h1 class="capitalize ">About us</h1>
+  </div>
+  <div class="w-full lg:w-7/12 my-5 lg:p-12">
+    <p class="text-white text-tiny lg:text-xl mt-2">
+      MetaMoves is the first NFT project of its kind, leading the movement of moves which is about to explode! We are a
+      passionate team of creators helping avatars come to life to express and communicate their feelings, thoughts, and
+      strengths by movement.
+    </p>
+  </div>
+  <div class="team_member h-full flex lg:flex-row lg:justify-around">
+    <div class="flex flex-col justify-between">
+      <div class="mt-5 lg:mt-0 flex items-center space-x-4">
+        <img class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/team/lio.png")%> alt="Lio.Bot">
+        <div class="space-y-1 font-medium">
+          <div class="lg:text-tiny text-sm text-white">Lio.Bot</div>
+          <div class="lg:text-sm text-xs text-white">Metaverse architect</div>
         </div>
-        <div class="w-full lg:w-1/2 mx-2">
+      </div>
 
-          <li><a href="https://opensea.io/Meta-Moves?tab=created" target="_blank">Open Sea</a></li>
-          <li><a href="https://www.coinbase.com/es/price/ethereum" target="_blank">Ethereum Price</a></li>
+      <div class="mt-5 lg:mt-0 flex items-center space-x-4">
+        <img class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/team/daniela.png")%>
+        alt="Daniela.Bot">
+        <div class="space-y-1 font-medium dark:text-white">
+          <div class="lg:text-tiny text-sm">Daniela.Bot</div>
+          <div class="lg:text-sm text-xs text-white">Marketing & strategy</div>
         </div>
-      </ul>
+      </div>
 
+      <div class="mt-5 lg:mt-0 flex items-center space-x-4">
+        <img class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/team/jorge.png")%> alt="Jorge.Bot">
+        <div class="space-y-1 font-medium dark:text-white">
+          <div class="lg:text-tiny text-sm">Jorge.Bot</div>
+          <div class="lg:text-sm text-xs text-white">Web3 solutions</div>
+        </div>
+      </div>
+
+      <div class="mt-5 lg:mt-0 flex items-center space-x-4">
+        <img class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/team/alex.png")%> alt="Alex.Bot">
+        <div class="space-y-1 font-medium dark:text-white">
+          <div class="lg:text-tiny text-sm">Alex.Bot</div>
+          <div class="lg:text-sm text-xs text-white">Artist relations</div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="flex flex-col justify-between">
+      <div class="mt-5 lg:mt-0 flex items-center space-x-4">
+        <img class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/team/jon.png")%> alt="Jon.Bot">
+        <div class="space-y-1 font-medium dark:text-white">
+          <div class="lg:text-tiny text-sm">Jon.Bot</div>
+          <div class="lg:text-sm text-xs text-white">Motion capture director</div>
+        </div>
+      </div>
+
+      <div class="mt-5 lg:mt-0 flex items-center space-x-4">
+        <img class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/team/zaid.png")%> alt="Zaid.Bot">
+        <div class="space-y-1 font-medium dark:text-white">
+          <div class="lg:text-tiny text-sm">Zaid.Bot</div>
+          <div class="lg:text-sm text-xs text-white">Biomechanics engineer</div>
+        </div>
+      </div>
+
+      <div class="mt-5 lg:mt-0 flex items-center space-x-4">
+        <img class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/team/esteban.png")%>
+        alt="Esteban.Bot">
+        <div class="space-y-1 font-medium dark:text-white">
+          <div class="lg:text-tiny text-sm">Esteban.Bot</div>
+          <div class="lg:text-sm text-xs text-white">Web3 development</div>
+        </div>
+      </div>
+
+      <div class="mt-5 lg:mt-0 flex items-center space-x-4">
+        <img class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/team/moise.png")%> alt="Moise.Bot">
+        <div class="space-y-1 font-medium dark:text-white">
+          <div class="lg:text-tiny text-sm">Moise.Bot</div>
+          <div class="lg:text-sm text-xs text-white">Research & advisor</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section data-aos="fade-left" id="letsconnect" class="contains bg-black flex flex-col justify-between">
+
+  <div>
+    <h1 class="capitalize ">Let<span style="color: transparent">"</span>'s connect</h1>
+    <p class="text-tiny lg:text-xl">
+      Let´s connect so you never miss a drop or releases of MetaMoves.
+    </p>
+  </div>
+
+  <div class="w-full my-5">
+    <ul class="text-2xl lg:text-4xl font-thin mt-5 flex lg:flex-row flex-col flex-wrap lg:flex-nowrap">
+      <li class="text-[#A728F2] w-1/4">
+        <a href="https://discord.gg/AgXjZpstPK" target="_blank">Discord</a>
+      </li>
+      <li class="text-[#34B3EF] w-1/4">
+        <a href="https://twitter.com/metamovesnft?s=21&t=h4nylv_iNYkBJbKgJdozkw" target="_blank">Twitter</a>
+      </li>
+      <li class="text-[#F1972D] w-1/4">
+        <a href="https://instagram.com/metamoves.nft?igshid=YmMyMTA2M2Y=" target="_blank">Instagram</a>
+      </li>
+      <li class="text-[#F12D9C] w-1/4">
+        <a href="https://vm.tiktok.com/ZMLbpT71j/" target="_blank">TikTok</a>
+      </li>
+    </ul>
+    <div class="flex flex-row justify-center mt-5 lg:mt-24">
+      <div class="mx-2">
+        <a href="https://opensea.io/Meta-Moves?tab=created" target="_blank">
+          <img class="h-12" src=<%=require("./img/opensea_logo.png")%> alt="opensea" />
+        </a>
+      </div>
+      <div class="mx-2">
+        <a
+          href="https://portion.io/nft-marketplace?category=&collection=&artist=MetaMoves&chains=Ethereum&sortBy=newest&verified=true&tags="
+          target="_blank">
+          <img class="h-12" src=<%=require("./img/portion_logo.png")%> alt="portion"/>
+        </a>
+      </div>
     </div>
   </div>
-  <div class="lg:w-1/3 w-full text-xs flex flex-col justify-center items-center">
-    <p class="text-sm text-center font-bold">Contact</p>
-    <div>
-      <a class="text-metablue" href="mailto:info@cinetica.studio" target="_blank">info@cinetica.studio</a>
+
+  <footer class="lg:p-1 w-full bg-[#10131a]">
+    <div class="flex flex-row text-white text-xs">
+      <div class="w-1/2">
+        <p class="text-base">About</p>
+        <ul>
+          <li class="text-sm"><a href="" target="_blank">News</a></li>
+          <li class="text-sm"><a href="" target="_blank">FAQs</a></li>
+          <li class="text-sm"><a href="" target="_blank">Media Kit</a></li>
+        </ul>
+      </div>
+      <div class="w-1/2 flex flex-row justify-end">
+        <div>
+          <p class="text-base">Get a Metamove</p>
+          <ul>
+            <li class="text-sm"><a href="" target="_blank">opensea.io</a></li>
+            <li class="text-sm"><a href="" target="_blank">portion.io</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div> Metamoves © 2022, All rights reserved</div>
-  </div>
-  <div class="lg:w-1/3 w-full text-xs flex flex-col justify-center items-center">
-    <p class="text-center font-bold">Address</p>
-    <div class="w-1/2">
-      <span class="material-symbols-outlined">pin_drop</span> Gutemberg 51 Verónica Anzurez, México
+    <div class="flex flex-row items-center justify-center">
+      <div class="text-center">
+        <p>MetaMoves © <span id="year"></span>. Powered by Cinetica Studio</p>
+        <p>All Rights Reserved</p>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
+
+</section>
 
 </body>
 </html>

@@ -1,7 +1,5 @@
 import { Animate3D } from './js/animation3D'
 
-import video from './video/video.mp4';
-
 import BrowserDetector from 'browser-dtector'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -81,8 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 })
-
-
 
 /**
  * @author Alex Andrix <alex@alexandrix.com>
@@ -398,3 +394,5 @@ setTimeout(() => {
   window.scrollTo(0, 0)
   document.querySelector('.se-pre-con').remove()
 }, 1400)
+
+document.querySelector('#year').innerHTML = new Date().getFullYear().toString()
