@@ -4,8 +4,8 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
-import File3D from '../resource/scene.glb'
-import HDRTexture from '../resource/venice_dawn_1_1k.hdr'
+import File3D from '../../resource/scene.glb'
+import HDRTexture from '../../resource/venice_dawn_1_1k.hdr'
 import { GUI } from 'three/examples/jsm/libs/lil-gui.module.min.js'
 
 import { range } from 'lodash'

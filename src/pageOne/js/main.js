@@ -1,4 +1,4 @@
-import { Animate3D } from './js/animation3D'
+import { Animate3D } from './animation3D'
 
 import BrowserDetector from 'browser-dtector'
 import AOS from 'aos'
@@ -11,18 +11,17 @@ const platform = browser.parseUserAgent()
 console.log(platform)
 
 require('normalize.css/normalize.css')
-require('./css/main.css')
-require('./page.css')
+require('../css/main.css')
 
-require('./menu/js/app.min')
-require('./menu/js/chunk-vendors.min')
-require('./menu/css/app.c26ea9af.css')
+require('../../shared/menu/js/app.min')
+require('../../shared/menu/js/chunk-vendors.min')
+require('../../shared/menu/css/app.c26ea9af.css')
 
-require('./js/hamburger')
+require('./hamburger')
 
-require('./js/roadmap')
-require('./js/socialcause')
-require('./js/aboutus')
+require('./roadmap')
+require('./socialcause')
+require('./aboutus')
 
 AOS.init()
 
