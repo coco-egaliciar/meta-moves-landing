@@ -103,7 +103,7 @@ html {
 
 
 h1{
-  @apply text-metablue tracking-wider leading-none text-4xl lg:text-6xl font-therhog font-bold;
+  @apply text-metablue tracking-wider leading-none text-2xl5 lg:text-6xl font-therhog font-bold;
   /*line-height: 4rem;*/
 }
 

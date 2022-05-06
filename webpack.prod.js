@@ -146,12 +146,12 @@ module.exports = {
       filename: '[name].[contenthash].css',
       chunkFilename: '[id].[contenthash].css'
     }),
-    new FaviconsWebpackPlugin({
-      logo: './src/fav.png',
-      prefix: '',
-      outputPath: '.',
-      cache: true
-    })
+    // new FaviconsWebpackPlugin({
+    //   logo: './src/fav.png',
+    //   prefix: '',
+    //   outputPath: '.',
+    //   cache: true
+    // })
   ],
 
   // https://webpack.js.org/configuration/optimization/

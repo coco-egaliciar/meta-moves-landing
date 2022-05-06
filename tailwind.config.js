@@ -203,6 +203,7 @@ module.exports = {
       xl: 'calc(3vh)',
       xl2: 'calc(3.5vh)',
       '2xl': 'calc(4vh)',
+      '2xl5': 'calc(5vh)',
       '3xl': 'calc(6vh)',
       '4xl': 'calc(8vh)',
       '5xl': 'calc(10vh - 2em)',

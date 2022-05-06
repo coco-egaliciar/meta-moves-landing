@@ -33,11 +33,11 @@
 
 <%= require('./partials/nav.html?raw') %>
 
-<section id="home" class="contains flex flex-col justify-evenly relative">
+<section id="home" class="contains flex flex-col justify-center lg:justify-evenly relative h-screen">
   <div id="model" class="hidden lg:block"></div>
   <img class="w-full lg:w-1/2" src=<%=require("./img/logo_principal.png")%> alt="logo">
-  <div id="a1" class="lg:-mt-5 lg:w-1/2  lg:text-xl2 lg:opacity-0">
-    MetaMoves project brings <span class="text-metablue">NFTs</span>to life through <span class="text-metablue">movements.</span>
+  <div id="a1" class="mt-12 lg:-mt-5 lg:w-1/2  lg:text-xl2 lg:opacity-0">
+    MetaMoves project brings <span class="text-metablue">NFTs</span> to life through <span class="text-metablue">movements.</span>
   </div>
   <div class="absolute bottom-[85px] lg:flex flex-row justify-center w-full p-5 scroll hidden lg:block">
     <img id="scroll" src=<%=require("./img/scrolldown.png")%> class="h-24 lg:h-30 " />
@@ -178,12 +178,7 @@
 
   <div class="w-full my-5">
     <p class="text-white text-sm mt-2">
-      MetaMoves is committed to bringing life through movement not only for NFTs, but for humans and pets too. To that
-      end, we are partnering with MediPrint, a Mexican 3D printer company that creates robotic limbs which are
-      controlled
-      by the human mind using portable electroencephalography and AI. The financial aspect is covered by MetaMoves,
-      allocating 2% of annual revenue to the cause and the community, by participating in dedicated drops organized to
-      increase awareness and raise funds.
+      MetaMoves is committed to bringing life through movement not only for NFTs, but for humans and pets too. To that end, we are partnering with MediPrint, a Mexican 3D printer company that creates robotic limbs which are controlled by the human mind using portable electroencephalography and AI. The financial aspect is covered by MetaMoves, allocating 10% for each ETH displayed on our total volume trade to the cause and the community, by participating in dedicated drops organized to increase awareness and raise funds.
     </p>
   </div>
   <div class="w-full mt-7">
@@ -191,39 +186,51 @@
     <div class="swiper mySwiperSocialCause xl:mt-10 lg:mt-4 mx-0">
       <div class="swiper-wrapper">
         <div class="swiper-slide SocialCause">
-          <img id="img1" class="swiper-lazy" data-src=<%=require("./img/socialcause/1.jpeg")%> alt="">
+          <img id="img1" class="swiper-lazy gradient-border" data-src=<%=require("./img/socialcause/1.jpg")%> alt="">
           <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </div>
 
         <div class="swiper-slide SocialCause">
-          <img id="img1" class="swiper-lazy" data-src=<%=require("./img/socialcause/2.jpeg")%> alt="">
+          <img id="img1" class="swiper-lazy  gradient-border" data-src=<%=require("./img/socialcause/2.jpg")%> alt="">
           <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </div>
 
         <div class="swiper-slide SocialCause">
-          <img id="img1" class="swiper-lazy" data-src=<%=require("./img/socialcause/3.jpeg")%> alt="">
+          <img id="img1" class="swiper-lazy  gradient-border" data-src=<%=require("./img/socialcause/3.jpg")%> alt="">
           <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </div>
 
         <div class="swiper-slide SocialCause">
-          <img id="img1" class="swiper-lazy" data-src=<%=require("./img/socialcause/3.jpeg")%> alt="">
+          <img id="img1" class="swiper-lazy  gradient-border" data-src=<%=require("./img/socialcause/4.jpg")%> alt="">
           <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </div>
 
         <div class="swiper-slide SocialCause">
-          <img id="img1" class="swiper-lazy" data-src=<%=require("./img/socialcause/3.jpeg")%> alt="">
+          <img id="img1" class="swiper-lazy  gradient-border" data-src=<%=require("./img/socialcause/5.jpg")%> alt="">
+          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </div>
+        <div class="swiper-slide SocialCause">
+          <img id="img1" class="swiper-lazy  gradient-border" data-src=<%=require("./img/socialcause/6.jpg")%> alt="">
+          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </div>
+        <div class="swiper-slide SocialCause">
+          <img id="img1" class="swiper-lazy  gradient-border" data-src=<%=require("./img/socialcause/7.jpg")%> alt="">
+          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </div>
+        <div class="swiper-slide SocialCause">
+          <img id="img1" class="swiper-lazy  gradient-border" data-src=<%=require("./img/socialcause/8.jpg")%> alt="">
+          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </div>
+        <div class="swiper-slide SocialCause">
+          <img id="img1" class="swiper-lazy  gradient-border" data-src=<%=require("./img/socialcause/9.jpg")%> alt="">
+          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </div>
+        <div class="swiper-slide SocialCause">
+          <img id="img1" class="swiper-lazy  gradient-border" data-src=<%=require("./img/socialcause/10.jpg")%> alt="">
           <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </div>
 
-        <div class="swiper-slide SocialCause">
-          <img id="img1" class="swiper-lazy" data-src=<%=require("./img/socialcause/3.jpeg")%> alt="">
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
 
-        <div class="swiper-slide SocialCause">
-          <img id="img1" class="swiper-lazy" data-src=<%=require("./img/socialcause/3.jpeg")%> alt="">
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
       </div>
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>

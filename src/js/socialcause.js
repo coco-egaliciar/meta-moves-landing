@@ -7,7 +7,7 @@ import 'swiper/css/bundle'
 const browser = new BrowserDetector(window.navigator.userAgent)
 const platform = browser.parseUserAgent()
 
-let slidesPerView = 5
+let slidesPerView = 3
 if (platform.isMobile === true) {
   slidesPerView = 1
 }
