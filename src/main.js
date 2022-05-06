@@ -24,6 +24,7 @@ require('./js/hamburger')
 
 require('./js/roadmap')
 require('./js/socialcause')
+require('./js/aboutus')
 
 AOS.init()
 

@@ -33,6 +33,92 @@
 
 <%= require('./partials/nav.html?raw') %>
 
+<section data-aos="fade-left" id="aboutus" class="contains bg-black flex flex-col justify-evenly">
+
+  <div>
+    <h1 class="capitalize ">About us</h1>
+  </div>
+  <div class="w-full lg:w-7/12 my-5 lg:p-12">
+    <p class="text-white text-sm mt-2">
+      MetaMoves is the first NFT project of its kind, leading the movement of moves which is about to explode! We are a
+      passionate team of creators helping avatars come to life to express and communicate their feelings, thoughts, and
+      strengths by movement.
+    </p>
+  </div>
+  <div class="team_member h-full flex lg:flex-row lg:justify-around" >
+    <div class="flex flex-col justify-between">
+      <div class="mt-5 lg:mt-0 flex items-center space-x-4">
+        <img class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/avatar.jpg")%>   alt="Lio.Bot">
+        <div class="space-y-1 font-medium">
+          <div class="lg:text-tiny text-sm text-white">Lio.Bot</div>
+          <div class="lg:text-sm text-xs text-white">Metaverse architect</div>
+        </div>
+      </div>
+
+      <div class="mt-5 lg:mt-0 flex items-center space-x-4">
+        <img class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/avatar.jpg")%>   alt="Daniela.Bot">
+        <div class="space-y-1 font-medium dark:text-white">
+          <div class="lg:text-tiny text-sm">Daniela.Bot</div>
+          <div class="lg:text-sm text-xs text-white">Marketing & strategy</div>
+        </div>
+      </div>
+
+      <div class="mt-5 lg:mt-0 flex items-center space-x-4">
+        <img class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/avatar.jpg")%>   alt="Jorge.Bot">
+        <div class="space-y-1 font-medium dark:text-white">
+          <div class="lg:text-tiny text-sm">Jorge.Bot</div>
+          <div class="lg:text-sm text-xs text-white">Web3 solutions</div>
+        </div>
+      </div>
+
+      <div class="mt-5 lg:mt-0 flex items-center space-x-4">
+        <img class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/avatar.jpg")%>   alt="Alex.Bot">
+        <div class="space-y-1 font-medium dark:text-white">
+          <div class="lg:text-tiny text-sm">Alex.Bot</div>
+          <div class="lg:text-sm text-xs text-white">Artist relations</div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="flex flex-col justify-between">
+      <div class="mt-5 lg:mt-0 flex items-center space-x-4">
+        <img class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/avatar.jpg")%>   alt="Jon.Bot">
+        <div class="space-y-1 font-medium dark:text-white">
+          <div class="lg:text-tiny text-sm">Jon.Bot</div>
+          <div class="lg:text-sm text-xs text-white">Motion capture director</div>
+        </div>
+      </div>
+
+      <div class="mt-5 lg:mt-0 flex items-center space-x-4">
+        <img class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/avatar.jpg")%>   alt="Zaid.Bot">
+        <div class="space-y-1 font-medium dark:text-white">
+          <div class="lg:text-tiny text-sm">Zaid.Bot</div>
+          <div class="lg:text-sm text-xs text-white">Biomechanics engineer </div>
+        </div>
+      </div>
+
+      <div class="mt-5 lg:mt-0 flex items-center space-x-4">
+        <img class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/avatar.jpg")%>   alt="Esteban.Bot">
+        <div class="space-y-1 font-medium dark:text-white">
+          <div class="lg:text-tiny text-sm">Esteban.Bot</div>
+          <div class="lg:text-sm text-xs text-white">Web3 development</div>
+        </div>
+      </div>
+
+      <div class="mt-5 lg:mt-0 flex items-center space-x-4">
+        <img class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/avatar.jpg")%>   alt="Moise.Bot">
+        <div class="space-y-1 font-medium dark:text-white">
+          <div class="lg:text-tiny text-sm">Moise.Bot</div>
+          <div class="lg:text-sm text-xs text-white">Research & advisor</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
 <section id="home" class="contains flex flex-col justify-center lg:justify-evenly relative h-screen">
   <div id="model" class="hidden lg:block"></div>
   <img class="w-full lg:w-1/2" src=<%=require("./img/logo_principal.png")%> alt="logo">
@@ -125,7 +211,7 @@
              class="w-full lg:w-1/3  rounded-xl bg-black relative flex flex-col items-center relative my-12 lg:my-1 mx-2 xl:mx-4 lg:opacity-0">
           <div
             class="rounded-full icon__background p-6 2xl:p-8 inline-block  flex flex-col items-center -top-[27%] z-20 absolute">
-            <img src=<%=require("./img/q1.png")%> class="h-12 xl:h-20" alt="phase 1"/>
+            <img src=<%=require("./img/phase1.png")%> class="h-12 xl:h-20" alt="phase 1"/>
           </div>
           <ul class=" z-10 py-12 xl:p-16 px-5">
             <li class="text-white text-xs mt-2"> • Release first 50 unique Metamoves</li>
@@ -138,7 +224,7 @@
              class="w-full lg:w-1/3  rounded-xl bg-black relative flex flex-col items-center relative my-12 lg:my-1 mx-2 xl:mx-4 lg:opacity-0">
           <div
             class="rounded-full icon__background bg-black p-6 2xl:p-8 inline-block  flex flex-col items-center -top-[27%] z-20 absolute">
-            <img src=<%=require("./img/q2.png")%> class="h-12 xl:h-20" alt="phase 2"/>
+            <img src=<%=require("./img/phase2.png")%> class="h-12 xl:h-20" alt="phase 2"/>
           </div>
           <ul class=" z-10  py-12 xl:p-16 px-5">
             <li class="text-white text-xs mt-2"> • First AI generated MetaMoves release</li>
@@ -151,7 +237,7 @@
              class="w-full lg:w-1/3  rounded-xl bg-black relative flex flex-col items-center relative my-12 lg:my-1 mx-2 xl:mx-4 lg:opacity-0">
           <div
             class="rounded-full icon__background p-6 2xl:p-8 inline-block  flex flex-col items-center -top-[27%] z-20 absolute">
-            <img src=<%=require("./img/q3.png")%> class="h-12 xl:h-20" alt="phase 3"/>
+            <img src=<%=require("./img/phase3.png")%> class="h-12 xl:h-20" alt="phase 3"/>
           </div>
           <ul class="z-10 py-12 xl:p-16 px-5">
             <li class="text-white text-xs mt-2"> • Second AI generated MetaMoves release</li>
@@ -178,7 +264,11 @@
 
   <div class="w-full my-5">
     <p class="text-white text-sm mt-2">
-      MetaMoves is committed to bringing life through movement not only for NFTs, but for humans and pets too. To that end, we are partnering with MediPrint, a Mexican 3D printer company that creates robotic limbs which are controlled by the human mind using portable electroencephalography and AI. The financial aspect is covered by MetaMoves, allocating 10% for each ETH displayed on our total volume trade to the cause and the community, by participating in dedicated drops organized to increase awareness and raise funds.
+      MetaMoves is committed to bringing life through movement not only for NFTs, but for humans and pets too. To that
+      end, we are partnering with MediPrint, a Mexican 3D printer company that creates robotic limbs which are
+      controlled by the human mind using portable electroencephalography and AI. The financial aspect is covered by
+      MetaMoves, allocating 10% for each ETH displayed on our total volume trade to the cause and the community, by
+      participating in dedicated drops organized to increase awareness and raise funds.
     </p>
   </div>
   <div class="w-full mt-7">
@@ -240,6 +330,7 @@
 
   </div>
 </section>
+
 
 
 <footer class="lg:p-1 w-full bg-[#10131a] flex lg:flex-row flex-col text-white h-full text-xs">
