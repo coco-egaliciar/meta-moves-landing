@@ -36,12 +36,12 @@
 
 <section id="home" class="contains flex flex-col justify-center lg:justify-evenly relative h-screen">
   <div id="model" class="hidden lg:block"></div>
-  <img class="w-full lg:w-1/2" src=<%=require("./img/logo_principal.png")%> alt="logo">
+  <img loading="lazy" class="w-full lg:w-1/2" src=<%=require("./img/logo_principal.png")%> alt="logo">
   <div id="a1" class="mt-12 lg:-mt-5 lg:w-1/2  lg:text-xl2 lg:opacity-0">
     MetaMoves project brings <span class="text-metablue">NFTs</span> to life through <span class="text-metablue">movements.</span>
   </div>
   <div class="absolute bottom-[85px] lg:flex flex-row justify-center w-full p-5 scroll hidden lg:block">
-    <img id="scroll" src=<%=require("./img/scrolldown.png")%> class="h-24 lg:h-30 " />
+    <img loading="lazy" id="scroll" src=<%=require("./img/scrolldown.png")%> class="h-24 lg:h-30 " />
   </div>
 </section>
 
@@ -71,7 +71,7 @@
       class="my-5 w-full lg:w-1/3 gradient-border rounded-xl bg-black relative flex flex-col items-center relative my-14 lg:my-1 mx-2 xl:mx-4">
       <div
         class="rounded-full icon__background p-6 2xl:p-8 inline-block  flex flex-col items-center -top-[27%] z-20 absolute">
-        <img src=<%=require("./img/ARTE.png")%> alt="Hand crafted visuals and audio" class="h-12 xl:h-20" alt="wallet"/>
+        <img loading="lazy" src=<%=require("./img/ARTE.png")%> alt="Hand crafted visuals and audio" class="h-12 xl:h-20" alt="wallet"/>
       </div>
       <div class="z-10 pt-12 pb-6 xl:p-14 px-5">
         <div class="text-metablue font-bold text-tiny text-center">Hand crafted visuals and audio</div>
@@ -85,7 +85,7 @@
       class="w-full lg:w-1/3 gradient-border rounded-xl bg-black relative flex flex-col items-center relative my-14 lg:my-1 mx-2 xl:mx-4">
       <div
         class="rounded-full icon__background p-6 2xl:p-8 inline-block  flex flex-col items-center -top-[27%] z-20 absolute">
-        <img src=<%=require("./img/AUDIO.png")%> alt="Motion capture data" class="h-12 xl:h-20" alt="wallet"/>
+        <img loading="lazy" src=<%=require("./img/AUDIO.png")%> alt="Motion capture data" class="h-12 xl:h-20" alt="wallet"/>
       </div>
       <div class="z-10 pt-12 pb-6 xl:p-14 px-5">
         <div class="text-metablue font-bold text-tiny text-center">Motion capture data</div>
@@ -99,7 +99,7 @@
       class="w-full lg:w-1/3 gradient-border rounded-xl bg-black relative flex flex-col items-center relative my-14 lg:my-1 mx-2 xl:mx-4">
       <div
         class="rounded-full icon__background p-6 2xl:p-8 inline-block flex flex-col items-center -top-[27%] z-20 absolute">
-        <img src=<%=require("./img/MOCAP.png")%> alt="NFT Utility" class="h-12 xl:h-20" alt="wallet"/>
+        <img loading="lazy" src=<%=require("./img/MOCAP.png")%> alt="NFT Utility" class="h-12 xl:h-20" alt="wallet"/>
       </div>
       <div class="z-10 pt-12 pb-6 xl:p-14 px-5">
         <div class="text-metablue font-bold text-tiny text-center">NFT Utility</div>
@@ -126,7 +126,7 @@
              class="w-full lg:w-1/3  rounded-xl bg-black relative flex flex-col items-center relative my-12 lg:my-1 mx-2 xl:mx-4 lg:opacity-0">
           <div
             class="rounded-full icon__background p-6 2xl:p-8 inline-block  flex flex-col items-center -top-[27%] z-20 absolute">
-            <img src=<%=require("./img/phase1.png")%> class="h-12 xl:h-20" alt="phase 1"/>
+            <img loading="lazy" src=<%=require("./img/phase1.png")%> class="h-12 xl:h-20" alt="phase 1"/>
           </div>
           <ul class=" z-10 py-12 xl:p-16 px-5">
             <li class="text-white text-xs mt-2"> • Release first 50 unique Metamoves</li>
@@ -139,7 +139,7 @@
              class="w-full lg:w-1/3  rounded-xl bg-black relative flex flex-col items-center relative my-12 lg:my-1 mx-2 xl:mx-4 lg:opacity-0">
           <div
             class="rounded-full icon__background bg-black p-6 2xl:p-8 inline-block  flex flex-col items-center -top-[27%] z-20 absolute">
-            <img src=<%=require("./img/phase2.png")%> class="h-12 xl:h-20" alt="phase 2"/>
+            <img loading="lazy" src=<%=require("./img/phase2.png")%> class="h-12 xl:h-20" alt="phase 2"/>
           </div>
           <ul class=" z-10  py-12 xl:p-16 px-5">
             <li class="text-white text-xs mt-2"> • First AI generated MetaMoves release</li>
@@ -152,7 +152,7 @@
              class="w-full lg:w-1/3  rounded-xl bg-black relative flex flex-col items-center relative my-12 lg:my-1 mx-2 xl:mx-4 lg:opacity-0">
           <div
             class="rounded-full icon__background p-6 2xl:p-8 inline-block  flex flex-col items-center -top-[27%] z-20 absolute">
-            <img src=<%=require("./img/phase3.png")%> class="h-12 xl:h-20" alt="phase 3"/>
+            <img loading="lazy" src=<%=require("./img/phase3.png")%> class="h-12 xl:h-20" alt="phase 3"/>
           </div>
           <ul class="z-10 py-12 xl:p-16 px-5">
             <li class="text-white text-xs mt-2"> • Second AI generated MetaMoves release</li>
@@ -191,47 +191,47 @@
     <div class="swiper mySwiperSocialCause xl:mt-10 lg:mt-4 mx-0">
       <div class="swiper-wrapper">
         <div class="swiper-slide SocialCause">
-          <img id="img1" class="swiper-lazy gradient-border" data-src=<%=require("./img/socialcause/1.jpg")%> alt="">
+          <img loading="lazy" id="img1" class="swiper-lazy gradient-border" data-src=<%=require("./img/socialcause/1.jpg")%> alt="">
           <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </div>
 
         <div class="swiper-slide SocialCause">
-          <img id="img1" class="swiper-lazy  gradient-border" data-src=<%=require("./img/socialcause/2.jpg")%> alt="">
+          <img loading="lazy" id="img1" class="swiper-lazy  gradient-border" data-src=<%=require("./img/socialcause/2.jpg")%> alt="">
           <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </div>
 
         <div class="swiper-slide SocialCause">
-          <img id="img1" class="swiper-lazy  gradient-border" data-src=<%=require("./img/socialcause/3.jpg")%> alt="">
+          <img loading="lazy" id="img1" class="swiper-lazy  gradient-border" data-src=<%=require("./img/socialcause/3.jpg")%> alt="">
           <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </div>
 
         <div class="swiper-slide SocialCause">
-          <img id="img1" class="swiper-lazy  gradient-border" data-src=<%=require("./img/socialcause/4.jpg")%> alt="">
+          <img loading="lazy" id="img1" class="swiper-lazy  gradient-border" data-src=<%=require("./img/socialcause/4.jpg")%> alt="">
           <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </div>
 
         <div class="swiper-slide SocialCause">
-          <img id="img1" class="swiper-lazy  gradient-border" data-src=<%=require("./img/socialcause/5.jpg")%> alt="">
+          <img loading="lazy" id="img1" class="swiper-lazy  gradient-border" data-src=<%=require("./img/socialcause/5.jpg")%> alt="">
           <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </div>
         <div class="swiper-slide SocialCause">
-          <img id="img1" class="swiper-lazy  gradient-border" data-src=<%=require("./img/socialcause/6.jpg")%> alt="">
+          <img loading="lazy" id="img1" class="swiper-lazy  gradient-border" data-src=<%=require("./img/socialcause/6.jpg")%> alt="">
           <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </div>
         <div class="swiper-slide SocialCause">
-          <img id="img1" class="swiper-lazy  gradient-border" data-src=<%=require("./img/socialcause/7.jpg")%> alt="">
+          <img loading="lazy" id="img1" class="swiper-lazy  gradient-border" data-src=<%=require("./img/socialcause/7.jpg")%> alt="">
           <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </div>
         <div class="swiper-slide SocialCause">
-          <img id="img1" class="swiper-lazy  gradient-border" data-src=<%=require("./img/socialcause/8.jpg")%> alt="">
+          <img loading="lazy" id="img1" class="swiper-lazy  gradient-border" data-src=<%=require("./img/socialcause/8.jpg")%> alt="">
           <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </div>
         <div class="swiper-slide SocialCause">
-          <img id="img1" class="swiper-lazy  gradient-border" data-src=<%=require("./img/socialcause/9.jpg")%> alt="">
+          <img loading="lazy" id="img1" class="swiper-lazy  gradient-border" data-src=<%=require("./img/socialcause/9.jpg")%> alt="">
           <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </div>
         <div class="swiper-slide SocialCause">
-          <img id="img1" class="swiper-lazy  gradient-border" data-src=<%=require("./img/socialcause/10.jpg")%> alt="">
+          <img loading="lazy" id="img1" class="swiper-lazy  gradient-border" data-src=<%=require("./img/socialcause/10.jpg")%> alt="">
           <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </div>
 
@@ -261,7 +261,7 @@
   <div class="team_member h-full flex lg:flex-row lg:justify-around">
     <div class="flex flex-col justify-between">
       <div class="mt-5 lg:mt-0 flex items-center space-x-4">
-        <img class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/team/lio.png")%> alt="Lio.Bot">
+        <img loading="lazy" class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/team/lio.png")%> alt="Lio.Bot">
         <div class="space-y-1 font-medium">
           <div class="lg:text-tiny text-sm text-white">Lio.Bot</div>
           <div class="lg:text-sm text-xs text-white">Metaverse architect</div>
@@ -269,7 +269,7 @@
       </div>
 
       <div class="mt-5 lg:mt-0 flex items-center space-x-4">
-        <img class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/team/daniela.png")%>
+        <img loading="lazy" class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/team/daniela.png")%>
         alt="Daniela.Bot">
         <div class="space-y-1 font-medium dark:text-white">
           <div class="lg:text-tiny text-sm">Daniela.Bot</div>
@@ -278,7 +278,7 @@
       </div>
 
       <div class="mt-5 lg:mt-0 flex items-center space-x-4">
-        <img class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/team/jorge.png")%> alt="Jorge.Bot">
+        <img loading="lazy" class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/team/jorge.png")%> alt="Jorge.Bot">
         <div class="space-y-1 font-medium dark:text-white">
           <div class="lg:text-tiny text-sm">Jorge.Bot</div>
           <div class="lg:text-sm text-xs text-white">Web3 solutions</div>
@@ -286,7 +286,7 @@
       </div>
 
       <div class="mt-5 lg:mt-0 flex items-center space-x-4">
-        <img class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/team/alex.png")%> alt="Alex.Bot">
+        <img loading="lazy" class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/team/alex.png")%> alt="Alex.Bot">
         <div class="space-y-1 font-medium dark:text-white">
           <div class="lg:text-tiny text-sm">Alex.Bot</div>
           <div class="lg:text-sm text-xs text-white">Artist relations</div>
@@ -297,7 +297,7 @@
 
     <div class="flex flex-col justify-between">
       <div class="mt-5 lg:mt-0 flex items-center space-x-4">
-        <img class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/team/jon.png")%> alt="Jon.Bot">
+        <img loading="lazy" class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/team/jon.png")%> alt="Jon.Bot">
         <div class="space-y-1 font-medium dark:text-white">
           <div class="lg:text-tiny text-sm">Jon.Bot</div>
           <div class="lg:text-sm text-xs text-white">Motion capture director</div>
@@ -305,7 +305,7 @@
       </div>
 
       <div class="mt-5 lg:mt-0 flex items-center space-x-4">
-        <img class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/team/zaid.png")%> alt="Zaid.Bot">
+        <img loading="lazy" class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/team/zaid.png")%> alt="Zaid.Bot">
         <div class="space-y-1 font-medium dark:text-white">
           <div class="lg:text-tiny text-sm">Zaid.Bot</div>
           <div class="lg:text-sm text-xs text-white">Biomechanics engineer</div>
@@ -313,7 +313,7 @@
       </div>
 
       <div class="mt-5 lg:mt-0 flex items-center space-x-4">
-        <img class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/team/esteban.png")%>
+        <img loading="lazy" class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/team/esteban.png")%>
         alt="Esteban.Bot">
         <div class="space-y-1 font-medium dark:text-white">
           <div class="lg:text-tiny text-sm">Esteban.Bot</div>
@@ -322,7 +322,7 @@
       </div>
 
       <div class="mt-5 lg:mt-0 flex items-center space-x-4">
-        <img class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/team/moise.png")%> alt="Moise.Bot">
+        <img loading="lazy" class="w-16  h-16 lg:w-24 lg:h-24 rounded-full" src=<%=require("./img/team/moise.png")%> alt="Moise.Bot">
         <div class="space-y-1 font-medium dark:text-white">
           <div class="lg:text-tiny text-sm">Moise.Bot</div>
           <div class="lg:text-sm text-xs text-white">Research & advisor</div>
@@ -360,14 +360,14 @@
     <div class="flex flex-row justify-center mt-5 lg:mt-24">
       <div class="mx-2">
         <a href="https://opensea.io/Meta-Moves?tab=created" target="_blank">
-          <img class="h-12" src=<%=require("./img/opensea_logo.png")%> alt="opensea" />
+          <img loading="lazy" class="h-12" src=<%=require("./img/opensea_logo.png")%> alt="opensea" />
         </a>
       </div>
       <div class="mx-2">
         <a
           href="https://portion.io/nft-marketplace?category=&collection=&artist=MetaMoves&chains=Ethereum&sortBy=newest&verified=true&tags="
           target="_blank">
-          <img class="h-12" src=<%=require("./img/portion_logo.png")%> alt="portion"/>
+          <img loading="lazy" class="h-12" src=<%=require("./img/portion_logo.png")%> alt="portion"/>
         </a>
       </div>
     </div>
@@ -378,8 +378,8 @@
       <div class="w-1/2">
         <p class="text-base">About</p>
         <ul>
-          <li class="text-sm"><a href="" target="_blank">News</a></li>
-          <li class="text-sm"><a href="" target="_blank">FAQs</a></li>
+          <li class="text-sm"><a href="news.html" target="_blank">News</a></li>
+          <li class="text-sm"><a href="faqs.html" target="_blank">FAQs</a></li>
           <li class="text-sm"><a href="" target="_blank">Media Kit</a></li>
         </ul>
       </div>
