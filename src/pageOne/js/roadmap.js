@@ -1,5 +1,9 @@
 import BrowserDetector from 'browser-dtector'
 
+const q1 = document.querySelector('#q1')
+const q2 = document.querySelector('#q2')
+const q3 = document.querySelector('#q3')
+
 // eslint-disable-next-line no-unused-vars
 const roadmapScript = () => {
   console.log('Roadmap')
@@ -14,14 +18,10 @@ const roadmapScript = () => {
 
   let percentage = 1
 
-  const q1 = document.querySelector('#q1')
-  const q2 = document.querySelector('#q2')
-  const q3 = document.querySelector('#q3')
-
   const progressBarProgress = document.querySelector('.progress_bar__progress')
 
-  const progressBarWidthPX = document.querySelector('.progress_bar').offsetWidth * 0.95
-  const roadmapContent = document.querySelector('#roadmap__content')
+  // const progressBarWidthPX = document.querySelector('.progress_bar').offsetWidth * 0.95
+  // const roadmapContent = document.querySelector('#roadmap__content')
   const roadmapWrapper = document.querySelector('.roadmap__wrapper')
 
   window.addEventListener('wheel', function (e) {
@@ -81,4 +81,10 @@ const platform = browser.parseUserAgent()
 
 if (platform.isMobile === false) {
   roadmapScript()
+}
+
+if (platform.isMobile === true) {
+  q1.classList.add('gradient-border')
+  q2.classList.add('gradient-border')
+  q3.classList.add('gradient-border')
 }
