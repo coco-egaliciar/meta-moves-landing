@@ -42,7 +42,7 @@ const roadmapScript = () => {
     if (positionWrapper.top <= window.innerHeight / 4 && percentage < 99) {
       // roadmapWrapper.scrollIntoView(true)
       document.body.style.overflow = 'hidden'
-      // roadmapWrapper.scrollIntoView(true)
+      roadmapWrapper.scrollIntoView(true)
 
       percentage += percentageToAdd
       progressBarProgress.style.width = `${percentage}%`
