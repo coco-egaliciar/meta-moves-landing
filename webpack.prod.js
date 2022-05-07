@@ -21,7 +21,8 @@ module.exports = {
 
   // https://webpack.js.org/concepts/entry-points/#multi-page-application
   entry: {
-    index: './src/main.js'
+    pageOne: './src/pageOne/js/main.js',
+    faqs: './src/faqs/js/main.js'
   },
 
   // how to write the compiled files to disk
@@ -133,14 +134,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       inject: true,
-      chunks: ['index'],
+      chunks: ['pageOne'],
       filename: 'index.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/gallery.html',
-      inject: true,
-      chunks: ['gallery'],
-      filename: 'gallery.html'
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',

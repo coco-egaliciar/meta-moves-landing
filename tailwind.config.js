@@ -177,7 +177,7 @@ module.exports = {
   // important: true,
   // purge: ['./dist/*.html'],
   // content: ['**/src/*.{html,js}', '**/src/partials/*.{html,js}'],
-  content: ['src/*.{html,js}', 'src/partials/*.{html,js}', 'src/faqs.html'],
+  content: ['src/**/*.{html,js}'],
   theme: {
     colors: {
       transparent: 'transparent',

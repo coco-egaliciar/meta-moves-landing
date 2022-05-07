@@ -1,0 +1,36 @@
+
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+  background: #000000;
+  /*overflow-x: hidden;*/
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 1px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: darkcyan;
+}
+
+::-webkit-scrollbar-corner {
+  background: darkblue;
+}
+
+
+
+
+
+

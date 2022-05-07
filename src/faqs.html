@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-black text-white">
 <head>
   <title>Meta-Moves - FAQs</title>
   <meta charset="UTF-8">
@@ -9,52 +9,115 @@
   <meta name="viewport"
         content="width=device-width,user-scalable=0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.9.8/dist/alpine.js" defer></script>
-<!--  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@1.2.0/dist/tailwind.min.css">-->
+  <!--  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@1.2.0/dist/tailwind.min.css">-->
 
 </head>
-<body>
-<div class="bg-black container mx-auto px-2 py-2" x-data="{
-            faqs: [
-                {
-                    question: 'Why do I need Alpine JS?',
-                    answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores iure quas laudantium dicta impedit, est id delectus molestiae deleniti enim nobis rem et nihil.',
-                    isOpen: true,
-                },
-                {
-                    question: 'Why am I so awesome?',
-                    answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi cumque, nulla harum aspernatur veniam ullam provident neque temporibus autem itaque odit.',
-                    isOpen: false,
-                },
-                {
-                    question: 'Why learn on Scrimba?',
-                    answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi cumque, nulla harum aspernatur veniam ullam provident neque temporibus autem itaque odit.',
-                    isOpen: false,
-                },
-            ]
-        }">
-  <h2 class="text-2xl font-bold">FAQs</h2>
-  <div class="leading-loose text-lg mt-6">
-    <template x-for="faq in faqs" :key="faq.question">
-      <div>
-        <button class="w-full font-bold border-b border-gray-400 py-3 flex justify-between items-center mt-4"
-                @click="faqs = faqs.map(f => ({ ...f, isOpen: f.question !== faq.question ? false : !f.isOpen}))">
-          <!-- Specs has it that only one component can be open at a time and also you should be able to toggle the open state of the active component too -->
-          <div x-text="faq.question"></div>
-          <svg x-show="!faq.isOpen" class="fill-current" viewBox="0 0 24 24" width="24" height="24">
-            <path class="heroicon-ui"
-                  d="M12 22a10 10 0 110-20 10 10 0 010 20zm0-2a8 8 0 100-16 8 8 0 000 16zm1-9h2a1 1 0 010 2h-2v2a1 1 0 01-2 0v-2H9a1 1 0 010-2h2V9a1 1 0 012 0v2z"/>
-          </svg>
-          <svg x-show="faq.isOpen" class="fill-current" viewBox="0 0 24 24" width="24" height="24">
-            <path class="heroicon-ui"
-                  d="M12 22a10 10 0 110-20 10 10 0 010 20zm0-2a8 8 0 100-16 8 8 0 000 16zm4-8a1 1 0 01-1 1H9a1 1 0 010-2h6a1 1 0 011 1z"/>
-          </svg>
-        </button>
+<body class="font-nunito text-white contains">
+<div class="title">
+  FAQ
+</div>
+<br>
 
-        <div class="text-gray-700 text-sm mt-2" x-text="faq.answer" x-show="faq.isOpen"></div>
-      </div>
-    </template>
-
+<div class="content">
+  <div class="question__container">
+    <input type="checkbox" id="question1" name="q" class="questions"/>
+    <div class="plus">+</div>
+    <label for="question1" class="question">
+      What is MetaMoves NFT Project?
+    </label>
+    <div class="answers font-normal">
+      <p> MetaMoves is a collection of unique motion capture data files living as NFTs on the Ethereum Blockchain, that began in late January 2022, and it is the first NFT project of its kind. Each movement is a 3D animated design meticulously crafted to convey a message by matching visuals with sound. MetaMoves are adaptable to any T-pose avatar, can be used several times, and are Metaverse friendly.</p>
+      <p> The project had released 2 small collections of 1:1 movements already, both times the collection sold out in less than 30 minutes. Some of the movements can be found on the secondary market in Portion or Opensea. The official launch date of a larger MetaMoves collection will be announced on social media soon.</p>
+    </div>
   </div>
+
+
+  <div class="question__container">
+    <input type="checkbox" id="question2" name="q" class="questions"/>
+    <div class="plus">+</div>
+    <label for="question2" class="question">
+      Who is behind MetaMoves NFT Project?
+    </label>
+    <div class="answers font-normal">
+      <p>MetaMoves is powered by Cinética, a digital media studio with headquarters in Mexico City. Cinética provides technical and practical solutions for the integration of new media technologies for all industries. Clients and collaborators include Nike, Mercedes-Benz, Huawei, Sony Music, Universal Music Latino, Foot Locker, Bimbo.  The company partnered with international artists and performers such as Bad Bunny, Snoop Dogg, Kiesza, and Antoni Tudisco.</p>
+    </div>
+  </div>
+
+
+  <div class="question__container">
+    <input type="checkbox" id="question3" name="q" class="questions"/>
+    <div class="plus">+</div>
+    <label for="question3" class="question">
+      Where can I buy a MetaMoves?
+    </label>
+    <div class="answers font-normal">
+      <p> For now, you can buy your MetaMoves on the secondary market on Portion and/or Open Sea marketplace. The MetaMoves team is working on the upcoming full collection of MetaMoves to be sold during an official launch campaign. The date will be communicated soon, stay tuned on social media.</p>
+      <p> Please note that by purchasing MetaMoves you have agreed to the Terms & Conditions.</p>
+    </div>
+  </div>
+
+
+  <div class="question__container">
+    <input type="checkbox" id="question4" name="q" class="questions"/>
+    <div class="plus">+</div>
+    <label for="question4" class="question">
+      What crypto currency do I need?
+    </label>
+    <div class="answers font-normal">
+      <p>You will need to have Eth to purchase/mint a MetaMoves.</p>
+    </div>
+  </div>
+
+
+  <div class="question__container">
+    <input type="checkbox" id="question5" name="q" class="questions"/>
+    <div class="plus">+</div>
+    <label for="question5" class="question">
+      What am I actually buying?
+    </label>
+    <div class="answers font-normal">
+      <p>When buying a MetaMove you get an fbx/bvh/mp4 file that can be applied to any T-pose avatar as many times as you wish. Note that you do not get the robot displayed but the moves. Holders of MetaMoves get backstage sneak peek access, an exclusive Discord channel, early access to releases, and much more as the community develops.</p>
+      <p>For the time being, you will be required to send your avatar to this email address metamoves@cinetica.studio, the team will apply the movement for you and send it back. Soon Cinética will launch a retargeting feature for holders to try movements on avatars.</p>
+    </div>
+  </div>
+
+  <div class="question__container">
+    <input type="checkbox" id="question6" name="q" class="questions"/>
+    <div class="plus">+</div>
+    <label for="question6" class="question">
+      Why do I need MetaMoves?
+    </label>
+    <div class="answers font-normal">
+      <p>How many times have you recognized someone from far just by the way she/he was moving or walking? Movements are an essential part of who we are as human beings, and at MetaMoves we believe the same apply for avatars.  </p>
+      <p>MetaMoves helps avatars to communicate through movements, express their thoughts, feelings, and strengths. You can use your MetaMove in as many avatars as you wish and move around the metaverse.</p>
+    </div>
+  </div>
+
+  <div class="question__container">
+    <input type="checkbox" id="question7" name="q" class="questions"/>
+    <div class="plus">+</div>
+    <label for="question7" class="question">
+      Where can I use my MetaMoves?
+    </label>
+    <div class="answers font-normal">
+      <p>Anywhere you display an avatar, you can actually display an avatar with one of the MetaMoves. Gamers can use it during a game or you can go shop on the metaverse and impress the buyer with an exclusive move. Not even the sky is the limit, use your imagination and share any cool idea you might have.</p>
+    </div>
+  </div>
+
+
+  <div class="question__container">
+    <input type="checkbox" id="question8" name="q" class="questions"/>
+    <div class="plus">+</div>
+    <label for="question8" class="question">
+      Do I get commercial rights with my NFT?
+    </label>
+    <div class="answers font-normal">
+      <p>A holder of MetaMoves owns the NFT. Holders of 1:1 receive (1) a worldwide, royalty-free personal license to use and display the art associated with purchased NFT, in platforms and/or piece of content (2) a commercial license to make merchandise that displays the art associated with the NFT MetaMoves, a license subject to a $100,000 gross revenue per year limit.</p>
+      <p>To clarify the above, note that as in most other projects, when purchasing a MetaMoves you are not purchasing the intellectual property rights in such a piece of content. In other words, holders do not own the underlying copyright in the content the NFT is associated with or the right to replicate, reproduce, and/or display that media on third-party products, websites, or platforms. MetaMoves, therefore Cinética Studio, preserves the right to use and commercialize the mocap at any time and forever.</p>
+      <p>In the case a holder is willing to sell the MetaMoves, she/he should do so through established NFT marketplaces to avoid clandestine sells that could potentially hurt MetaMoves NFT project trajectory and growth.</p>
+    </div>
+  </div>
+  <p class="font-bold text-xl lg:my-12 my-5">To any other question, contact us on social media 😀</p>
 </div>
 </body>
 </html>

@@ -10,12 +10,14 @@ const browser = new BrowserDetector(window.navigator.userAgent)
 const platform = browser.parseUserAgent()
 console.log(platform)
 
-require('normalize.css/normalize.css')
+
 require('../css/main.css')
 
 require('../../shared/menu/js/app.min')
 require('../../shared/menu/js/chunk-vendors.min')
 require('../../shared/menu/css/app.c26ea9af.css')
+
+require('../../shared/js/base')
 
 require('./hamburger')
 

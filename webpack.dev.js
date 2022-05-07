@@ -7,7 +7,8 @@ module.exports = {
 
   // https://webpack.js.org/concepts/entry-points/#multi-page-application
   entry: {
-    pageOne: './src/pageOne/js/main.js'
+    pageOne: './src/pageOne/js/main.js',
+    faqs: './src/faqs/js/main.js'
   },
   target: 'web',
   devtool: 'eval-cheap-module-source-map',
@@ -128,12 +129,6 @@ module.exports = {
       inject: true,
       chunks: ['pageOne'],
       filename: 'index.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/gallery.html',
-      inject: true,
-      chunks: ['gallery'],
-      filename: 'gallery.html'
     }),
     new HtmlWebpackPlugin({
       template: './src/faqs.html',

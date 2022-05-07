@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+@font-face {
+  font-family: 'Therhog';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../resource/Therhog.ttf') format('truetype');
+}
+
