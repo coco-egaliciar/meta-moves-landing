@@ -14,7 +14,7 @@ if (platform.isMobile === true) {
 
 const swiper = new Swiper('.mySwiperSocialCause', {
   slidesPerView: slidesPerView,
-  spaceBetween: 40,
+  spaceBetween: 2,
   lazy: true,
   pagination: {
     el: '.swiper-pagination',
