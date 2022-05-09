@@ -76,5 +76,5 @@
 }
 
 .contains{
-  @apply py-5  lg:px-12 xl:px-20 xl:py-12;
+  @apply pt-5  lg:px-12 xl:px-20 xl:pt-12;
 }
