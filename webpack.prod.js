@@ -22,7 +22,8 @@ module.exports = {
   // https://webpack.js.org/concepts/entry-points/#multi-page-application
   entry: {
     pageOne: './src/pageOne/js/main.js',
-    faqs: './src/faqs/js/main.js'
+    faqs: './src/faqs/js/main.js',
+    terms: './src/terms/js/main.js'
   },
 
   // how to write the compiled files to disk
@@ -124,7 +125,12 @@ module.exports = {
 
   // https://webpack.js.org/concepts/plugins/
   plugins: [
-
+    new HtmlWebpackPlugin({
+      template: './src/terms.html',
+      inject: true,
+      chunks: ['terms'],
+      filename: 'terms.html'
+    }),
     new HtmlWebpackPlugin({
       template: './src/faq.html',
       inject: true,
