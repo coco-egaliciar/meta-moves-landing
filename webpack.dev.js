@@ -131,10 +131,10 @@ module.exports = {
       filename: 'index.html'
     }),
     new HtmlWebpackPlugin({
-      template: './src/faqs.html',
+      template: './src/faq.html',
       inject: true,
       chunks: ['faqs'],
-      filename: 'faqs.html'
+      filename: 'faq.html'
     })
   ]
 }

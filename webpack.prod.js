@@ -126,10 +126,10 @@ module.exports = {
   plugins: [
 
     new HtmlWebpackPlugin({
-      template: './src/faqs.html',
+      template: './src/faq.html',
       inject: true,
       chunks: ['faqs'],
-      filename: 'faqs.html'
+      filename: 'faq.html'
     }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
