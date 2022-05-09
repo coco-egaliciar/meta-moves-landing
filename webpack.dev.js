@@ -8,7 +8,8 @@ module.exports = {
   // https://webpack.js.org/concepts/entry-points/#multi-page-application
   entry: {
     pageOne: './src/pageOne/js/main.js',
-    faqs: './src/faqs/js/main.js'
+    faqs: './src/faqs/js/main.js',
+    terms: './src/terms/js/main.js'
   },
   target: 'web',
   devtool: 'eval-cheap-module-source-map',
@@ -135,6 +136,12 @@ module.exports = {
       inject: true,
       chunks: ['faqs'],
       filename: 'faq.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/terms.html',
+      inject: true,
+      chunks: ['terms'],
+      filename: 'terms.html'
     })
   ]
 }
