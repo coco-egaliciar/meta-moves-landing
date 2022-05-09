@@ -1,2 +1,2 @@
-require('normalize.css/normalize.css')
+require('../../shared/js/base')
 require('../css/main.css')

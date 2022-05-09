@@ -391,9 +391,4 @@ document.addEventListener('DOMContentLoaded', function () {
   frame()
 })
 
-setTimeout(() => {
-  window.scrollTo(0, 0)
-  document.querySelector('.se-pre-con').remove()
-}, 1400)
 
-document.querySelector('#year').innerHTML = new Date().getFullYear().toString()

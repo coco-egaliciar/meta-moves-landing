@@ -1,4 +1,5 @@
 @import url('../../shared/css/fonts.css');
+@import url('../../shared/css/base.css');
 
 
 @tailwind base;
