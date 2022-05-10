@@ -41,6 +41,8 @@
   position: relative;
   opacity: 0;
   transition: .3s ease;
+  @apply text-tiny lg:text-xl;
+  @apply font-normal;
 }
 
 .questions:checked ~ .answers{

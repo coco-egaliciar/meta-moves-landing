@@ -9,67 +9,6 @@
 
 
 
-.content {
-  @apply w-full;
-}
-
-
-.question__container{
-  @apply text-tiny lg:text-xl font-bold my-5 lg:my-12;
-}
-
-
-/*Question*/
-.question {
-  position: relative;
-  /*background: #f9f9f9;*/
-  margin: 0;
-  @apply pl-10 lg:pl-12;
-  display: block;
-  width:100%;
-  cursor: pointer;
-}
-
-/*Answer*/
-.answers {
-  padding: 0 15px;
-  margin: 5px 0;
-  width:100%!important;
-  height: 0;
-  overflow: hidden;
-  z-index: -1;
-  position: relative;
-  opacity: 0;
-  transition: .3s ease;
-}
-
-.questions:checked ~ .answers{
-  height: auto;
-  opacity: 1;
-  padding: 15px;
-
-}
-
-/*FAQ Toggle*/
-.plus {
-  position: absolute;
-  margin-left: 10px;
-  margin-right: 10px;
-  z-index: 5;
-  /*font-size: 2em;*/
-  /*line-height: 100%;*/
-  user-select: none;
-  transition: .3s ease;
-}
-
-.questions:checked + .plus {
-  transform: rotate(45deg);
-}
-
-.questions {
-  display: none;
-}
-
 
 .title{
   @apply text-metablue tracking-wider leading-none text-2xl5 lg:text-6xl font-therhog font-bold;
