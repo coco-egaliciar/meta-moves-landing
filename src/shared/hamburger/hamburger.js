@@ -1,5 +1,14 @@
+import BrowserDetector from 'browser-dtector'
+
+const browser = new BrowserDetector(window.navigator.userAgent)
+const platform = browser.parseUserAgent()
+
 const menuLinks = document.querySelectorAll('.menu-item a')
 const checker = document.querySelector('.checkbox')
+
+require('../../shared/menu/js/app.min')
+require('../../shared/menu/js/chunk-vendors.min')
+require('../../shared/menu/css/app.c26ea9af.css')
 
 function menu () {
   const menu = document.querySelector('#menu')
@@ -27,3 +36,7 @@ menu()
 checker.addEventListener('change', function () {
   menu()
 })
+
+if (platform.isMobile === true) {
+  document.querySelector('#connect').style.display = 'none'
+}
