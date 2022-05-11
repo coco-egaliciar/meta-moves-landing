@@ -49,7 +49,7 @@ body{
   position: relative;
   /*left: -40%;*/
   /*top: 80px;*/
-  @apply top-[70vh] left-[-40%] lg:left-[-40%] lg:top-[25vh];
+  @apply top-[70vh] left-[-40%] lg:left-[-40%] lg:top-[40vh];
 }
 
 
@@ -58,7 +58,7 @@ body{
   /*left: 0;*/
   /*top: 130px;*/
 
-  @apply top-[70vh]  lg:left-[0%] lg:top-[30vh];
+  @apply top-[70vh]  lg:left-[0%] lg:top-[50vh];
 }
 
 
@@ -67,5 +67,5 @@ body{
   /*top: 0;*/
   /*right: -50%;*/
 
-  @apply top-[70vh] right-[-50%] lg:right-[-50%] lg:top-[15vh];
+  @apply top-[70vh] right-[-50%] lg:right-[-50%] lg:top-[20vh];
 }

@@ -4,6 +4,6 @@ require('../css/main.css')
 
 const scene = document.getElementById('scene')
 const parallaxInstance = new Parallax(scene, {
-  limitX: 200,
+  limitX: 2000,
   limitY: 100
 })
