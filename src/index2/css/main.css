@@ -1,0 +1,71 @@
+@import url('../../shared/css/fonts.css');
+@import url('../../shared/css/base.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.title {
+  @apply text-metablue tracking-wider leading-none text-2xl5 lg:text-6xl font-therhog font-bold;
+}
+
+.contains {
+  @apply pt-5  lg:px-12 xl:px-20 xl:pt-12;
+}
+
+html,
+body{
+  margin: 0;
+  line-height: inherit;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+.background {
+  background-image: url("../../img/background.jpg");
+
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  background-attachment: fixed;
+
+  background-size: cover;
+  background-blend-mode: overlay;
+  min-height: 260vh;
+  min-width: 260vw;
+  overflow: hidden;
+  position: relative;
+  @apply top-[-5vh] lg:top-[-350px];
+  left: -20%;
+  /*bottom: 0;*/
+  z-index: -100;
+  filter: brightness(0.5);
+}
+
+
+.mountain1 {
+  position: relative;
+  /*left: -40%;*/
+  /*top: 80px;*/
+  @apply top-[70vh] left-[-40%] lg:left-[-40%] lg:top-[25vh];
+}
+
+
+.mountain2 {
+  position: relative;
+  /*left: 0;*/
+  /*top: 130px;*/
+
+  @apply top-[70vh]  lg:left-[0%] lg:top-[30vh];
+}
+
+
+.mountain3 {
+  position: relative;
+  /*top: 0;*/
+  /*right: -50%;*/
+
+  @apply top-[70vh] right-[-50%] lg:right-[-50%] lg:top-[15vh];
+}

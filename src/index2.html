@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-black text-white">
+<head>
+  <title>Meta-Moves - FAQs</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="cache-control" content="no-cache"/>
+  <meta http-equiv="pragma" content="no-cache"/>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport"
+        content="width=device-width,user-scalable=0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <!--  <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+
+</head>
+<body class="font-nunito text-white text-justify h-full">
+<div class="flex flex-col items-center justify-center fixed w-full h-screen">
+  <h1 class="title capitalize z-10">Metamoves</h1>
+  <p class="text-tiny lg:text-xl">We get your avatars moving with custom made animations. Check it out.</p>
+  <div class="flex flex-row w-full items-center justify-center">
+    <video id="" class="w-full lg:w-1/2" controls preload="none" loop="true">
+      <source src="./video.mp4" type="video/mp4">
+    </video>
+  </div>
+
+</div>
+
+<ul id="scene" data-hover-only="true" data-relative-input="true" class="-z-10">
+  <li data-depth="0.04" class="layer">
+    <div class="background"></div>
+  </li>
+  <li data-depth="0.65" class="layer">
+    <div class="mountain1">
+      <img src=<%=require("./img/mountain1.png")%> >
+    </div>
+  </li>
+  <li data-depth="0.48" class="layer">
+    <div class="mountain2">
+      <img src=<%=require("./img/mountain2.png")%> >
+    </div>
+  </li>
+  <li data-depth="0.55" class="layer">
+    <div class="mountain3">
+      <img src=<%=require("./img/mountain3.png")%> >
+    </div>
+  </li>
+</ul>
+</body>
+</html>

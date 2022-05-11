@@ -23,7 +23,8 @@ module.exports = {
   entry: {
     pageOne: './src/pageOne/js/main.js',
     faqs: './src/faqs/js/main.js',
-    terms: './src/terms/js/main.js'
+    terms: './src/terms/js/main.js',
+    index2: './src/index2/js/main.js'
   },
 
   // how to write the compiled files to disk
@@ -142,6 +143,12 @@ module.exports = {
       inject: true,
       chunks: ['pageOne'],
       filename: 'index.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/index2.html',
+      inject: true,
+      chunks: ['index2'],
+      filename: 'index2.html'
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',

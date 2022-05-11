@@ -9,7 +9,8 @@ module.exports = {
   entry: {
     pageOne: './src/pageOne/js/main.js',
     faqs: './src/faqs/js/main.js',
-    terms: './src/terms/js/main.js'
+    terms: './src/terms/js/main.js',
+    index2: './src/index2/js/main.js'
   },
   target: 'web',
   devtool: 'eval-cheap-module-source-map',
@@ -142,6 +143,12 @@ module.exports = {
       inject: true,
       chunks: ['terms'],
       filename: 'terms.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/index2.html',
+      inject: true,
+      chunks: ['index2'],
+      filename: 'index2.html'
     })
   ]
 }
