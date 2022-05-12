@@ -7,3 +7,10 @@
   src: url('../../resource/Therhog.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Century Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../../resource/Century-Gothic-Bold.ttf') format('truetype');
+}
+

@@ -18,8 +18,9 @@ html,
 body{
   margin: 0;
   line-height: inherit;
-  height: 100vh;
+  height: calc(100vh - env(safe-area-inset-bottom) - env(safe-area-inset-top));
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 
@@ -49,7 +50,7 @@ body{
   position: relative;
   /*left: -40%;*/
   /*top: 80px;*/
-  @apply top-[70vh] left-[-40%] lg:left-[-40%] lg:top-[40vh];
+  @apply top-[75vh] left-[-40%] lg:left-[-40%] lg:top-[40vh];
 }
 
 
@@ -58,7 +59,7 @@ body{
   /*left: 0;*/
   /*top: 130px;*/
 
-  @apply top-[70vh]  lg:left-[0%] lg:top-[50vh];
+  @apply top-[75vh]  lg:left-[0%] lg:top-[50vh];
 }
 
 
@@ -67,5 +68,15 @@ body{
   /*top: 0;*/
   /*right: -50%;*/
 
-  @apply top-[70vh] right-[-50%] lg:right-[-50%] lg:top-[20vh];
+  @apply top-[75vh] right-[-50%] lg:right-[-50%] lg:top-[30vh];
+}
+
+
+.video{
+  @apply mt-12 w-[95%] h-[auto] xl:h-[55vh] xl:w-[auto] xl:mt-[1rem] 2xl:h-[60vh];
+}
+
+#logo{
+  @apply h-[auto] w-3/4 -mt-5 xl:w-[auto] xl:h-[15vh] xl:mt-[2rem] 2xl:mt-[2rem];
+  /*margin-top: 2rem;*/
 }

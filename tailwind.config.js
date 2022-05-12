@@ -188,6 +188,7 @@ module.exports = {
       emerald: colors.emerald,
       indigo: colors.indigo,
       yellow: colors.yellow,
+      metalightblue: '#2EC0CB',
       metablue: '#3878ef',
       metapink: {
         100: '#d02a6c',
@@ -212,7 +213,8 @@ module.exports = {
     },
     fontFamily: {
       therhog: ['Therhog'],
-      nunito: ['Nunito Sans']
+      nunito: ['Nunito Sans'],
+      century: ['Century Gothic']
     },
     screens: {
       sm: '640px',

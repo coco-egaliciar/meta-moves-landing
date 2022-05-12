@@ -91,7 +91,10 @@ module.exports = {
       {
         // https://webpack.js.org/guides/asset-modules/#resource-assets
         test: /\.(png|jpe?g|gif|svg)$/i,
-        type: 'asset/resource'
+        type: 'asset/resource',
+        generator: {
+          filename: '[name]_[hash][ext][query]'
+        }
       },
       {
         // https://webpack.js.org/guides/asset-modules/#replacing-inline-loader-syntax
@@ -117,6 +120,11 @@ module.exports = {
                 tag: 'img',
                 attribute: 'data-srcset',
                 type: 'srcset'
+              },
+              {
+                tag: 'source',
+                attribute: 'src',
+                type: 'src'
               }
             ]
           }

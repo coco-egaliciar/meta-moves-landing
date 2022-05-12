@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+const WebpackFavicons = require('webpack-favicons')
 
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin')
 
@@ -109,7 +109,10 @@ module.exports = {
       {
         // https://webpack.js.org/guides/asset-modules/#resource-assets
         test: /\.(png|jpe?g|gif|svg)$/i,
-        type: 'asset/resource'
+        type: 'asset/resource',
+        generator: {
+          filename: '[name]_[hash][ext][query]'
+        }
       },
       {
         // https://webpack.js.org/guides/asset-modules/#replacing-inline-loader-syntax
@@ -145,6 +148,17 @@ module.exports = {
       filename: 'index.html'
     }),
     new HtmlWebpackPlugin({
+      meta: {
+        'og:title': { property: 'og:title', content: 'The MetaMoves NFT project brings avatars to life through movements.' },
+        'og:description': { property: 'og:description', content: 'MetaMoves are adaptable to T-pose avatars and are  metaverse friendly.' },
+        'og:type': { property: 'og:type', content: 'website' },
+        'og:url': { property: 'og:url', content: 'www.meta-moves.com' },
+        'og:image': { property: 'og:image', content: 'https://www.meta-moves.com/meta-moves.jpg' },
+        'twitter:card': { name: 'twitter:card', content: 'summary_large_image' },
+        'twitter:title': { name: 'twitter:title', content: 'The MetaMoves NFT project brings avatars to life through movements.' },
+        'twitter:description': { name: 'twitter:description', content: 'MetaMoves are adaptable to T-pose avatars and are  metaverse friendly.' },
+        'twitter:image': { name: 'twitter:image', content: 'https://www.meta-moves.com/meta-moves.jpg' }
+      },
       template: './src/index2.html',
       inject: true,
       chunks: ['index2'],
@@ -154,17 +168,34 @@ module.exports = {
       filename: '[name].[contenthash].css',
       chunkFilename: '[id].[contenthash].css'
     }),
-    // new FaviconsWebpackPlugin({
-    //   logo: './src/fav.png',
-    //   prefix: '',
-    //   outputPath: '.',
-    //   cache: true
-    // })
+    new WebpackFavicons({
+      appName: 'MetaMoves',
+      appShortName: 'MetaMoves',
+      appDescription: 'The MetaMoves NFT project brings avatars to life through movements.',
+      lang: 'en',
+      src: './src/fav.png',
+      path: '.',
+      background: '#000',
+      theme_color: '#000',
+      icons: {
+        favicons: true,
+        android: true,
+        appleIcon: true
+      }
+    })
   ],
 
   // https://webpack.js.org/configuration/optimization/
   optimization: {
-    minimize: true,
+    removeAvailableModules: false,
+    removeEmptyChunks: false,
+    splitChunks: {
+      cacheGroups: {
+        defaultVendors: {
+          reuseExistingChunk: true
+        }
+      }
+    },
     minimizer: [
       new ImageMinimizerPlugin({
         minimizer: {

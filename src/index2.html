@@ -1,27 +1,49 @@
 <!DOCTYPE html>
 <html lang="en" class="bg-black text-white">
 <head>
-  <title>Meta-Moves - FAQs</title>
+  <title>Meta-Moves - Powered by Cinetica studio</title>
   <meta charset="UTF-8">
   <meta http-equiv="cache-control" content="no-cache"/>
   <meta http-equiv="pragma" content="no-cache"/>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="description"
+        content="A Novel NFT collection where all members are able to bring to life their digital avatars through custom Motion Capture.">
   <meta name="viewport"
-        content="width=device-width,user-scalable=0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
-  <!--  <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 
 </head>
-<body class="font-nunito text-white text-justify h-full">
-<div class="flex flex-col items-center justify-center fixed w-full h-screen">
-  <h1 class="title capitalize z-10">Metamoves</h1>
-  <p class="text-tiny lg:text-xl">We get your avatars moving with custom made animations. Check it out.</p>
-  <div class="flex flex-row w-full items-center justify-center">
-    <video id="" class="w-full lg:w-1/2" controls preload="none" loop="true">
-      <source src="./video.mp4" type="video/mp4">
-    </video>
+<body class="font-nunito text-white text-justify w-screen">
+<div class="flex flex-col items-center justify-around fixed w-full h-full">
+  <img id="logo" loading="lazy" class="w-1/2 lg:w-1/3" src=<%=require("./img/logo_gradiente.png")%> alt="logo">
+  <div>
+    <div class="flex flex-row w-full items-center justify-center">
+      <video id="howitworksvideo" class="video cursor-pointer" preload="auto" poster=<%=require("./img/THUMBNAIL.jpg")%>
+        >
+        <source src="./whatismetamoves.mp4" type="video/mp4">
+      </video>
+
+    </div>
+    <img loading="lazy" class="w-full mt-5 xl:hidden" src=<%=require("./img/slogan.png")%> alt="MetaMoves project brings
+    NFTs to life trhough movements">
+    <p id="slogan" class="hidden xl:block text-sm lg:text-base xl:text-xl font-bold mt-5 text-center">MetaMoves project
+      brings <span class="text-metalightblue">NFTs </span>to life trhough <span
+        class="text-metalightblue">movements.</span></p>
   </div>
 
+  <div class="flex flex-col justify-center items-center my-2">
+    <p class="font-century text-sm lg:text-base xl:text-xl font-bold">Available on</p>
+    <div class="flex flex-row">
+      <a href="https://opensea.io/Meta-Moves?tab=created" target="_blank">
+        <img loading="lazy" class="h-8 lg:h-10 mx-1" src=<%=require("./img/opensea-icon.png")%> alt="">
+      </a>
+      <a
+        href="https://portion.io/nft-marketplace?category=&collection=&artist=MetaMoves&chains=Ethereum&sortBy=newest&verified=true&tags="
+        target="_blank"
+      >
+        <img loading="lazy" class="h-8 lg:h-10 mx-1" src=<%=require("./img/portion-icon.png")%> alt="">
+      </a>
+    </div>
+  </div>
 </div>
 
 <ul id="scene" data-hover-only="true" data-relative-input="true" class="-z-10">
