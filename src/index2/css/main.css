@@ -73,10 +73,10 @@ body{
 
 
 .video{
-  @apply mt-12 w-[95%] h-[auto] xl:h-[55vh] xl:w-[auto] xl:mt-[1rem] 2xl:h-[60vh];
+  @apply mt-12 w-[95%] h-[auto] lg:h-[55vh] lg:w-[auto] lg:mt-[1rem] 2xl:h-[60vh];
 }
 
 #logo{
-  @apply h-[auto] w-3/4 -mt-5 xl:w-[auto] xl:h-[15vh] xl:mt-[2rem] 2xl:mt-[2rem];
+  @apply h-[auto] w-3/4 -mt-5 lg:w-[auto] lg:h-[15vh] lg:mt-[2rem] 2xl:mt-[2rem];
   /*margin-top: 2rem;*/
 }
